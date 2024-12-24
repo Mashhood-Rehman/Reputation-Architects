@@ -1,26 +1,27 @@
 export default function Component() {
   return (
-    <div className="relative  w-full overflow-hidden bg-black p-12">
+    <div className="relative w-full overflow-hidden bg-black p-8 sm:p-12">
       {/* Background Triangle */}
       <div
-        className="absolute left-0 top-0 h-96 w-96 opacity-0 animate-fadeInLeft"
+        className="absolute left-0 top-0 h-64 w-64 opacity-0 animate-fadeInLeft"
         style={{ animationDelay: "0.2s", animationDuration: "0.8s" }}
       >
-        <div className="h-full w-full transform -rotate-45 bg-orange-500"/>
+        <div className="h-full w-full transform -rotate-45 bg-orange-500" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-8">
+      <div className="relative z-10 mx-auto max-w-6xl">
+        <div className="grid gap-8 lg:grid-cols-2 lg:gap-6">
           {/* Left Column - Images */}
           <div className="relative opacity-0 animate-scaleIn">
             <div className="relative aspect-square overflow-hidden rounded-full border-8 border-gray-100">
               <img
-                src="/marketing.jpg"
-                alt="Team collaboration?height=200&width=200"
-                height={200}
-                width={200}
-                className=" object-cover"
+                src="/marketing.webp"
+                alt="Team collaboration"
+                height={600}
+                width={600}
+                className="z-50"
               />
+
               {/* Spiral overlay */}
               <div
                 className="absolute inset-0 animate-spinSlow"
@@ -31,16 +32,16 @@ export default function Component() {
               />
             </div>
             {/* Additional Images */}
-            <div className="absolute -bottom-12 -left-12 w-48 overflow-hidden rounded-lg shadow-xl opacity-0 animate-fadeInUp delay-400">
+            <div className="absolute -bottom-10 -left-10 w-36 overflow-hidden rounded-lg shadow-xl opacity-0 animate-fadeInUp delay-400">
               <img
-                src="/public/marketing.jpg?height=200&width=300"
+                src="/public/marketing.jpg?height=160&width=240"
                 alt="Office space"
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-12 right-0 w-48 overflow-hidden rounded-lg shadow-xl opacity-0 animate-fadeInUp delay-600">
+            <div className="absolute -bottom-10 right-0 w-36 overflow-hidden rounded-lg shadow-xl opacity-0 animate-fadeInUp delay-600">
               <img
-                src="/public/searching.jpg?height=200&width=300"
+                src="/public/searching.jpg?height=160&width=240"
                 alt="Team meeting"
                 className="h-full w-full object-cover"
               />
@@ -53,7 +54,7 @@ export default function Component() {
               <span className="text-sm font-semibold uppercase tracking-wider text-orange-500">
                 ABOUT AGENCY :
               </span>
-              <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+              <h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 We are Sharp Brands Creators Open For Any New Collabs
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-white">
@@ -62,7 +63,7 @@ export default function Component() {
                 and envisioning the future arts.
               </p>
               <div className="mt-8">
-                <div className="mb-8">
+                <div className="mb-6">
                   <h3 className="text-xl font-semibold text-white">
                     High Standard
                   </h3>
@@ -72,7 +73,7 @@ export default function Component() {
                     support and envisioning the future arts.
                   </p>
                 </div>
-                <button className="rounded-full bg-orange-500 px-8 py-4 text-white transition-colors hover:bg-orange-600">
+                <button className="rounded-full bg-orange-500 px-6 py-3 text-white transition-colors hover:bg-orange-600">
                   View All Our News
                 </button>
               </div>
