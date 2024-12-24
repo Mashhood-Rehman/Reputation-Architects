@@ -1,9 +1,15 @@
-import React from 'react'
+import HeroPage from "../components/HeroPage";
+import Services from "../components/Services";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div>
+      <h1>
+        <HeroPage />
+        <Services />
+      </h1>
+    </div>
+  );
+};
 
-export default Home
+export default Home;
