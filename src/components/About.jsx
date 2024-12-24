@@ -1,5 +1,4 @@
-
-export default function Component() {
+export default function About() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-white px-4 py-12 md:px-6 lg:px-8">
       {/* Background Triangle */}
@@ -16,7 +15,7 @@ export default function Component() {
           <div className="relative opacity-0 animate-scaleIn">
             <div className="relative aspect-square overflow-hidden rounded-full border-8 border-gray-100">
               <img
-                src="/placeholder.svg?height=600&width=600"
+                src="/optimization.jpg"
                 alt="Team collaboration"
                 className="h-full w-full object-cover"
               />
@@ -32,14 +31,14 @@ export default function Component() {
             {/* Additional Images */}
             <div className="absolute -bottom-12 -left-12 w-48 overflow-hidden rounded-lg shadow-xl opacity-0 animate-fadeInUp delay-400">
               <img
-                src="/placeholder.svg?height=200&width=300"
+                src="/optimization.jpg"
                 alt="Office space"
                 className="h-full w-full object-cover"
               />
             </div>
             <div className="absolute -bottom-12 right-0 w-48 overflow-hidden rounded-lg shadow-xl opacity-0 animate-fadeInUp delay-600">
               <img
-                src="/placeholder.svg?height=200&width=300"
+                src="/"
                 alt="Team meeting"
                 className="h-full w-full object-cover"
               />

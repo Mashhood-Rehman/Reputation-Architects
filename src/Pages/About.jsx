@@ -1,4 +1,4 @@
-export default function Component() {
+export default function About() {
   return (
     <div className="relative w-full overflow-hidden bg-black p-8 sm:p-12">
       {/* Background Triangle */}
@@ -32,18 +32,22 @@ export default function Component() {
               />
             </div>
             {/* Additional Images */}
-            <div className="absolute -bottom-10 -left-10 w-36 overflow-hidden rounded-lg shadow-xl opacity-0 animate-fadeInUp delay-400">
+            <div className="absolute -bottom-10 -left-1  overflow-hidden rounded-lg shadow-xl opacity-0 animate-fadeInUp delay-400">
               <img
-                src="/public/marketing.jpg?height=160&width=240"
+                src="/optimization.jpg  "
+                height={300}
+                width={200}
                 alt="Office space"
-                className="h-full w-full object-cover"
+                className=" "
               />
             </div>
             <div className="absolute -bottom-10 right-0 w-36 overflow-hidden rounded-lg shadow-xl opacity-0 animate-fadeInUp delay-600">
               <img
-                src="/public/searching.jpg?height=160&width=240"
+                src="/searching.jpg"
                 alt="Team meeting"
-                className="h-full w-full object-cover"
+                height={200}
+                width={200}
+                className=" object-cover"
               />
             </div>
           </div>
@@ -55,7 +59,7 @@ export default function Component() {
                 ABOUT AGENCY :
               </span>
               <h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                We are Sharp Brands Creators Open For Any New Collabs
+                We define your Digital Existence!
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-white">
                 Grow brands through bold and strategic creative, focused on
@@ -63,16 +67,6 @@ export default function Component() {
                 and envisioning the future arts.
               </p>
               <div className="mt-8">
-                <div className="mb-6">
-                  <h3 className="text-xl font-semibold text-white">
-                    High Standard
-                  </h3>
-                  <p className="mt-2 text-white">
-                    Grow brands through bold and strategic creative, focused on
-                    searching new ways to showcase user content on digital
-                    support and envisioning the future arts.
-                  </p>
-                </div>
                 <button className="rounded-full bg-orange-500 px-6 py-3 text-white transition-colors hover:bg-orange-600">
                   View All Our News
                 </button>
