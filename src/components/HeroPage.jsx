@@ -1,8 +1,6 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 const HeroPage = () => {
-  const scroll = useScrollAnimation();
   const { scrollYProgress } = useScroll();
 
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0, 0]);
@@ -10,12 +8,12 @@ const HeroPage = () => {
   const y = useTransform(scrollYProgress, [0, 0.5, 1], [0, 80, 200]);
 
   return (
-    <div className="bg-[url('/Hero-BG.webp')] bg-fixed relative">
+    <div className="bg-[url('/Hero-BG.webp')] h-[100vh] bg-fixed relative">
       <motion.div
-        className="fixed top-0 left-0 w-full h-[80vh] flex items-center justify-center"
+        className="fixed  left-0 top-1/4 w-full  flex items-center justify-center"
         style={{ opacity, scale, y }}
       >
-        <div className="text-white text-center">
+        <div className="text-white text-center ">
           <motion.h1
             className="text-6xl font-bold mb-4"
             initial={{ y: 50, opacity: 0 }}
@@ -54,7 +52,6 @@ const HeroPage = () => {
         className="fixed top-0 left-0 w-1 h-full bg-white origin-top"
         style={{ scaleY: scrollYProgress }}
       />
-      <div className="h-[100vh]" /> {/* This creates scrollable space */}
     </div>
   );
 };
