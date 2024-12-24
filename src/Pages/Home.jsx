@@ -1,6 +1,7 @@
 import HeroPage from "../components/HeroPage";
 import Services from "../components/Services";
-import About from "./About"
+import Testimonials from "../components/Testimonial";
+import About from "./About";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
         <HeroPage />
         <About />
         <Services />
+        <Testimonials />
       </h1>
     </div>
   );
