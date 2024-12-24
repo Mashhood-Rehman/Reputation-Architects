@@ -1,20 +1,19 @@
-import HeroPage from "../components/HeroPage";
-import Services from "../components/Services";
-<<<<<<< HEAD
 import CursorAnimation from "../components/CursorAnimation";
 import Footer from "../components/Footer";
-=======
-import About from "./About"
->>>>>>> a1e576986f60c64a6ea3c17df5c7b13d50ee2b11
+import HeroPage from "../components/HeroPage";
+import Services from "../components/Services";
+import Testimonials from "../components/Testimonial";
+import About from "./About";
 
 const Home = () => {
   return (
-    <div >
-      <h1 >
-        <CursorAnimation/>
+    <div>
+      <h1>
+        <CursorAnimation />
         <HeroPage />
         <About />
         <Services />
+        <Testimonials />
         <Footer/>
       </h1>
     </div>
