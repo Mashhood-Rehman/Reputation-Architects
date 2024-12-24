@@ -48,11 +48,11 @@ const Navbar = () => {
         <div className="flex items-center space-x-4">
           <Link to="/">
             <img
-              src="/logo.jpeg"
+              src="/Main-Logo.webp"
               alt="Logo"
-              height={50}
-              width={50}
-              className="mx-auto"
+              height={100}
+              width={100}
+              className="mx-auto  "
             />
           </Link>
         </div>
@@ -69,14 +69,14 @@ const Navbar = () => {
         transition={{ type: "tween", ease: "easeOut", duration: 0.5 }}
         className="fixed top-0 left-0 w-screen h-full bg-black text-white z-40 shadow-lg flex items-center justify-center lg:items-center lg:justify-center"
       >
-        <div className="p-6 lg:p-0 space-y-10 text-center">
+        <div className=" text-center">
           {/* Navigation Links */}
-          <ul className="space-y-4 mt-24 lg:mt-0 grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-4 items-center justify-center">
+          <ul className="space-y-4  lg:mt-0 grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-4 items-center justify-center">
             {navdData.map((item, index) => (
               <li key={index}>
                 <Link
                   href={item.href}
-                  className="block text-lg lg:text-4xl font-thin hover:text-[#c4a053] transition-colors"
+                  className="block text-lg lg:text-4xl  hover:text-[#f97316] "
                   onClick={toggleSidebar}
                 >
                   {item.name}
