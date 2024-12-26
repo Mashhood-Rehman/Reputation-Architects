@@ -1,3 +1,5 @@
+import CursorAnimation from "../components/CursorAnimation";
+import Footer from "../components/Footer";
 import HeroPage from "../components/HeroPage";
 import Services from "../components/Services";
 import Testimonials from "../components/Testimonial";
@@ -6,15 +8,14 @@ import About from "./About";
 const Home = () => {
   return (
     <div>
-      <h1>
-        <div className=" relative">
-          <HeroPage />
-        </div>
+      
+        <CursorAnimation/>
+        <HeroPage />
 
         <About />
         <Services />
         <Testimonials />
-      </h1>
+        <Footer />
     </div>
   );
 };
