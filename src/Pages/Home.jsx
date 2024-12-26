@@ -2,7 +2,6 @@ import HeroPage from "../components/HeroPage";
 import Services from "../components/Services";
 import Testimonials from "../components/Testimonial";
 import About from "./About";
-import Contact from "./Contact";
 
 const Home = () => {
   return (
