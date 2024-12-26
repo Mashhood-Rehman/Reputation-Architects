@@ -23,7 +23,7 @@ const HeroPage = () => {
             Reputation Architects
           </motion.h1>
           <motion.p
-            className="text-xl mb-8"
+            className="text-xl text-orange-500 mb-8"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -45,6 +45,20 @@ const HeroPage = () => {
                 ease: "easeInOut",
               }}
             />
+          </motion.div>
+
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className=" mt-28 flex items-center justify-center space-x-2 "
+          >
+            <button className=" border bg-black text-white hover:bg-orange-500 duration-300 ease-in-out  hover:text-black hover:border-none border-white rounded-2xl px-2 py-2">
+              Get Started
+            </button>
+            <button className=" border bg-orange-500 text-black hover:bg-black hover:text-white duration-300 ease-in-out hover:border-none border-white rounded-2xl px-2 py-2">
+              Our Services
+            </button>
           </motion.div>
         </div>
       </motion.div>
