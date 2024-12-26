@@ -1,5 +1,4 @@
 import { Icon } from "@iconify/react";
-import { Link } from "react-router-dom";
 
 // Service data to be mapped
 const servicesData = [
@@ -10,73 +9,60 @@ const servicesData = [
       "Enhance your online visibility and drive organic traffic to your website with our expert SEO strategies.",
   },
   {
-    icon: "tabler:seo",
-    title: "Web Development",
+    icon: "nimbus:marketing",
+    title: "Marketing & Advertisement",
     description:
-      "Create stunning, responsive websites that offer seamless user experiences, optimized for performance and speed.",
+      "Boost your brand's online presence with effective marketing campaigns and advertisements.",
   },
   {
-    icon: "tabler:seo",
-    title: "Digital Marketing",
+    icon: "tabler:report-analytics",
+    title: "Reporting & Analysis",
     description:
-      "Boost your brand’s online presence with effective digital marketing strategies including social media and email campaigns.",
-  },
-  {
-    icon: "tabler:seo",
-    title: "Digital Marketing",
-    description:
-      "Boost your brand’s online presence with effective digital marketing strategies including social media and email campaigns.",
-  },
-  {
-    icon: "tabler:seo",
-    title: "Digital Marketing",
-    description:
-      "Boost your brand’s online presence with effective digital marketing strategies including social media and email campaigns.",
+      "Gain actionable insights with detailed reporting and analysis to track your progress.",
   },
 ];
 
 const Services = () => {
   return (
-    <div className="bg-black text-white">
-      <div className="p-6 md:p-24">
-        <div className="space-y-4">
-          <span className="border text-xs bg-gradient-to-r from-[#f97316] to-transparent border-white px-3 py-1 rounded-xl">
-            Our Services
-          </span>
-          <h1 className="text-lg md:text-2xl">What We Offer?</h1>
-          <div className="flex flex-col md:flex-row md:justify-between space-y-4 md:space-y-0">
-            <p className="text-sm md:w-96">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
-              cumque repellat nisi repudiandae ullam qui architecto debitis quas
-              sed, doloremque voluptate libero ad nihil animi?
+    <div className="bg-black text-white h-[100vh] relative overflow-hidden">
+      <div className="max-w-6xl mx-auto p-6 md:p-16">
+        {/* Header Section */}
+        <div className="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-6">
+          <div className="flex flex-col z-10  lg:flex-row items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-6">
+            <h1 className="text-2xl lg:w-1/2 md:text-5xl font-bold text-white">
+              The right digital <span className="">partner</span> for success
+            </h1>
+            <p className="mt-4 lg:w-1/2  text-sm text-gray-300">
+              Lorem ipsum dolor sit amet consectetur. In nulla nunc arcu velit
+              consectetur massa mauris molestie hac. Hac arcu amet nullam
+              pellentesque. Urna eu suspendisse felis sodales sit non.
             </p>
-            <Link
-              to="/Services"
-              className="flex border hover:scale-110 hover:border-none bg-black hover:bg-[#f97316]  border-white text-xs rounded-full py-1 px-2 items-center justify-center space-x-1 cursor-pointer  duration-300 ease-in-out"
-            >
-              <button className="text-white">Services</button>
-              <Icon icon="mdi-light:arrow-right" width="24" height="24" />
-            </Link>
           </div>
+          <div className=" w-32 h-16 bg-black hover:bg-orange-500 duration-300 ease-in-out  flex items-center justify-center border boder-whtite rounded-full p-1">
+            <button className=" ">View All</button>
+          </div>
+        </div>
 
-          {/* Service Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
-            {servicesData.map((service, index) => (
-              <div
-                key={index}
-                className="border duration-300 ease-in-out bg-black hover:bg-[#f97316] hover:text-black border-white rounded-lg p-4 space-y-6"
-              >
-                <Icon
-                  icon={service.icon}
-                  width="40"
-                  height="40"
-                  className="border border-white rounded-full p-1"
-                />
-                <p className="text-xs">{service.description}</p>
-                <p>{service.title}</p>
+        <div className="absolute top-12 left-14 w-[500px] h-[500px] bg-orange-500 rounded-full z-0"></div>
+
+        {/* Services Cards */}
+        <div className="relative z-10 mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {servicesData.map((service, index) => (
+            <div
+              key={index}
+              className="bg-white text-black border border-gray-300 rounded-lg p-6 shadow-md flex flex-col items-center space-y-4"
+            >
+              <div className="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center">
+                <Icon icon={service.icon} width="32" height="32" />
               </div>
-            ))}
-          </div>
+              <h3 className="text-lg font-semibold text-center">
+                {service.title}
+              </h3>
+              <p className="text-sm text-center text-gray-600">
+                {service.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -84,4 +70,3 @@ const Services = () => {
 };
 
 export default Services;
-
