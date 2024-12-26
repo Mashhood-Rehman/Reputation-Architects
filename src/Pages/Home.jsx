@@ -7,9 +7,7 @@ const Home = () => {
   return (
     <div>
       <h1>
-        <div className=" relative">
-          <HeroPage />
-        </div>
+        <HeroPage />
 
         <About />
         <Services />
