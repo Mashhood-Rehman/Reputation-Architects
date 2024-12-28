@@ -1,5 +1,123 @@
-const Contact = () => {
-  return <div>hello</div>;
+import { Link } from "react-router-dom";
+import { Icon } from "@iconify/react";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
+
+const ContactForm = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+  return (
+    <div className="z-50 flex flex-col bg-black h-screen justify-center">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        className="grid mt-40 sm:grid-cols-2 items-center gap-14 p-8 mx-auto max-w-5xl bg-gray-50 shadow-lg rounded-md font-sans"
+      >
+        {/* Left Section */}
+        <motion.div
+          initial={{ x: -50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
+        >
+          <div className="flex items-center space-x-3">
+            <div className="bg-orange-500 h-1 rounded-full w-12"></div>
+            <h1 className="text-black text-3xl font-extrabold">Get in touch</h1>
+          </div>
+          <p className="text-sm text-gray-500 mt-4 leading-6">
+            Have some big idea or brand to develop and need help? Reach out—we’d
+            love to hear about your project and provide assistance.
+          </p>
+
+          {/* Email Section */}
+          <div className="mt-12">
+            <h2 className="text-gray-800 text-lg font-semibold">Email</h2>
+            <ul className="mt-4">
+              <li className="flex items-center">
+                <div className="bg-gray-100 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                  <Icon
+                    icon="mdi:email-outline"
+                    width={20}
+                    height={20}
+                    color="#f97316"
+                  />
+                </div>
+                <Link
+                  to="mailto:info@example.com"
+                  className="text-orange-500 text-sm ml-4"
+                >
+                  <small className="block">Mail</small>
+                  <strong>info@example.com</strong>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Socials Section */}
+          <div className="mt-12">
+            <h2 className="text-gray-800 text-lg font-semibold">Socials</h2>
+            <ul className="flex mt-4 space-x-4">
+              {[
+                { icon: "mdi:facebook", label: "Facebook" },
+                { icon: "mdi:instagram", label: "Instagram" },
+                { icon: "mdi:twitter", label: "Twitter" },
+              ].map((social, index) => (
+                <li
+                  key={index}
+                  className="bg-gray-100 h-10 w-10 rounded-full flex items-center justify-center shrink-0"
+                >
+                  <Link to="#" aria-label={social.label}>
+                    <Icon
+                      icon={social.icon}
+                      width={20}
+                      height={20}
+                      color="#f97316"
+                    />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </motion.div>
+
+        {/* Right Section (Form) */}
+        <motion.form
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
+          className="space-y-4"
+        >
+          <input
+            type="text"
+            placeholder="Name"
+            className="w-full text-gray-800 rounded-md py-3 px-4 border border-gray-300 text-sm focus:outline-orange-500 focus:ring-2 focus:ring-orange-500"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            className="w-full text-gray-800 rounded-md py-3 px-4 border border-gray-300 text-sm focus:outline-orange-500 focus:ring-2 focus:ring-orange-500"
+          />
+          <input
+            type="text"
+            placeholder="Subject"
+            className="w-full text-gray-800 rounded-md py-3 px-4 border border-gray-300 text-sm focus:outline-orange-500 focus:ring-2 focus:ring-orange-500"
+          />
+          <textarea
+            placeholder="Message"
+            rows="6"
+            className="w-full text-gray-800 rounded-md px-4 py-3 border border-gray-300 text-sm focus:outline-orange-500 focus:ring-2 focus:ring-orange-500"
+          ></textarea>
+          <button
+            type="button"
+            className="text-white bg-orange-500 hover:bg-orange-600 rounded-md text-sm px-4 py-3 w-full transition-all duration-300 ease-in-out"
+          >
+            Send
+          </button>
+        </motion.form>
+      </motion.div>
+    </div>
+  );
 };
 
-export default Contact;
+export default ContactForm;
