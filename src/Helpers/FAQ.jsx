@@ -44,7 +44,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="font-sans mx-auto px-6 bg-black text-white">
+    <div className="font-sans mx-auto p-24 bg-black text-white">
       <div className="">
         <h2 className="text-4xl font-bold text-white text-center">
           Frequently Asked Questions

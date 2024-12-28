@@ -2,7 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      textStrokeWidth: {
+        2: "2px",
+      },
+      textStrokeColor: {
+        white: "#ffffff",
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-text-fill-stroke")],
 };
