@@ -24,7 +24,7 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <div className="bg-black text-white h-[100vh] relative overflow-hidden">
+    <div className="bg-black text-white h-[90vh] relative overflow-hidden">
       <div className="max-w-6xl mx-auto p-6 md:p-16">
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-6">

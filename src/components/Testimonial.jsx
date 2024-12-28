@@ -46,15 +46,17 @@ const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex > 0 ? prevIndex - 1 : testimonials.length - 1
-    );
+    setCurrentIndex((prevIndex) => {
+      const newIndex = prevIndex > 0 ? prevIndex - 1 : testimonials.length - 1;
+      return newIndex;
+    });
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex < testimonials.length - 1 ? prevIndex + 1 : 0
-    );
+    setCurrentIndex((prevIndex) => {
+      const newIndex = prevIndex < testimonials.length - 1 ? prevIndex + 1 : 0;
+      return newIndex;
+    });
   };
 
   return (

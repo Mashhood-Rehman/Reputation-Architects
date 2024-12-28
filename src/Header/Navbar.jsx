@@ -19,6 +19,7 @@ const Navbar = () => {
         }
       }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -27,9 +28,11 @@ const Navbar = () => {
 
   return (
     <div>
+      {/* Navbar */}
       <div
-        className={`${bgColor} duration-500 ease-in-out flex fixed z-50 items-center justify-between w-full p-12`}
+        className={`${bgColor} duration-500 ease-in-out flex fixed z-50 items-center justify-between w-full p-6 md:p-12`}
       >
+        {/* Sidebar Toggle Button */}
         <button
           onClick={toggleSidebar}
           className="text-white p-3 rounded-full focus:outline-none z-50"
@@ -45,14 +48,13 @@ const Navbar = () => {
           )}
         </button>
 
+        {/* Logo */}
         <div className="flex items-center space-x-4">
           <Link to="/">
             <img
               src="/Main-Logo.webp"
               alt="Logo"
-              height={100}
-              width={100}
-              className="mx-auto  "
+              className="h-12 w-12 md:h-20 md:w-20 object-contain"
             />
           </Link>
         </div>
@@ -67,24 +69,21 @@ const Navbar = () => {
           opacity: isSidebarOpen ? 1 : 0,
         }}
         transition={{ type: "tween", ease: "easeOut", duration: 0.5 }}
-        className="fixed top-0 left-0 w-screen h-full bg-black text-white z-40 shadow-lg flex items-center justify-center lg:items-center lg:justify-center"
+        className="fixed top-0 left-0 w-screen h-full bg-black bg-opacity-90 text-white z-40 flex items-center justify-center"
       >
-        <div className=" text-center">
-          {/* Navigation Links */}
-          <ul className="space-y-4  lg:mt-0 grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-4 items-center justify-center">
-            {navdData.map((item, index) => (
-              <li key={index}>
-                <Link
-                  href={item.href}
-                  className="block text-lg lg:text-4xl  hover:text-[#f97316] "
-                  onClick={toggleSidebar}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className="space-y-10 mt-24 text-center">
+          {navdData.map((item, index) => (
+            <li key={index}>
+              <Link
+                to={item.href}
+                className="block text-lg lg:text-4xl hover:text-[#f97316] duration-300"
+                onClick={toggleSidebar}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </motion.div>
     </div>
   );

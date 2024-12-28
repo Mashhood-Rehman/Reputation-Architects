@@ -1,21 +1,21 @@
 import CursorAnimation from "../components/CursorAnimation";
-import Footer from "../components/Footer";
 import HeroPage from "../components/HeroPage";
 import Services from "../components/Services";
 import Testimonials from "../components/Testimonial";
-import About from "./About";
-
+import About from "../components/About";
+import { useEffect } from "react";
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <div>
-      
-        <CursorAnimation/>
-        <HeroPage />
+      <CursorAnimation />
+      <HeroPage />
 
-        <About />
-        <Services />
-        <Testimonials />
-        <Footer />
+      <About />
+      <Services />
+      <Testimonials />
     </div>
   );
 };

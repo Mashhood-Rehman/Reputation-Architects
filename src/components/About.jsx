@@ -1,78 +1,89 @@
 export default function About() {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-white px-4 py-12 md:px-6 lg:px-8">
-      {/* Background Triangle */}
-      <div
-        className="absolute left-0 top-0 h-96 w-96 opacity-0 animate-fadeInLeft"
-        style={{ animationDelay: "0.2s", animationDuration: "0.8s" }}
-      >
-        <div className="h-full w-full transform -rotate-45 bg-orange-500" />
-      </div>
-
-      <div className="relative z-10 mx-auto max-w-7xl">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-8">
-          {/* Left Column - Images */}
-          <div className="relative opacity-0 animate-scaleIn">
-            <div className="relative aspect-square overflow-hidden rounded-full border-8 border-gray-100">
+    <div className="min-h-[500px] bg-[#111111] px-6 py-12 md:px-8 lg:px-12">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="relative aspect-square w-full max-w-lg mx-auto lg:mx-0">
+            <div className="relative h-full">
               <img
-                src="/optimization.jpg"
-                alt="Team collaboration"
-                className="h-full w-full object-cover"
-              />
-              {/* Spiral overlay */}
-              <div
-                className="absolute inset-0 animate-spinSlow"
-                style={{
-                  background:
-                    "radial-gradient(circle at center, transparent 30%, rgba(255,255,255,0.8) 70%)",
-                }}
-              />
-            </div>
-            {/* Additional Images */}
-            <div className="absolute -bottom-12 -left-12 w-48 overflow-hidden rounded-lg shadow-xl opacity-0 animate-fadeInUp delay-400">
-              <img
-                src="/optimization.jpg"
-                alt="Office space"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-12 right-0 w-48 overflow-hidden rounded-lg shadow-xl opacity-0 animate-fadeInUp delay-600">
-              <img
-                src="/"
-                alt="Team meeting"
-                className="h-full w-full object-cover"
+                src="/public/marketing.webp"
+                alt="Creative professional"
+                className="w-full h-full object-cover rounded-lg"
               />
             </div>
           </div>
 
-          {/* Right Column - Content */}
-          <div className="flex flex-col justify-center opacity-0 animate-fadeInUp delay-400">
-            <div>
-              <span className="text-sm font-semibold uppercase tracking-wider text-orange-500">
-                : ABOUT AGENCY :
-              </span>
-              <h1 className="mt-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                Were Sharp Brands Creators Open For Any New Collabs
-              </h1>
-              <p className="mt-6 text-lg leading-relaxed text-gray-600">
-                Grow brands through bold and strategic creative, focused on
-                searching new ways to showcase user content on digital support
-                and envisioning the future arts.
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <p className="text-gray-400 text-sm uppercase tracking-wider">
+                ABOUT US
               </p>
-              <div className="mt-8">
-                <div className="mb-8">
-                  <h3 className="text-xl font-semibold text-gray-900">
-                    High Standard
-                  </h3>
-                  <p className="mt-2 text-gray-600">
-                    Grow brands through bold and strategic creative, focused on
-                    searching new ways to showcase user content on digital
-                    support and envisioning the future arts.
+              <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                We Use Creativity to
+                <br />
+                Get Our Clients.
+              </h1>
+              <p className="text-gray-400 leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
+                magna integer a tellus cursus amet. Proin vel magna integer in
+                tellus cursus vitae interdum ut elementum sit amet.
+              </p>
+            </div>
+
+            {/* Features Section */}
+            <div className="grid grid-cols-2 gap-6">
+              {/* Feature 1 - Clean Code */}
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#40E0D0]/10 flex items-center justify-center">
+                    <svg
+                      className="w-6 h-6 text-[#40E0D0]"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold mb-1">Clean Code</h3>
+                  <p className="text-gray-400 text-sm">
+                    Optimized for better performance
                   </p>
                 </div>
-                <button className="rounded-full bg-orange-500 px-8 py-4 text-white transition-colors hover:bg-orange-600">
-                  View All Our News
-                </button>
+              </div>
+
+              {/* Feature 2 - Modern Design */}
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#40E0D0]/10 flex items-center justify-center">
+                    <svg
+                      className="w-6 h-6 text-[#40E0D0]"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold mb-1">
+                    Modern Design
+                  </h3>
+                  <p className="text-gray-400 text-sm">Latest design trends</p>
+                </div>
               </div>
             </div>
           </div>

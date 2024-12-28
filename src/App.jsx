@@ -6,14 +6,34 @@ import Contact from "./Pages/Contact";
 
 const App = () => {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/services" element={<About />} />
-        <Route path="/services" element={<Contact />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+
+      <Route
+        path="/services"
+        element={
+          <div className="pt-24 md:pt-32">
+            <Services />
+          </div>
+        }
+      />
+      <Route
+        path="/about"
+        element={
+          <div className="pt-24 md:pt-32">
+            <About />
+          </div>
+        }
+      />
+      <Route
+        path="/contact"
+        element={
+          <div className="pt-24 md:pt-32">
+            <Contact />
+          </div>
+        }
+      />
+    </Routes>
   );
 };
 

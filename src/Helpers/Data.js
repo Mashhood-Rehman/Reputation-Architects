@@ -1,7 +1,7 @@
 export const navdData = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/AboutUs" },
+  { name: "About", href: "/about" },
   { name: "Services", href: "/Services" },
   { name: "Packages", href: "/Packages" },
-  { name: "Contact", href: "/Contact" },
+  { name: "Contact", href: "/contact" },
 ];
