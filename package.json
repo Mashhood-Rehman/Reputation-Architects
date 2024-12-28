@@ -18,7 +18,8 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.1.0",
     "react-type-animation": "^3.2.0",
-    "reputation-architects": "file:"
+    "reputation-architects": "file:",
+    "tailwindcss-text-fill-stroke": "^1.1.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

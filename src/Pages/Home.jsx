@@ -5,7 +5,6 @@ import Testimonials from "../components/Testimonial";
 import ContactLink from "../components/ContactLink";
 import About from "../components/About";
 import { useEffect } from "react";
-import Footer from "../components/Footer";
 
 const Home = () => {
   useEffect(() => {
@@ -16,11 +15,10 @@ const Home = () => {
       <CursorAnimation />
       <HeroPage />
 
-        <About />
-        <Services />
-        <Testimonials />
-        <ContactLink />
-        <Footer />
+      <About />
+      <Services />
+      <Testimonials />
+      <ContactLink />
     </div>
   );
 };
