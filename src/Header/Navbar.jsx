@@ -19,6 +19,7 @@ const Navbar = () => {
         }
       }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -27,9 +28,11 @@ const Navbar = () => {
 
   return (
     <div>
+      {/* Navbar */}
       <div
-        className={`${bgColor} duration-500 ease-in-out flex fixed z-50 items-center justify-between w-full p-12`}
+        className={`${bgColor} duration-500 ease-in-out flex fixed z-50 items-center justify-between w-full p-6 md:p-12`}
       >
+        {/* Sidebar Toggle Button */}
         <button
           onClick={toggleSidebar}
           className="text-white p-3 rounded-full focus:outline-none z-50"
@@ -45,6 +48,7 @@ const Navbar = () => {
           )}
         </button>
 
+        {/* Logo */}
         <div className="flex items-center space-x-4">
           <Link to="/">
             <img
@@ -73,7 +77,7 @@ const Navbar = () => {
           opacity: isSidebarOpen ? 1 : 0,
         }}
         transition={{ type: "tween", ease: "easeOut", duration: 0.5 }}
-        className="fixed top-0 left-0 w-screen h-full bg-black text-white z-40 shadow-lg flex items-center justify-center lg:items-center lg:justify-center"
+        className="fixed top-0 left-0 w-screen h-full bg-black bg-opacity-90 text-white z-40 flex items-center justify-center"
       >
         <div className="text-center">
           {/* Navigation Links */}
