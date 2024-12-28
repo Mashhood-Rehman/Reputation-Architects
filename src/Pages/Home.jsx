@@ -15,10 +15,10 @@ const Home = () => {
       <CursorAnimation />
       <HeroPage />
 
-      <About />
-      <Services />
-      <Testimonials />
-      <ContactLink />
+        <About />
+        <Services />
+        <Testimonials />
+        <ContactLink />
     </div>
   );
 };
