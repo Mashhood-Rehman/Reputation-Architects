@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import Stats from "../Helpers/Stats";
-import Team from "../Helpers/Team";
-import WhoWeAre from "../Helpers/WhoWeAre";
-
+import Team from "../Helpers/ABOUTData/Team";
+import WhoWeAre from "../Helpers/ABOUTData/WhoWeAre";
+import { useEffect } from "react";
+import AboutMarqee from "../Helpers/ABOUTData/AboutMarqee";
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <>
       <div className="h-[60vh] bg-black flex flex-col space-y-4 items-center justify-center">
@@ -16,6 +20,7 @@ const About = () => {
         </div>
       </div>
       <div>
+        <AboutMarqee />
         <WhoWeAre />
         <Team />
         <Stats />

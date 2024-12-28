@@ -27,7 +27,10 @@ const Stats = () => {
   return (
     <div className="font-sans py-4  bg-black  ">
       <div className=" ">
-        <h1 className=" text-white  flex items-center justify-center text-2xl  font-[sans-serif] mb-12">
+        <h1
+          className=" text-white  flex items-center justify-center text-4xl font-semibold  font-[sans-serif] 
+        "
+        >
           Our Stats
         </h1>
       </div>

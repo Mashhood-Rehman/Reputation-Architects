@@ -46,7 +46,7 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="font-[sans-serif] h-[100vh]  mx-auto p-4 bg-black">
+    <div className="font-[sans-serif]  p-24  mx-auto  bg-black">
       <div className="max-w-2xl mx-auto text-center text-white">
         <h2 className="text-white text-3xl font-extrabold">Meet our team</h2>
         <p className="text-white text-sm mt-4 leading-relaxed">
