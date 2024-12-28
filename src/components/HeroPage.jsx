@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 const HeroPage = () => {
   const { scrollYProgress } = useScroll();
 
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.95, 0.9]);
-  const y = useTransform(scrollYProgress, [0, 0.5, 1], [0, 80, 200]);
+  const opacity = useTransform(scrollYProgress, [0, 0.1, 1], [1, 0, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.1, 1], [1, 0.2, 0.9]);
+  const y = useTransform(scrollYProgress, [0, 0.1, 1], [0, 80, 200]);
   const triangles = [
     { top: "10%", left: "10%", rotate: 0 },
     { top: "20%", right: "15%", rotate: 45 },
@@ -46,7 +46,7 @@ const HeroPage = () => {
         />
       ))}
       {/* Social Media Icons */}
-      <span className="absolute left-6 lg:right-6 top-1/2 transform -translate-y-1/2 flex-col my-5 space-y-10 z-50 hidden lg:flex">
+      <span className="absolute left-6 lg:right-6 top-1/2 transform -translate-y-1/2 flex-col my-5 space-y-10 z-10 hidden lg:flex">
         <a
           href="https://www.facebook.com/profile.php?id=61566739650180"
           target="_blank"
