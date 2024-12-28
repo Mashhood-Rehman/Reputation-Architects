@@ -52,11 +52,17 @@ const Navbar = () => {
               alt="Logo"
               height={100}
               width={100}
-              className="mx-auto  "
+              className="mx-auto"
             />
           </Link>
         </div>
-        <div></div>
+
+        {/* Hide this button on mobile */}
+        <div className="hidden lg:block">
+          <button className="border bg-transparent text-white hover:text-white hover:bg-orange-500 duration-300 ease-in-out hover:border-none border-white rounded-3xl px-3 py-3">
+            Get a Quote
+          </button>
+        </div>
       </div>
 
       {/* Sidebar */}
@@ -69,14 +75,14 @@ const Navbar = () => {
         transition={{ type: "tween", ease: "easeOut", duration: 0.5 }}
         className="fixed top-0 left-0 w-screen h-full bg-black text-white z-40 shadow-lg flex items-center justify-center lg:items-center lg:justify-center"
       >
-        <div className=" text-center">
+        <div className="text-center">
           {/* Navigation Links */}
-          <ul className="space-y-4  lg:mt-0 grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-4 items-center justify-center">
+          <ul className="space-y-4 lg:mt-0 grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-4 items-center justify-center">
             {navdData.map((item, index) => (
               <li key={index}>
                 <Link
                   href={item.href}
-                  className="block text-lg lg:text-4xl  hover:text-[#f97316] "
+                  className="block text-lg lg:text-4xl hover:text-[#f97316]"
                   onClick={toggleSidebar}
                 >
                   {item.name}
@@ -91,3 +97,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
