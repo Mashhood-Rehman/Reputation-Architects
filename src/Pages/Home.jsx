@@ -5,7 +5,6 @@ import Testimonials from "../components/Testimonial";
 import ContactLink from "../components/ContactLink";
 import About from "../components/About";
 import { useEffect } from "react";
-import Footer from "../components/Footer";
 
 const Home = () => {
   useEffect(() => {
@@ -20,7 +19,6 @@ const Home = () => {
         <Services />
         <Testimonials />
         <ContactLink />
-        <Footer />
     </div>
   );
 };
