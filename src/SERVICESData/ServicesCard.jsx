@@ -1,47 +1,8 @@
-import React from "react";
-import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { servicesInfo } from "../Helpers/Data";
 
 function ServicesCard() {
-  const services = [
-    {
-      isTitle: true,
-      content: {
-        title: "Unmatched Services.",
-        subtitle: "Unmatched Excellence.",
-      },
-    },
-    {
-      icon: <Icon icon="mdi:code-tags"  className="h-8 w-8 text-white" />, // Web icon
-      title: "Web Development",
-      description:
-        "Custom web solutions built with cutting-edge technologies to meet your digital transformation needs.",
-    },
-    {
-      icon: <Icon icon="mdi:magnify" className="h-8 w-8 text-white" />, 
-      title: "SEO Optimization",
-      description:
-        "Strategic search engine optimization to improve your visibility and drive organic traffic.",
-    },
-    {
-      icon: <Icon icon="mdi:speaker"className="h-8 w-8 text-white" />, 
-      title: "Social Media Marketing",
-      description:
-        "Engaging social media strategies to build your brand presence and connect with your audience.",
-    },
-    {
-      icon: <Icon icon="mdi:earth" className="h-8 w-8 text-white" />, 
-      title: "Digital Marketing",
-      description:
-        "Comprehensive digital marketing solutions to grow your online presence and reach.",
-    },
-    {
-      icon: <Icon icon="mdi:chart-line" className="h-8 w-8 text-white" />, 
-      title: "Google Ads",
-      description:
-        "Targeted advertising campaigns to maximize your ROI and drive qualified traffic.",
-    },
-  ];
   // Animation variants
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -52,7 +13,7 @@ function ServicesCard() {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
   };
-
+  console.log(Array.isArray(servicesInfo), servicesInfo); // this will tell if it's an array
   return (
     <section className="w-full bg-black px-4 py-12 md:py-24">
       <div className="mx-auto max-w-6xl">
@@ -62,7 +23,7 @@ function ServicesCard() {
           initial="hidden"
           animate="visible"
         >
-          {services.map((service, index) =>
+          {servicesInfo?.map((service, index) =>
             service.isTitle ? (
               <motion.div
                 key={index}
@@ -74,7 +35,7 @@ function ServicesCard() {
                     {service.content.title}
                     <br />
                     <span className="text-orange-500 ">
-                    {service.content.subtitle}
+                      {service.content.subtitle}
                     </span>
                   </h2>
                 </div>
@@ -91,6 +52,11 @@ function ServicesCard() {
                   {service.title}
                 </h3>
                 <p className="text-sm text-gray-400">{service.description}</p>
+                <Link to={`/Services/${service.path}`}>
+                  <button className="mt-2 hover:text-orange-500 duration-300 ease-in-out text-white">
+                    View details
+                  </button>
+                </Link>
               </motion.div>
             )
           )}

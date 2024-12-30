@@ -5,6 +5,7 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import ChatIcon from "./Helpers/ChatIcon";
 import Packages from "./Pages/Packages";
+import ServiceDetails from "./SubServices/ServicesDetails";
 
 const App = () => {
   return (
@@ -13,13 +14,15 @@ const App = () => {
         <Route path="/" element={<Home />} />
 
         <Route
-          path="/services"
+          path="/Services"
           element={
             <div className="pt-24 md:pt-32">
               <Services />
             </div>
           }
         />
+        <Route path="/Services/:id" element={<ServiceDetails />} />
+
         <Route
           path="/about"
           element={
