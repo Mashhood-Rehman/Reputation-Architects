@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { cards } from "../Helpers/Data";
 // import ContactLink from "../../ContactLink";
 
-const Web = () => {
+ export default function Web() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -210,4 +210,3 @@ const Web = () => {
   );
 };
 
-export default Web;
