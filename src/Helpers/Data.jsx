@@ -55,6 +55,7 @@ export const servicesInfo = [
   {
     icon: <Icon icon="mdi:code-tags" className="h-8 w-8 text-white" />, // Web icon
     title: "Web Development",
+
     item: <Web />,
     path: "Web",
     description:
