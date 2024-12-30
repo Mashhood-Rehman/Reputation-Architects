@@ -18,7 +18,7 @@ export default function About() {
               <p className="text-gray-400 text-sm uppercase tracking-wider">
                 ABOUT US
               </p>
-              <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+              <h1 className="lg:text-4xl text-2xl font-bold text-white leading-tight">
                 We Use Creativity to
                 <br />
                 Get Our Clients.

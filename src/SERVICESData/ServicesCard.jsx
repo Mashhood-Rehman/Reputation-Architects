@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { servicesInfo } from "../Helpers/Data";
-
 function ServicesCard() {
   // Animation variants
   const cardVariants = {
@@ -13,7 +12,7 @@ function ServicesCard() {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
   };
-  console.log(Array.isArray(servicesInfo), servicesInfo); // this will tell if it's an array
+  console.log("It is true", Array.isArray(servicesInfo), servicesInfo);
   return (
     <section className="w-full bg-black px-4 py-12 md:py-24">
       <div className="mx-auto max-w-6xl">
@@ -23,7 +22,7 @@ function ServicesCard() {
           initial="hidden"
           animate="visible"
         >
-          {servicesInfo?.map((service, index) =>
+          {servicesInfo.map((service, index) =>
             service.isTitle ? (
               <motion.div
                 key={index}

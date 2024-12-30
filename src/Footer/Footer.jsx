@@ -12,12 +12,12 @@ const galleryImages = [
 
 const Footer = () => {
   return (
-    <div className="relative h-screen bg-black bg-opacity-90 bg-[url('/Footer.webp')] bg-cover bg-center">
+    <div className="relative bg-black bg-opacity-90 bg-[url('/Footer.webp')] bg-cover bg-center">
       <div className="absolute inset-0"></div>
-      <div className="max-w-screen-xl flex flex-col-reverse  mx-auto p-8">
-        <div className="grid gap-8 max-sm:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-4">
+      <div className="max-w-screen-xl flex flex-col-reverse mx-auto p-4 sm:p-6 lg:p-12">
+        <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Company Info Section */}
-          <div className="space-y-6 mt-10">
+          <div className="space-y-4 sm:space-y-6 mt-6 sm:mt-10">
             <Link to="/">
               <img
                 src="/Main-Logo.webp"
@@ -27,15 +27,17 @@ const Footer = () => {
                 className="brightness-0 invert"
               />
             </Link>
-            <p className="text-white max-w-sm">
+            <p className="text-white text-xs sm:text-sm lg:text-base">
               Digital Agency with creative ideas and great team support.
             </p>
           </div>
 
           {/* About Us Section */}
           <div>
-            <h4 className="text-base font-bold text-white mt-10">About Us</h4>
-            <ul className="space-y-2 mt-4 text-white text-sm">
+            <h4 className="text-sm sm:text-base font-bold text-white mt-6 sm:mt-10">
+              About Us
+            </h4>
+            <ul className="space-y-2 mt-2 sm:mt-4 text-white text-xs sm:text-sm">
               {["Our Story", "Mission and Values", "Team", "Testimonials"].map(
                 (item, index) => (
                   <li key={index}>
@@ -52,11 +54,11 @@ const Footer = () => {
           </div>
 
           {/* Services Gallery Section */}
-          <div className="space-y-6">
-            <h3 className="text-2xl text-white font-semibold mt-10">
+          <div className="space-y-4 sm:space-y-6">
+            <h3 className="text-lg sm:text-xl lg:text-2xl text-white font-semibold mt-6 sm:mt-10">
               Our Services
             </h3>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4">
               {galleryImages.map((src, index) => (
                 <div
                   key={index}
@@ -73,11 +75,11 @@ const Footer = () => {
           </div>
 
           {/* Contact Info Section */}
-          <div className="space-y-6">
-            <h3 className="text-2xl text-white font-semibold mt-10">
+          <div className="space-y-4 sm:space-y-6">
+            <h3 className="text-lg sm:text-xl lg:text-2xl text-white font-semibold mt-6 sm:mt-10">
               Contact Us
             </h3>
-            <div className="text-white space-y-4">
+            <div className="text-white space-y-2 sm:space-y-4 text-xs sm:text-sm">
               <p>301 Princes Street, Damietta</p>
               <p>Egypt-104</p>
               <p>+92-207-823-7766</p>
@@ -97,25 +99,27 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr className="my-12 border-gray-700" />
+        <hr className="my-6 sm:my-8 lg:my-12 border-gray-700" />
 
         {/* Newsletter Section */}
-        <div className="text-center text-white space-y-6 max-w-xl mx-auto">
-          <h3 className="text-2xl font-bold">Newsletter</h3>
-          <p className="text-sm">
+        <div className="text-center text-white space-y-4 sm:space-y-6 max-w-sm mx-auto">
+          <h3 className="text-lg sm:text-xl lg:text-2xl font-bold">
+            Newsletter
+          </h3>
+          <p className="text-xs sm:text-sm">
             Subscribe to our newsletter and stay up to date with the latest
             news, updates, and exclusive offers. Get valuable insights. Join our
             community today!
           </p>
-          <div className="bg-gray-800 flex items-center px-2 py-1.5 rounded-full">
+          <div className="bg-gray-800 flex   items-center px-3 py-2 rounded-full space-y-3 sm:space-y-0 sm:space-x-3">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-grow bg-transparent text-sm text-white outline-none pl-4"
+              className="flex-grow bg-transparent text-xs sm:text-sm text-white outline-none pl-2"
             />
             <button
               type="button"
-              className="bg-[#f97316] hover:bg-orange-600 text-white text-sm rounded-full px-4 py-2 ml-4 transition-all tracking-wide"
+              className="bg-[#f97316] hover:bg-orange-600 text-white text-xs sm:text-sm rounded-full px-4 py-2 transition-all tracking-wide"
             >
               Submit
             </button>
