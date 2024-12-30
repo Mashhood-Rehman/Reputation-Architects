@@ -2,12 +2,15 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { cards } from "../Helpers/Data";
+import { FaArrowLeft } from "react-icons/fa";
 // import ContactLink from "../../ContactLink";
 
  export default function Web() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  console.log(cards);
+
 
   return (
     <div className="bg-black text-white flex flex-col items-center px-4 py-8 sm:px-6 lg:px-16 lg:gap-12">
@@ -19,6 +22,7 @@ import { cards } from "../Helpers/Data";
             to="/services"
             className="text-white hover:text-orange-500 transition duration-300 flex items-center"
           >
+            <FaArrowLeft className="mr-2 text-sm" />
             <span className="text-sm">Back to Services</span>
           </Link>
         </div>
@@ -62,7 +66,7 @@ import { cards } from "../Helpers/Data";
 
         {/* Right - Content Section */}
         <div className="w-full lg:w-2/3 flex flex-col justify-center">
-          <h1 className="text-3xl lg:text-4xl font-extrabold mb-4">
+          <h1 className="text-2xl lg:text-4xl font-extrabold mb-4">
             Website
             <span className="text-orange-500 ml-2">Development</span> Services
           </h1>
@@ -112,7 +116,7 @@ import { cards } from "../Helpers/Data";
       <div className="bg-black w-full max-w-6xl  mt-0 rounded-lg shadow-lg p-8 sm:p-10 lg:p-16 lg:grid lg:grid-cols-2 lg:gap-10">
         {/* Left Column - Heading and Description */}
         <div className="flex flex-col justify-center">
-          <h1 className="text-3xl lg:text-4xl font-extrabold text-white mb-6">
+          <h1 className="text-2xl lg:text-4xl font-extrabold text-white mb-6">
             Our <span className="text-orange-500">Services</span> <br />{" "}
             Expertise
           </h1>

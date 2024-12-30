@@ -24,7 +24,7 @@ const Footer = () => {
                 alt="Logo"
                 width={120}
                 height={50}
-                className="brightness-0 invert"
+                
               />
             </Link>
             <p className="text-white text-xs sm:text-sm lg:text-base">

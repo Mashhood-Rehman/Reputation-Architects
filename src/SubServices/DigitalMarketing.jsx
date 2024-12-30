@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
 import { cards, digitalMarketing } from "../Helpers/Data";
 // import ContactLink from "../../ContactLink";
 
@@ -14,14 +15,15 @@ const DigitalMarketing = () => {
       {/* Main Section */}
       <div className="flex mt-8  flex-col lg:flex-row items-center justify-between w-full max-w-6xl gap-8 lg:gap-16 bg-black rounded-xl p-6 lg:p-12 shadow-lg relative">
         {/* Back Arrow */}
-        <div className="w-full flex justify-start lg:absolute lg:top-4 lg:left-4 mb-4 lg:mb-0">
-          <Link
-            to="/services"
-            className="text-white hover:text-orange-500 transition duration-300 flex items-center"
-          >
-            <span className="text-sm">Back to Services</span>
-          </Link>
-        </div>
+               <div className="w-full flex justify-start lg:absolute lg:top-4 lg:left-4 mb-4 lg:mb-0">
+                 <Link
+                   to="/services"
+                   className="text-white hover:text-orange-500 transition duration-300 flex items-center"
+                 >
+                   <FaArrowLeft className="mr-2 text-sm" />
+                   <span className="text-sm">Back to Services</span>
+                 </Link>
+               </div>
 
         {/* Left - Image Section */}
         <div className="group relative w-full max-w-sm overflow-hidden rounded-lg shadow-lg">

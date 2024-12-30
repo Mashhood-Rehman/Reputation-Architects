@@ -15,19 +15,19 @@ export const navdData = [
 
 export const cards = [
   {
-    icon: <Icon icon="mdi:tag" className="h-8 w-8 text-primary" />, 
+    icon: () => <Icon icon="mdi:tag" className="h-8 w-8 text-primary" />,
     title: "Branding",
     content:
       "Branding makes you stand out. People remember your brand and choose you over competitors. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eos aliquam blanditiis, nobis ipsam incidunt reprehenderit odio? Eveniet, cumque sequi. Recusandae quas aliquid quam ipsum vitae doloribus nostrum dicta! Consequatur?",
   },
   {
-    icon: <Icon icon="mdi:star" className="h-8 w-8 text-primary" />,
+    icon: () => <Icon icon="mdi:star" className="h-8 w-8 text-primary" />,
     title: "Research Targeted Audience",
     content:
       "Find businesses selling quality products. Targeted Audience is the right place. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eos aliquam blanditiis, nobis ipsam incidunt reprehenderit odio? Eveniet, cumque sequi. Recusandae quas aliquid quam ipsum vitae doloribus nostrum dicta! Consequatur?",
   },
   {
-    icon: <Icon icon="mdi:account-group" className="h-8 w-8 text-primary" />, 
+    icon: () => <Icon icon="mdi:account-group" className="h-8 w-8 text-primary" />,
     title: "Research Competition",
     content:
       "We research the market and competition, then start marketing your business. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eos aliquam blanditiis, nobis ipsam incidunt reprehenderit odio? Eveniet, cumque sequi. Recusandae quas aliquid quam ipsum vitae doloribus nostrum dicta! Consequatur?",
@@ -54,16 +54,15 @@ export const servicesInfo = [
     },
   },
   {
-    icon: <Icon icon="mdi:code-tags" className="h-8 w-8 text-white" />, 
+    icon: () => <Icon icon="mdi:code-tags" className="h-8 w-8 text-white" />,
     title: "Web Development",
-
     item: <Web />,
     path: "Web",
     description:
       "Custom web solutions built with cutting-edge technologies to meet your digital transformation needs.",
   },
   {
-    icon: <Icon icon="mdi:magnify" className="h-8 w-8 text-white" />, 
+    icon: () => <Icon icon="mdi:magnify" className="h-8 w-8 text-white" />,
     title: "SEO Optimization",
     item: <SEO />,
     path: "SEO",
@@ -71,7 +70,7 @@ export const servicesInfo = [
       "Strategic search engine optimization to improve your visibility and drive organic traffic.",
   },
   {
-    icon: <Icon icon="mdi:speaker" className="h-8 w-8 text-white" />, 
+    icon: () => <Icon icon="mdi:speaker" className="h-8 w-8 text-white" />,
     title: "Social Media Marketing",
     item: <SocialMedia />,
     path: "SocialMedia",
@@ -79,7 +78,7 @@ export const servicesInfo = [
       "Engaging social media strategies to build your brand presence and connect with your audience.",
   },
   {
-    icon: <Icon icon="mdi:earth" className="h-8 w-8 text-white" />, 
+    icon: () => <Icon icon="mdi:earth" className="h-8 w-8 text-white" />,
     title: "Digital Marketing",
     item: <DigitalMarketing />,
     path: "DigitalMarketing",
@@ -87,7 +86,7 @@ export const servicesInfo = [
       "Comprehensive digital marketing solutions to grow your online presence and reach.",
   },
   {
-    icon: <Icon icon="mdi:chart-line" className="h-8 w-8 text-white" />, 
+    icon: () => <Icon icon="mdi:chart-line" className="h-8 w-8 text-white" />,
     title: "Google Ads",
     item: <GoogleAd />,
     path: "GoogleAd",
@@ -95,3 +94,4 @@ export const servicesInfo = [
       "Targeted advertising campaigns to maximize your ROI and drive qualified traffic.",
   },
 ];
+
