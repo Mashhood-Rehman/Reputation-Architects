@@ -12,7 +12,7 @@ import { cards } from "../Helpers/Data";
   return (
     <div className="bg-black text-white flex flex-col items-center px-4 py-8 sm:px-6 lg:px-16 lg:gap-12">
       {/* Main Section */}
-      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-6xl gap-8 lg:gap-16 bg-black rounded-xl p-6 lg:p-12 shadow-lg relative">
+      <div className="flex flex-col mt-8 lg:flex-row items-center justify-between w-full max-w-6xl gap-8 lg:gap-16 bg-black rounded-xl p-6 lg:p-12 shadow-lg relative">
         {/* Back Arrow */}
         <div className="w-full flex justify-start lg:absolute lg:top-4 lg:left-4 mb-4 lg:mb-0">
           <Link
