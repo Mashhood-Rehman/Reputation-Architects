@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 
 // Service data to be mapped
 const servicesData = [
@@ -39,7 +40,9 @@ const Services = () => {
             </p>
           </div>
           <div className="w-28 sm:w-32 z-30 h-12 sm:h-16 bg-black hover:bg-orange-500 duration-300 ease-in-out flex items-center justify-center border border-white rounded-full p-1">
-            <button className="text-sm sm:text-base">View All</button>
+            <Link href="/Services">
+              <button className="text-sm sm:text-base">View All</button>
+            </Link>
           </div>
         </div>
 
