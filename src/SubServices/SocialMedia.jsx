@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { cards } from "../Helpers/Data";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 const SocialMedia = () => {
   useEffect(() => {
@@ -13,16 +13,16 @@ const SocialMedia = () => {
     <div className="bg-black text-white flex flex-col items-center px-4 py-8 sm:px-6 lg:px-16 lg:gap-12">
       {/* Main Section */}
       <div className="flex mt-8  flex-col lg:flex-row items-center justify-between w-full max-w-6xl gap-8 lg:gap-16 bg-black rounded-xl p-6 lg:p-12 shadow-lg relative">
-         {/* Back Arrow */}
-                <div className="w-full flex justify-start lg:absolute lg:top-4 lg:left-4 mb-4 lg:mb-0">
-                  <Link
-                    to="/services"
-                    className="text-white hover:text-orange-500 transition duration-300 flex items-center"
-                  >
-                    <FaArrowLeft className="mr-2 text-sm" />
-                    <span className="text-sm">Back to Services</span>
-                  </Link>
-                </div>
+        {/* Back Arrow */}
+        <div className="w-full  mt-12 flex justify-start lg:absolute lg:top-4 lg:left-4 mb-4 lg:mb-0">
+          <Link
+            to="/services"
+            className="text-white hover:text-orange-500 transition duration-300 flex items-center"
+          >
+            <Icon icon="si:arrow-right-line" className=" mr-2 text-sm" />
+            <span className="text-sm">Back to Services</span>
+          </Link>
+        </div>
 
         {/* Left - Image Section */}
         <div className="group relative w-full max-w-sm overflow-hidden rounded-lg shadow-lg">
