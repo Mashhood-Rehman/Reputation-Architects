@@ -6,24 +6,28 @@ import { useEffect } from "react";
 const ContactForm = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  }, []);
+
   return (
-    <div className="z-50 flex flex-col bg-black h-screen justify-center">
+    <div className="z-50 flex flex-col bg-black min-h-screen justify-center p-4 sm:p-8">
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="grid mt-40 sm:grid-cols-2 items-center gap-14 p-8 mx-auto max-w-5xl bg-gray-50 shadow-lg rounded-md font-sans"
+        className="grid sm:grid-cols-2 items-center gap-8 p-6 sm:p-8 mx-auto max-w-5xl bg-gray-50 shadow-lg rounded-md font-sans"
       >
         {/* Left Section */}
         <motion.div
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
+          className="text-center sm:text-left"
         >
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center justify-center sm:justify-start space-x-3">
             <div className="bg-orange-500 h-1 rounded-full w-12"></div>
-            <h1 className="text-black text-3xl font-extrabold">Get in touch</h1>
+            <h1 className="text-black text-2xl sm:text-3xl font-extrabold">
+              Get in touch
+            </h1>
           </div>
           <p className="text-sm text-gray-500 mt-4 leading-6">
             Have some big idea or brand to develop and need help? Reach out—we’d
@@ -31,10 +35,10 @@ const ContactForm = () => {
           </p>
 
           {/* Email Section */}
-          <div className="mt-12">
+          <div className="mt-8">
             <h2 className="text-gray-800 text-lg font-semibold">Email</h2>
             <ul className="mt-4">
-              <li className="flex items-center">
+              <li className="flex items-center justify-center sm:justify-start">
                 <div className="bg-gray-100 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                   <Icon
                     icon="mdi:email-outline"
@@ -55,9 +59,9 @@ const ContactForm = () => {
           </div>
 
           {/* Socials Section */}
-          <div className="mt-12">
+          <div className="mt-8">
             <h2 className="text-gray-800 text-lg font-semibold">Socials</h2>
-            <ul className="flex mt-4 space-x-4">
+            <ul className="flex mt-4 justify-center sm:justify-start space-x-4">
               {[
                 { icon: "mdi:facebook", label: "Facebook" },
                 { icon: "mdi:instagram", label: "Instagram" },

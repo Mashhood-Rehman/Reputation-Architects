@@ -44,38 +44,42 @@ const FAQ = () => {
   };
 
   return (
-    <div className="font-sans mx-auto p-24 bg-black text-white">
-      <div className="">
-        <h2 className="text-4xl font-bold text-white text-center">
+    <div className="font-sans mx-auto p-6 sm:p-12 lg:p-24 bg-black text-white">
+      <div className="mb-6">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center">
           Frequently Asked Questions
         </h2>
       </div>
-      {faqs.map((faq, index) => (
-        <div className="accordion  rounded-lg shadow-md " key={index}>
-          <button
-            type="button"
-            className="toggle-button w-full text-base outline-none text-left font-semibold py-6 px-4 flex items-center text-white  rounded-t-lg hover:text-orange-500 transition-all duration-300"
-            onClick={() => toggleAccordion(index)}
-            aria-expanded={openIndex === index}
-          >
-            <span className="mr-4">{faq.question}</span>
-            {openIndex === index ? (
-              <Minus className="w-5 h-5 ml-auto shrink-0 text-orange-500 transform rotate-180 transition-all duration-300" />
-            ) : (
-              <Plus className="w-5 h-5 ml-auto shrink-0 text-orange-500 transform rotate-0 transition-all duration-300" />
-            )}
-          </button>
-          <div
-            className={`content transition-all duration-500 ease-in-out ${
-              openIndex === index
-                ? "max-h-[1000px] pb-6 overflow-visible"
-                : "max-h-0 invisible overflow-hidden"
-            }`}
-          >
-            <p className="text-sm text-gray-300 px-6 pb-6">{faq.answer}</p>
+      <div className="space-y-4">
+        {faqs.map((faq, index) => (
+          <div className="accordion rounded-lg shadow-md" key={index}>
+            <button
+              type="button"
+              className="toggle-button w-full text-sm sm:text-base outline-none text-left font-semibold py-4 px-3 sm:py-6 sm:px-4 flex items-center text-white rounded-t-lg hover:text-orange-500 transition-all duration-300"
+              onClick={() => toggleAccordion(index)}
+              aria-expanded={openIndex === index}
+            >
+              <span className="mr-4">{faq.question}</span>
+              {openIndex === index ? (
+                <Minus className="w-5 h-5 ml-auto shrink-0 text-orange-500 transform rotate-180 transition-all duration-300" />
+              ) : (
+                <Plus className="w-5 h-5 ml-auto shrink-0 text-orange-500 transform rotate-0 transition-all duration-300" />
+              )}
+            </button>
+            <div
+              className={`content transition-all duration-500 ease-in-out ${
+                openIndex === index
+                  ? "max-h-[1000px] pb-4 sm:pb-6 overflow-visible"
+                  : "max-h-0 invisible overflow-hidden"
+              }`}
+            >
+              <p className="text-xs sm:text-sm text-gray-300 px-4 sm:px-6 pb-4 sm:pb-6">
+                {faq.answer}
+              </p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
