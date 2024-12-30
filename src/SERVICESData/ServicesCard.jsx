@@ -22,43 +22,44 @@ function ServicesCard() {
           initial="hidden"
           animate="visible"
         >
-          {servicesInfo.map((service, index) =>
-            service.isTitle ? (
-              <motion.div
-                key={index}
-                className="relative p-6"
-                variants={cardVariants}
-              >
-                <div className="text-white">
-                  <h2 className="text-3xl font-bold md:text-4xl">
-                    {service.content.title}
-                    <br />
-                    <span className="text-orange-500 ">
-                      {service.content.subtitle}
-                    </span>
-                  </h2>
-                </div>
-              </motion.div>
-            ) : (
-              <motion.div
-                key={index}
-                className="group relative border border-white/10 hover:border-orange-500/20 p-6 transition-all "
-                variants={cardVariants}
-                whileHover={{ scale: 1.05 }}
-              >
-                <div className="mb-4 text-orange-500">{service.icon}</div>
-                <h3 className="mb-2 text-lg font-semibold text-white">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-gray-400">{service.description}</p>
-                <Link to={`/Services/${service.path}`}>
-                  <button className="mt-2 hover:text-orange-500 duration-300 ease-in-out text-white">
-                    View details
-                  </button>
-                </Link>
-              </motion.div>
-            )
-          )}
+          {servicesInfo &&
+            servicesInfo.map((service, index) =>
+              service.isTitle ? (
+                <motion.div
+                  key={index}
+                  className="relative p-6"
+                  variants={cardVariants}
+                >
+                  <div className="text-white">
+                    {/* <h2 className="text-3xl font-bold md:text-4xl">
+                      {service.content.title}
+                      <br />
+                      <span className="text-orange-500 ">
+                        {service.content.subtitle}
+                      </span>
+                    </h2> */}
+                  </div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key={index}
+                  className="group relative border border-white/10 hover:border-orange-500/20 p-6 transition-all "
+                  variants={cardVariants}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  {/* <div className="mb-4 text-orange-500">{service.icon}</div> */}
+                  <h3 className="mb-2 text-lg font-semibold text-white">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-gray-400">{service.description}</p>
+                  <Link to={`/Services/${service.path}`}>
+                    <button className="mt-2 hover:text-orange-500 duration-300 ease-in-out text-white">
+                      View details
+                    </button>
+                  </Link>
+                </motion.div>
+              )
+            )}
         </motion.div>
       </div>
     </section>
