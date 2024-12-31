@@ -1,4 +1,4 @@
-import { Plus, Minus } from "lucide-react";
+import { Icon } from "@iconify/react";
 import { useState } from "react";
 
 const FAQ = () => {
@@ -61,9 +61,15 @@ const FAQ = () => {
             >
               <span className="mr-4">{faq.question}</span>
               {openIndex === index ? (
-                <Minus className="w-5 h-5 ml-auto shrink-0 text-orange-500 transform rotate-180 transition-all duration-300" />
+                <Icon
+                  icon="mdi:minus"
+                  className="w-5 h-5 ml-auto shrink-0 text-orange-500 transform rotate-180 transition-all duration-300"
+                />
               ) : (
-                <Plus className="w-5 h-5 ml-auto shrink-0 text-orange-500 transform rotate-0 transition-all duration-300" />
+                <Icon
+                  icon="mdi:plus"
+                  className="w-5 h-5 ml-auto shrink-0 text-orange-500 transform rotate-0 transition-all duration-300"
+                />
               )}
             </button>
             <div

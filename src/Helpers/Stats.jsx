@@ -1,24 +1,29 @@
-import { Users, ShoppingCart, Star } from "lucide-react";
+import { Icon } from "@iconify/react";
 
 const Stats = () => {
   const stats = [
     {
-      icon: <Users className="text-orange-500 w-10 h-10" />,
+      icon: (
+        <Icon icon="mdi:account-group" className="text-orange-500 w-10 h-10" />
+      ),
+
       value: "400+",
       label: "Unique Visitors",
     },
     {
-      icon: <ShoppingCart className="text-orange-500 w-10 h-10" />,
+      icon: <Icon icon="mdi:cart" className="text-orange-500 w-10 h-10" />,
       value: "450+",
       label: "Total Sales",
     },
     {
-      icon: <Star className="text-orange-500 w-10 h-10" />,
+      icon: <Icon icon="mdi:star" className="text-orange-500 w-10 h-10" />,
       value: "4.8",
       label: "Customer Rating",
     },
     {
-      icon: <Users className="text-orange-500 w-10 h-10" />,
+      icon: (
+        <Icon icon="mdi:account-group" className="text-orange-500 w-10 h-10" />
+      ),
       value: "1500+",
       label: "Happy Customers",
     },

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { MessageCircle } from "lucide-react";
+import { Icon } from "@iconify/react";
 
 const ChatIcon = () => {
   const [visible, setVisible] = useState(false);
@@ -30,7 +30,7 @@ const ChatIcon = () => {
           rel="noopener noreferrer"
           className="z-50 flex items-center justify-center h-16 w-16 bg-green-500 rounded-full shadow-lg hover:scale-110 transition-transform"
         >
-          <MessageCircle size={32} color="white" />
+          <Icon icon="tabler:message-circle" width={32} color="white" />
         </Link>
       )}
     </div>
