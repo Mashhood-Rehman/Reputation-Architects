@@ -39,11 +39,12 @@ const Services = () => {
               pellentesque. Urna eu suspendisse felis sodales sit non.
             </p>
           </div>
-          <div className="w-28 sm:w-32 z-30 h-12 sm:h-16 bg-black hover:bg-orange-500 duration-300 ease-in-out flex items-center justify-center border border-white rounded-full p-1">
-            <Link href="/Services">
-              <button className="text-sm sm:text-base">View All</button>
-            </Link>
-          </div>
+          <Link
+            className="w-28 sm:w-32 z-30 h-12 sm:h-16 bg-black hover:bg-orange-500 duration-300 ease-in-out flex items-center justify-center border border-white rounded-full p-1"
+            to="/Services"
+          >
+            View All
+          </Link>
         </div>
 
         <div className="absolute top-12 left-14 w-[300px] sm:w-[400px] lg:w-[500px] h-[300px] sm:h-[400px] lg:h-[500px] bg-orange-500 rounded-full z-0"></div>

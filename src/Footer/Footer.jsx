@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Linkedin, WebcamIcon as Skype } from "lucide-react";
+import { Icon } from "@iconify/react";
 
 const galleryImages = [
   "/G1.webp",
@@ -19,13 +19,7 @@ const Footer = () => {
           {/* Company Info Section */}
           <div className="space-y-4 sm:space-y-6 mt-6 sm:mt-10">
             <Link to="/">
-              <img
-                src="/Main-Logo.webp"
-                alt="Logo"
-                width={120}
-                height={50}
-                
-              />
+              <img src="/Main-Logo.webp" alt="Logo" width={120} height={50} />
             </Link>
             <p className="text-white text-xs sm:text-sm lg:text-base">
               Digital Agency with creative ideas and great team support.
@@ -85,13 +79,18 @@ const Footer = () => {
               <p>+92-207-823-7766</p>
               <p>info@example.com</p>
               <div className="flex gap-4">
-                {[Facebook, Twitter, Linkedin, Skype].map((Icon, index) => (
+                {[
+                  { icon: "logos:facebook", url: "#" },
+                  { icon: "logos:twitter", url: "#" },
+                  { icon: "logos:linkedin", url: "#" },
+                  { icon: "logos:skype", url: "#" },
+                ].map((social, index) => (
                   <Link
                     key={index}
-                    to="#"
+                    to={social.url}
                     className="hover:text-[#f97316] transition transform hover:-translate-y-1 duration-300"
                   >
-                    <Icon className="w-5 h-5" />
+                    <Icon icon={social.icon} className="w-5 h-5" />
                   </Link>
                 ))}
               </div>
