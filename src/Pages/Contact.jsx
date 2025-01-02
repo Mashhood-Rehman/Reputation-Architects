@@ -21,6 +21,7 @@ const ContactForm = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -30,12 +31,13 @@ const ContactForm = () => {
       to_email: import.meta.env.VITE_TO_EMAIL,
     };
 
+    // Ensure user_id is passed here
     emailjs
       .send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         emailData,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_USER_ID
       )
       .then(
         (response) => {
