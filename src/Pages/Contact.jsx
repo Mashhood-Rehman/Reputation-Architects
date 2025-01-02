@@ -31,7 +31,6 @@ const ContactForm = () => {
       to_email: import.meta.env.VITE_TO_EMAIL,
     };
 
-    // Ensure user_id is passed here
     emailjs
       .send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
