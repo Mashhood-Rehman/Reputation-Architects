@@ -1,12 +1,57 @@
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import emailjs from "emailjs-com";
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const emailData = {
+      ...formData,
+      to_email: import.meta.env.VITE_TO_EMAIL,
+    };
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        emailData,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (response) => {
+          console.log("Email sent successfully:", response);
+          alert("Message sent successfully!");
+          setFormData({ name: "", email: "", subject: "", message: "" });
+        },
+        (error) => {
+          console.error("Failed to send email:", error);
+          alert("Failed to send the message. Please try again later.");
+        }
+      )
+      .finally(() => {
+        setIsSubmitting(false);
+      });
+  };
 
   return (
     <div className="z-50 flex flex-col bg-black min-h-screen justify-center p-4 sm:p-8">
@@ -48,11 +93,11 @@ const ContactForm = () => {
                   />
                 </div>
                 <Link
-                  to="mailto:info@example.com"
+                  to="mailto:info@reputation-architects.com"
                   className="text-orange-500 text-sm ml-4"
                 >
                   <small className="block">Mail</small>
-                  <strong>info@example.com</strong>
+                  <strong>info@reputation-architects.com</strong>
                 </Link>
               </li>
             </ul>
@@ -87,6 +132,7 @@ const ContactForm = () => {
 
         {/* Right Section (Form) */}
         <motion.form
+          onSubmit={handleSubmit}
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
@@ -94,29 +140,47 @@ const ContactForm = () => {
         >
           <input
             type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
             placeholder="Name"
             className="w-full text-gray-800 rounded-md py-3 px-4 border border-gray-300 text-sm focus:outline-orange-500 focus:ring-2 focus:ring-orange-500"
+            required
           />
           <input
             type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
             placeholder="Email"
             className="w-full text-gray-800 rounded-md py-3 px-4 border border-gray-300 text-sm focus:outline-orange-500 focus:ring-2 focus:ring-orange-500"
+            required
           />
           <input
             type="text"
+            name="subject"
+            value={formData.subject}
+            onChange={handleChange}
             placeholder="Subject"
             className="w-full text-gray-800 rounded-md py-3 px-4 border border-gray-300 text-sm focus:outline-orange-500 focus:ring-2 focus:ring-orange-500"
           />
           <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
             placeholder="Message"
             rows="6"
             className="w-full text-gray-800 rounded-md px-4 py-3 border border-gray-300 text-sm focus:outline-orange-500 focus:ring-2 focus:ring-orange-500"
+            required
           ></textarea>
           <button
-            type="button"
-            className="text-white bg-orange-500 hover:bg-orange-600 rounded-md text-sm px-4 py-3 w-full transition-all duration-300 ease-in-out"
+            type="submit"
+            disabled={isSubmitting}
+            className={`text-white ${
+              isSubmitting ? "bg-gray-400" : "bg-orange-500 hover:bg-orange-600"
+            } rounded-md text-sm px-4 py-3 w-full transition-all duration-300 ease-in-out`}
           >
-            Send
+            {isSubmitting ? "Sending..." : "Send"}
           </button>
         </motion.form>
       </motion.div>
