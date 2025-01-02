@@ -6,6 +6,7 @@ import Contact from "./Pages/Contact";
 import ChatIcon from "./Helpers/ChatIcon";
 import Packages from "./Pages/Packages";
 import ServiceDetails from "./SubServices/ServicesDetails";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
@@ -49,6 +50,7 @@ const App = () => {
         />
       </Routes>
       <ChatIcon />
+      <Toaster position="top-center" reverseOrder={false} />
     </>
   );
 };

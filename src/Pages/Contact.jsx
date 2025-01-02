@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
+import { toast } from "react-hot-toast"; // Importing toast
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -41,12 +42,12 @@ const ContactForm = () => {
       .then(
         (response) => {
           console.log("Email sent successfully:", response);
-          alert("Message sent successfully!");
+          toast.success("Message sent successfully!"); // Success toast
           setFormData({ name: "", email: "", subject: "", message: "" });
         },
         (error) => {
           console.error("Failed to send email:", error);
-          alert("Failed to send the message. Please try again later.");
+          toast.error("Failed to send the message. Please try again later."); // Error toast
         }
       )
       .finally(() => {

@@ -112,9 +112,10 @@ const Footer = () => {
           </p>
           <div className="bg-gray-800 flex   items-center px-3 py-2 rounded-full space-y-3 sm:space-y-0 sm:space-x-3">
             <input
+              name="email"
               type="email"
               placeholder="Enter your email"
-              className="flex-grow bg-transparent text-xs sm:text-sm text-white outline-none pl-2"
+              className="flex-grow z-50 bg-transparent text-xs sm:text-sm text-white outline-none pl-2"
             />
             <button
               type="button"
