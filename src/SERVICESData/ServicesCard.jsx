@@ -1,10 +1,8 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { servicesInfo } from "../Helpers/Data";
 
 function ServicesCard() {
-  // Animation variants
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -60,7 +58,7 @@ function ServicesCard() {
                   </h3>
                   <p className="text-sm text-gray-400">{service.description}</p>
                   <Link to={`/Services/${service.path}`}>
-                  <div className="absolute bottom-1 right-6 flex items-center text-orange-500 cursor-pointer hover:underline">
+                    <div className="absolute bottom-1 right-6 flex items-center text-orange-500 cursor-pointer hover:underline">
                       <span>View Details</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

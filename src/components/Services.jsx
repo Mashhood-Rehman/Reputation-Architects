@@ -1,7 +1,6 @@
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 
-// Service data to be mapped
 const servicesData = [
   {
     icon: "tabler:seo",
@@ -27,7 +26,6 @@ const Services = () => {
   return (
     <div className="bg-black text-white min-h-screen relative overflow-hidden">
       <div className="max-w-6xl p-4 sm:p-6 md:p-16">
-        {/* Header Section */}
         <div className="flex flex-col lg:flex-row  items-center space-y-6 lg:space-y-0 lg:space-x-6">
           <div className="flex flex-col z-10 lg:flex-row items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-6 text-center lg:text-left">
             <h1 className="text-xl sm:text-2xl lg:w-1/2 md:text-5xl font-bold text-white">
@@ -49,7 +47,6 @@ const Services = () => {
 
         <div className="absolute top-12 left-14 w-[300px] sm:w-[400px] lg:w-[500px] h-[300px] sm:h-[400px] lg:h-[500px] bg-orange-500 rounded-full z-0"></div>
 
-        {/* Services Cards */}
         <div className="relative z-10 mt-8 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
           {servicesData.map((service, index) => (
             <div
@@ -69,7 +66,6 @@ const Services = () => {
           ))}
         </div>
       </div>
-      {/* Add padding to separate sections */}
     </div>
   );
 };

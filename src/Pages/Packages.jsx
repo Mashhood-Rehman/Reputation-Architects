@@ -70,7 +70,6 @@ const PackageDetails = () => {
 
   return (
     <div className="min-h-screen bg-black">
-      {/* Header Section */}
       <div className="bg-black text-white py-20 lg:py-32 relative overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -87,7 +86,6 @@ const PackageDetails = () => {
         </motion.div>
       </div>
 
-      {/* Timeframe Selection */}
       <div className="flex justify-center items-center mt-12 mb-8">
         <label
           htmlFor="timeframe"
@@ -111,7 +109,6 @@ const PackageDetails = () => {
         </motion.div>
       </div>
 
-      {/* Pricing Cards */}
       <div className="container  mx-auto px-4 py-12">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"

@@ -1,4 +1,4 @@
-import { Icon } from "@iconify/react"; // Import Icon component from Iconify
+import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 
 const teamMembers = [
@@ -7,7 +7,6 @@ const teamMembers = [
     role: "Software Engineer",
     image: "https://readymadeui.com/team-1.webp",
     socials: {
-      // twitter: "https://twitter.com",
       linkedin: "https://www.linkedin.com",
       github: "https://github.com",
     },
@@ -17,7 +16,6 @@ const teamMembers = [
     role: "Software Engineer",
     image: "https://readymadeui.com/team-2.webp",
     socials: {
-      // twitter: "https://twitter.com",
       linkedin: "https://www.linkedin.com",
       github: "https://github.com",
     },
@@ -27,7 +25,6 @@ const teamMembers = [
     role: "Web Designer",
     image: "https://readymadeui.com/team-3.webp",
     socials: {
-      // twitter: "https://twitter.com",
       linkedin: "https://www.linkedin.com",
       github: "https://github.com",
     },
@@ -37,7 +34,6 @@ const teamMembers = [
     role: "Web Designer",
     image: "https://readymadeui.com/team-6.webp",
     socials: {
-      // twitter: "https://twitter.com",
       linkedin: "https://www.linkedin.com",
       github: "https://github.com",
     },

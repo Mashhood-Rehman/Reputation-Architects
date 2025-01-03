@@ -12,7 +12,6 @@ const ContactLink = () => {
 
   return (
     <section className="container max-w-full bg-black mx-auto py-12 relative">
-      {/* Animated triangles */}
       {triangles.map((triangle, index) => (
         <motion.div
           key={index}
@@ -23,9 +22,9 @@ const ContactLink = () => {
             right: triangle.right,
             bottom: triangle.bottom,
             transform: `rotate(${triangle.rotate}deg)`,
-            borderLeft: "6px solid transparent", // Smaller triangles for mobile
+            borderLeft: "6px solid transparent",
             borderRight: "6px solid transparent",
-            borderBottom: "12px solid rgb(249, 115, 22)", // orange-500
+            borderBottom: "12px solid rgb(249, 115, 22)",
           }}
           animate={{
             y: [0, -20, 0],
@@ -40,10 +39,8 @@ const ContactLink = () => {
         />
       ))}
       <div className="max-w-full mx-auto relative px-4 sm:px-8">
-        {/* Image with orange shape container */}
         <div className="flex justify-center mb-8 md:mb-0">
           <div className="relative inline-flex items-center">
-            {/* Image */}
             <img
               src="/p3-min.webp"
               alt="Profile"
@@ -52,7 +49,6 @@ const ContactLink = () => {
               className="w-[120px] h-[120px] sm:w-[180px] sm:h-[180px] rounded-full z-10 object-cover"
             />
 
-            {/* Custom orange shape with arrow */}
             <div className="absolute -right-16 top-0 sm:-right-24">
               <div className="relative">
                 <svg
@@ -63,12 +59,10 @@ const ContactLink = () => {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  {/* Orange shape */}
                   <path
                     d="M0 96C0 42.9807 42.9807 0 96 0C149.019 0 192 42.9807 192 96V192H96C42.9807 192 0 149.019 0 96Z"
                     fill="#FF4500"
                   />
-                  {/* Arrow */}
                   <path
                     d="M96 96L136 136M136 136V96M136 136H96"
                     stroke="white"
@@ -82,7 +76,6 @@ const ContactLink = () => {
           </div>
         </div>
 
-        {/* Heading */}
         <h2 className="text-2xl text-white sm:text-3xl md:text-5xl lg:text-6xl font-bold text-center mt-8 sm:mt-16 max-w-4xl mx-auto leading-tight">
           Have Any Projects In Mind? Get In Touch With Us!
         </h2>
@@ -101,7 +94,7 @@ const ContactLink = () => {
           <motion.path
             d="M0 120C240 120 480 0 720 0C960 0 1200 120 1440 120V120H0V120Z"
             fill="none"
-            stroke="rgba(249, 115, 22, 0.2)" // orange-500 with opacity
+            stroke="rgba(249, 115, 22, 0.2)"
             strokeWidth="2"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}

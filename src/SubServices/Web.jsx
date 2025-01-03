@@ -13,9 +13,7 @@ export default function Web() {
 
   return (
     <div className="bg-black text-white flex flex-col items-center px-4 py-8 sm:px-6 lg:px-16 lg:gap-12">
-      {/* Main Section */}
       <div className="flex flex-col mt-8 lg:flex-row items-center justify-between w-full max-w-6xl gap-8 lg:gap-16 bg-black rounded-xl p-6 lg:p-12 shadow-lg relative">
-        {/* Back Arrow */}
         <div className="w-full  mt-12 flex justify-start lg:absolute lg:top-4 lg:left-4 mb-4 lg:mb-0">
           <Link
             to="/services"
@@ -26,7 +24,6 @@ export default function Web() {
           </Link>
         </div>
 
-        {/* Left - Image Section */}
         <div className="group relative w-full max-w-sm overflow-hidden rounded-lg shadow-lg">
           <img
             src="/wd.webp"
@@ -63,7 +60,6 @@ export default function Web() {
           <div className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </div>
 
-        {/* Right - Content Section */}
         <div className="w-full lg:w-2/3 flex flex-col justify-center">
           <h1 className="text-2xl lg:text-4xl font-extrabold mb-4">
             Website
@@ -73,7 +69,6 @@ export default function Web() {
             Maximize your brand&apos;s reach with our comprehensive digital
             marketing strategies.
           </p>
-          {/* Divided List into Two Columns */}
           <ul className="text-sm lg:text-lg text-gray-300 grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
             {[
               "Custom Website Design",
@@ -111,9 +106,7 @@ export default function Web() {
         </p>
       </div>
 
-      {/* New Section */}
       <div className="bg-black w-full max-w-6xl  mt-0 rounded-lg shadow-lg p-8 sm:p-10 lg:p-16 lg:grid lg:grid-cols-2 lg:gap-10">
-        {/* Left Column - Heading and Description */}
         <div className="flex flex-col justify-center">
           <h1 className="text-2xl lg:text-4xl font-extrabold text-white mb-6">
             Our <span className="text-orange-500">Services</span> <br />{" "}
@@ -137,7 +130,6 @@ export default function Web() {
           </ul>
         </div>
 
-        {/* Right Column - Image */}
         <motion.div
           className="relative"
           initial={{ opacity: 0, x: -50 }}
@@ -179,7 +171,6 @@ export default function Web() {
           </div>
         </motion.div>
       </div>
-      {/* Marketing Cards Section */}
       <div className="mt-12 w-full max-w-6xl mx-auto">
         <h2 className="text-2xl lg:text-3xl font-bold text-center text-orange-500 mb-"></h2>
         <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
@@ -188,18 +179,15 @@ export default function Web() {
               key={index}
               className="bg-black text-white rounded-lg p-6 relative shadow-md hover:shadow-lg transition duration-300"
             >
-              {/* Top Dotted Icon */}
               <div className="absolute w-full -top-6  flex items-center justify-start  border-gray-300 bg-black">
                 {React.createElement(card.icon, {
                   className:
                     "p-2 text-gray-300 w-12 h-12  text-orange-500 rounded-full border-dotted border-2",
                 })}
               </div>
-              {/* Card Title */}
               <h1 className="text-xl font-extrabold mt-8 mb-4 text-left">
                 {card.title}
               </h1>
-              {/* Card Content */}
               <p className="text-gray-300 text-left text-sm leading-relaxed">
                 {card.content}
               </p>
@@ -207,8 +195,6 @@ export default function Web() {
           ))}
         </div>
       </div>
-
-      {/* <ContactLink /> */}
     </div>
   );
 }

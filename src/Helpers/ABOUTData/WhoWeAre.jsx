@@ -2,7 +2,6 @@ const WhoWeAre = () => {
   return (
     <section className="py-12 px-4 bg-black text-white">
       <div className="max-w-6xl mx-auto text-center">
-        {/* Title Section */}
         <h2 className="text-3xl font-bold uppercase text-orange-500">
           Who We Are
         </h2>
@@ -12,13 +11,10 @@ const WhoWeAre = () => {
           proident, sunt in culpa qui officia deserunt mollit anim id est
           laborum.
         </p>
-        {/* Divider */}
         <div className="w-16 h-1 bg-orange-500 mx-auto mt-4"></div>
       </div>
 
-      {/* Content Section */}
       <div className="mt-12 flex flex-wrap justify-center items-center">
-        {/* Text Section */}
         <div className="w-full lg:w-1/2 p-6">
           <p className="text-white">
             Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -26,7 +22,6 @@ const WhoWeAre = () => {
             cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.
           </p>
-          {/* List Items */}
           <ul className="mt-8 space-y-6">
             {[
               {
@@ -76,10 +71,9 @@ const WhoWeAre = () => {
           </ul>
         </div>
 
-        {/* Image Section */}
         <div className="w-full lg:w-1/2 p-6">
           <img
-            src="/download 2.jpeg" // Replace with your image path
+            src="/download 2.jpeg"
             alt="Who We Are Illustration"
             className="max-w-full"
           />

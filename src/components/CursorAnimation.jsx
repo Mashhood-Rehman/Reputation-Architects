@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -38,7 +37,6 @@ const CursorAnimation = () => {
 
   return (
     <>
-      {/* Outer Circle */}
       <motion.div
         style={{
           x: outerX,
@@ -58,7 +56,6 @@ const CursorAnimation = () => {
         transition={{ duration: 0.2 }}
       />
 
-      {/* Inner Circle */}
       <motion.div
         style={{
           x: cursorX,
