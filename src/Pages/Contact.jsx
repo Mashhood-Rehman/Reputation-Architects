@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
-import { toast } from "react-hot-toast"; // Importing toast
+import { toast } from "react-hot-toast";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -41,13 +41,11 @@ const ContactForm = () => {
       )
       .then(
         (response) => {
-          console.log("Email sent successfully:", response);
-          toast.success("Message sent successfully!"); // Success toast
+          toast.success("Message sent successfully!"); //
           setFormData({ name: "", email: "", subject: "", message: "" });
         },
         (error) => {
-          console.error("Failed to send email:", error);
-          toast.error("Failed to send the message. Please try again later."); // Error toast
+          toast.error("Failed to send the message. Please try again later.");
         }
       )
       .finally(() => {
@@ -63,7 +61,6 @@ const ContactForm = () => {
         transition={{ duration: 0.8, ease: "easeInOut" }}
         className="grid sm:grid-cols-2 items-center gap-8 p-6 sm:p-8 mx-auto max-w-5xl bg-gray-50 shadow-lg rounded-md font-sans"
       >
-        {/* Left Section */}
         <motion.div
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -105,7 +102,6 @@ const ContactForm = () => {
             </ul>
           </div>
 
-          {/* Socials Section */}
           <div className="mt-8">
             <h2 className="text-gray-800 text-lg font-semibold">Socials</h2>
             <ul className="flex mt-4 justify-center sm:justify-start space-x-4">
@@ -132,7 +128,6 @@ const ContactForm = () => {
           </div>
         </motion.div>
 
-        {/* Right Section (Form) */}
         <motion.form
           onSubmit={handleSubmit}
           initial={{ x: 50, opacity: 0 }}

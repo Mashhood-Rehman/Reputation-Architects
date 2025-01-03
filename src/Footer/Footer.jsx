@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 const galleryImages = [
   "/G1.webp",
@@ -11,12 +14,57 @@ const galleryImages = [
 ];
 
 const Footer = () => {
+  const [formData, setFormData] = useState({
+    email: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const emailData = {
+      ...formData,
+      to_email: import.meta.env.VITE_TO_EMAIL,
+    };
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_NEWSLETTER_TEMPLATE_ID,
+        emailData,
+        import.meta.env.VITE_EMAILJS_USER_ID
+      )
+      .then(
+        (response) => {
+          console.log("Email sent successfully:", response);
+          toast.success("Message sent successfully!");
+          setFormData({ email: "" });
+        },
+        (error) => {
+          console.error("Failed to send email:", error);
+          toast.error("Failed to send the message. Please try again later.");
+        }
+      )
+      .finally(() => {
+        setIsSubmitting(false);
+      });
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
   return (
     <div className="relative bg-black bg-opacity-90 bg-[url('/Footer.webp')] bg-cover bg-center">
       <div className="absolute inset-0"></div>
       <div className="max-w-screen-xl flex flex-col-reverse mx-auto p-4 sm:p-6 lg:p-12">
         <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Company Info Section */}
           <div className="space-y-4 sm:space-y-6 mt-6 sm:mt-10">
             <Link to="/">
               <img src="/Main-Logo.webp" alt="Logo" width={120} height={50} />
@@ -26,7 +74,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* About Us Section */}
           <div>
             <h4 className="text-sm sm:text-base font-bold text-white mt-6 sm:mt-10">
               About Us
@@ -47,7 +94,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services Gallery Section */}
           <div className="space-y-4 sm:space-y-6">
             <h3 className="text-lg sm:text-xl lg:text-2xl text-white font-semibold mt-6 sm:mt-10">
               Our Services
@@ -68,7 +114,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Contact Info Section */}
           <div className="space-y-4 sm:space-y-6">
             <h3 className="text-lg sm:text-xl lg:text-2xl text-white font-semibold mt-6 sm:mt-10">
               Contact Us
@@ -100,7 +145,6 @@ const Footer = () => {
 
         <hr className="my-6 sm:my-8 lg:my-12 border-gray-700" />
 
-        {/* Newsletter Section */}
         <div className="text-center text-white space-y-4 sm:space-y-6 max-w-sm mx-auto">
           <h3 className="text-lg sm:text-xl lg:text-2xl font-bold">
             Newsletter
@@ -110,19 +154,32 @@ const Footer = () => {
             news, updates, and exclusive offers. Get valuable insights. Join our
             community today!
           </p>
-          <div className="bg-gray-800 flex   items-center px-3 py-2 rounded-full space-y-3 sm:space-y-0 sm:space-x-3">
-            <input
-              name="email"
-              type="email"
-              placeholder="Enter your email"
-              className="flex-grow z-50 bg-transparent text-xs sm:text-sm text-white outline-none pl-2"
-            />
-            <button
-              type="button"
-              className="bg-[#f97316] hover:bg-orange-600 text-white text-xs sm:text-sm rounded-full px-4 py-2 transition-all tracking-wide"
+          <div className="bg-gray-800 flex items-center px-3 py-2 rounded-full space-y-3 sm:space-y-0 sm:space-x-3">
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="w-full flex items-center"
             >
-              Submit
-            </button>
+              <input
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                placeholder="Enter your email"
+                className="flex-grow z-50 bg-transparent text-xs sm:text-sm text-white outline-none pl-2 py-2 rounded-l-full"
+              />
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className={`text-white ${
+                  isSubmitting
+                    ? "bg-gray-400"
+                    : "bg-orange-500 hover:bg-orange-600"
+                } rounded-2xl text-sm px-4 py-2 z-30 w-24 transition-all  duration-300 ease-in-out`}
+              >
+                {isSubmitting ? "Sending..." : "Send"}
+              </button>
+            </form>
           </div>
         </div>
       </div>

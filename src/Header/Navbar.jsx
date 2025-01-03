@@ -48,7 +48,6 @@ const Navbar = () => {
           )}
         </button>
 
-        {/* Logo */}
         <div className="flex items-center space-x-4">
           <Link to="/">
             <img
@@ -61,7 +60,6 @@ const Navbar = () => {
         <div></div>
       </div>
 
-      {/* Sidebar */}
       <motion.div
         initial={{ x: "-100%", opacity: 0 }}
         animate={{

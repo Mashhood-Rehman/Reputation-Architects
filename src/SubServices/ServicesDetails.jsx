@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { servicesInfo } from "../Helpers/Data";
-// import { servicesInfo } from "../Helpers/Data ";
 
 const ServiceDetails = () => {
   const { id } = useParams();

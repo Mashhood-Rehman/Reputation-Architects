@@ -14,5 +14,5 @@
 .animate-marquee-ltr {
   display: inline-flex;
   animation: marquee-ltr 40s linear infinite;
-  will-change: transform; /* Optimizes animation for smooth performance */
+  will-change: transform;
 }
