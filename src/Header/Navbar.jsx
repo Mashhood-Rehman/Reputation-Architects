@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { navdData } from "../Helpers/Data";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Icon } from '@iconify/react';  // Import Iconify
 
 const Navbar = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -38,13 +39,9 @@ const Navbar = () => {
           className="text-white p-3 rounded-full focus:outline-none z-50"
         >
           {isSidebarOpen ? (
-            <span className="text-2xl">&times;</span>
+            <Icon icon="mdi:close" className="text-3xl text-white z-20" />  
           ) : (
-            <>
-              <span className="block w-6 h-0.5 bg-white mb-1"></span>
-              <span className="block w-6 h-0.5 bg-white mb-1"></span>
-              <span className="block w-6 h-0.5 bg-white mb-1"></span>
-            </>
+            <Icon icon="mdi:menu" className="text-3xl" />  
           )}
         </button>
 
