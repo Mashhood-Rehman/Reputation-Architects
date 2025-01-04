@@ -20,7 +20,7 @@ const HeroPage = () => {
   ];
 
   return (
-    <div className="bg-[url('/b4.jpg')] h-[70vh] lg:h-[100vh] bg-fixed bg-center bg-cover relative">
+    <div className="bg-[url('/b4.webp')] h-[70vh] lg:h-[100vh] bg-fixed bg-center bg-cover relative">
       {/* Animated triangles */}
       {triangles.map((triangle, index) => (
         <motion.div
