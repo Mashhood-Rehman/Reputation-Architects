@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 const WhoWeAre = () => {
   return (
     <section className="py-12 px-4 bg-black text-white">
@@ -71,13 +72,39 @@ const WhoWeAre = () => {
           </ul>
         </div>
 
-        <div className="w-full lg:w-1/2 p-6">
-          <img
-            src="/download 2.jpeg"
-            alt="Who We Are Illustration"
-            className="max-w-full"
-          />
-        </div>
+        <div className="group relative w-full max-w-sm overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="/G3.webp"
+              alt="Example Image"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <motion.div
+              className="absolute -right-8 -bottom-8 bg-orange-500 rounded-xl p-4 shadow-lg w-48"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <div className="flex items-center gap-2">
+                <div className="h-3 w-3 rounded-full bg-orange-500" />
+                <span className="text-sm font-medium text-black"></span>
+              </div>
+            </motion.div>
+            <motion.div
+              className="absolute -left-8 -top-8 bg-orange-500 rounded-xl p-4 shadow-lg w-48"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+            >
+              <div className="flex items-center gap-2">
+                <div className="h-3 w-3 rounded-full bg-orange-500" />
+                <span className="text-sm font-medium text-black"></span>
+              </div>
+            </motion.div>
+            <div className="absolute inset-0 bg-white/10 transition-all duration-300 transform scale-x-0 origin-left group-hover:scale-x-100"></div>
+            <div className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              {" "}
+            </div>
+          </div>
       </div>
     </section>
   );

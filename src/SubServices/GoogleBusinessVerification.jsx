@@ -11,22 +11,24 @@ const GoogleBusinessVerification = () => {
 
   return (
     <div className="bg-black text-white flex flex-col items-center px-4 py-8 sm:px-6 lg:px-16 lg:gap-12">
-      <div className="flex mt-8 flex-col lg:flex-row items-center justify-between w-full max-w-6xl gap-8 lg:gap-16 bg-black rounded-xl p-6 lg:p-12 shadow-lg relative">
-        <div className="w-full mt-12 flex justify-start lg:absolute lg:top-4 lg:left-4 mb-4 lg:mb-0">
-          <Link
-            to="/services"
-            className="text-white hover:text-orange-500 transition duration-300 flex items-center"
-          >
-            <Icon icon="si:arrow-right-line" className="mr-2 text-sm" />
-            <span className="text-sm">Back to Services</span>
-          </Link>
-        </div>
+      <div className="flex mt-11 flex-col lg:flex-row items-center justify-between w-full max-w-6xl gap-8 lg:gap-16 bg-black rounded-xl p-6 lg:p-12 shadow-lg relative">
+         <div className="w-full mt-4  flex justify-start lg:absolute lg:top-4 lg:left-4 mb-2 lg:mb-0">
+                 <Link
+                   to="/services"
+                   className="text-white hover:text-orange-500 transition duration-300 flex items-center"
+                 >
+                   <Icon icon="si:arrow-left-line" className=" mr-2 text-sm" />
+                   <span className="text-sm ">Back to Services</span>
+                 </Link>
+               </div>
 
         <div className="group relative w-full max-w-sm overflow-hidden rounded-lg shadow-lg">
           <img
-            src="/GoogleBusiness.webp"
+            src="/GoogleBusiness2.webp"
             alt="Example Image"
-            className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
+            height={300}
+            width={300}
+            className="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
           />
           <motion.div
             className="absolute -right-8 -bottom-8 bg-orange-500 rounded-xl p-4 shadow-lg w-48"
@@ -50,7 +52,7 @@ const GoogleBusinessVerification = () => {
             <div className="flex items-center gap-2">
               <div className="h-3 w-3 rounded-full bg-orange-500" />
               <span className="text-sm font-medium text-black">
-                Build Trust
+              
               </span>
             </div>
           </motion.div>
@@ -64,7 +66,7 @@ const GoogleBusinessVerification = () => {
             <span className="text-orange-500 ml-2">Business Verification</span>
           </h1>
           <p className="text-gray-300 text-sm lg:text-lg mb-6">
-            Verify your business on Google and boost credibility.
+            Verify your business on Google and boost credibility
           </p>
           <ul className="text-sm lg:text-lg text-gray-300 grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
             {[
@@ -135,9 +137,11 @@ const GoogleBusinessVerification = () => {
         >
           <div className="group relative w-full max-w-sm overflow-hidden rounded-lg shadow-lg">
             <img
-              src="/GoogleBusiness2.webp"
+              src="/GoogleBusiness.webp"
               alt="Example Image"
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              height={100}
+              width={100}
+              className="w-auto h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <motion.div
               className="absolute -right-8 -bottom-8 bg-orange-500 rounded-xl p-4 shadow-lg w-48"

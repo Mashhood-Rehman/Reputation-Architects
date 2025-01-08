@@ -6,9 +6,11 @@ import { BrowserRouter } from "react-router-dom";
 import Navbar from "./Header/Navbar.jsx";
 import Footer from "./Footer/Footer.jsx";
 import FAQ from "./Helpers/FAQ.jsx";
+import CursorAnimation from "./Helpers/CursorAnimation";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
+    <CursorAnimation ClassName="hidden lg-block"/>
       <Navbar />
       <App />
       <FAQ />
