@@ -7,6 +7,7 @@ const ContactLink = React.lazy(() => import("../components/ContactLink"));
 
 import About from "../components/About";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   useEffect(() => {
@@ -14,6 +15,14 @@ const Home = () => {
   });
   return (
     <div>
+      <Helmet>
+        <meta
+          name="description"
+          content="We are a top digital marketing agency in Austin, offering expert services in SEO, social media marketing, PPC, and web development to help your business grow online."
+        />
+        <title>Reputation Architects LLC | Boost Your Business</title>
+      </Helmet>
+
       <CursorAnimation />
       <HeroPage />
 

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 import { toast } from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -55,6 +56,14 @@ const ContactForm = () => {
 
   return (
     <div className="z-50 flex flex-col bg-black min-h-screen justify-center p-4 sm:p-8">
+      <Helmet>
+        <meta
+          name="description"
+          content="Get in touch with our team for inquiries, project collaboration, or digital marketing consultation. Reach out via email or social media."
+        />
+        <title>Contact Us | Reputation Architects Consultation</title>
+      </Helmet>
+
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}

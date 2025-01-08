@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const PackageDetails = () => {
   useEffect(() => {
@@ -70,6 +71,15 @@ const PackageDetails = () => {
 
   return (
     <div className="min-h-screen bg-black">
+      <Helmet>
+        <meta
+          name="description"
+          content="Explore our digital marketing packages designed to help your business succeed. Choose from Basic, Standard, or Premium packages with SEO, social media, and web design services."
+        />
+        <title>
+          Digital Marketing Packages | SEO, Web Design & Social Media
+        </title>
+      </Helmet>
       <div className="bg-black text-white py-20 lg:py-32 relative overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
