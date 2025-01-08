@@ -1,10 +1,8 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-router-dom";
-import React, { memo } from "react";
+import { memo } from "react";
 import CircleLogo from "/src/components/CircleLogo.jsx";
-import { Link } from "react-router-dom";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 const HeroPage = () => {
