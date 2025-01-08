@@ -1,8 +1,9 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-router-dom";
-import React, { memo } from "react";
+import { memo } from "react";
 import CircleLogo from "/src/components/CircleLogo.jsx";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 const HeroPage = () => {
   const { scrollYProgress } = useScroll();
@@ -49,22 +50,61 @@ const HeroPage = () => {
         />
       ))}
 
-      {/* Social Media Links */}
-      <div className="absolute z-10 space-y-8 lg:flex lg:flex-col top-1/3 left-4 hidden">
-        {["fb11-min.webp", "instaram-icon.webp", "inn-min.webp"].map((imgSrc, idx) => (
-          <Link key={idx} to="https://www.facebook.com/profile.php?id=61566739650180">
-            <img
-              src={`/${imgSrc}`}
-              alt="social icon"
-              width={50}
-              height={50}
-              className="h-auto w-5 p-1"
-            />
-          </Link>
-        ))}
-      </div>
+      <span className="absolute z-10 space-y-8 lg:flex lg:flex-col top-1/3 left-4 hidden">
+        <Link
+          to="https://www.facebook.com/profile.php?id=61571549906577"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon
+            className="text-white"
+            icon="basil:facebook-outline"
+            width="24"
+            height="24"
+          />
+        </Link>
+        <Link
+          to="https://www.instagram.com/reputationarchitectsllc/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon
+            icon="jam:instagram"
+            width="24"
+            height="24"
+            className="text-white"
+          />
+        </Link>
+        <Link
+          to="https://www.linkedin.com/in/reputation-architects-llc-251498344/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon
+            icon="basil:linkedin-outline"
+            width="24"
+            height="24"
+            className="text-white"
+          />
+        </Link>
+        <Link
+          to="https://x.com/LlcReputation"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon
+            icon="prime:twitter"
+            width="18"
+            height="18"
+            className="text-white"
+          />
+        </Link>
+      </span>
 
-      <motion.div className="fixed lg:left-5 top-1/4 w-full flex items-center justify-center" style={{ opacity, scale, y }}>
+      <motion.div
+        className="fixed lg:left-5 top-1/4 w-full flex items-center justify-center"
+        style={{ opacity, scale, y }}
+      >
         <div className="text-white text-left">
           <motion.h1
             className="text-3xl mr-6 lg:mr-0 lg:text-6xl font-bold mb-4"

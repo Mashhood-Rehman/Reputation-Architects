@@ -1,9 +1,9 @@
 import { Icon } from "@iconify/react";
 import Web from "../SubServices/Web";
 import SEO from "../SubServices/SEO";
-import DigitalMarketing from "../SubServices/DigitalMarketing";
-import GoogleAd from "../SubServices/GoogleAd";
 import SocialMedia from "../SubServices/SocialMedia";
+import ReviewsManagement from "../SubServices/ReviewsManagement";
+import GoogleBusinessVerification from "../SubServices/GoogleBusinessVerification";
 
 export const navdData = [
   { name: "Home", href: "/" },
@@ -27,14 +27,16 @@ export const cards = [
       "Find businesses selling quality products. Targeted Audience is the right place. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eos aliquam blanditiis, nobis ipsam incidunt reprehenderit odio? Eveniet, cumque sequi. Recusandae quas aliquid quam ipsum vitae doloribus nostrum dicta! Consequatur?",
   },
   {
-    icon: () => <Icon icon="mdi:account-group" className="h-8 w-8 text-primary" />,
+    icon: () => (
+      <Icon icon="mdi:account-group" className="h-8 w-8 text-primary" />
+    ),
     title: "Research Competition",
     content:
       "We research the market and competition, then start marketing your business. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eos aliquam blanditiis, nobis ipsam incidunt reprehenderit odio? Eveniet, cumque sequi. Recusandae quas aliquid quam ipsum vitae doloribus nostrum dicta! Consequatur?",
   },
 ];
 
-export const digitalMarketing = [
+export const reviewsManagement = [
   "SEO (Search Engine Optimization)",
   "Social Media Marketing (SMM)",
   "Pay-Per-Click Advertising (PPC)",
@@ -79,19 +81,18 @@ export const servicesInfo = [
   },
   {
     icon: () => <Icon icon="mdi:earth" className="h-8 w-8 text-white" />,
-    title: "Digital Marketing",
-    item: <DigitalMarketing />,
-    path: "DigitalMarketing",
+    title: "Reviews Management",
+    item: <ReviewsManagement />,
+    path: "Reviews Management",
     description:
       "Comprehensive digital marketing solutions to grow your online presence and reach.",
   },
   {
     icon: () => <Icon icon="mdi:chart-line" className="h-8 w-8 text-white" />,
-    title: "Google Ads",
-    item: <GoogleAd />,
-    path: "GoogleAd",
+    title: "Google Business Verification",
+    item: <GoogleBusinessVerification />,
+    path: "Google Business Verification",
     description:
       "Targeted advertising campaigns to maximize your ROI and drive qualified traffic.",
   },
 ];
-

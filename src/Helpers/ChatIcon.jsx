@@ -25,7 +25,7 @@ const ChatIcon = () => {
     >
       {visible && (
         <Link
-          to="https://wa.me/923316361916"
+          to="https://wa.me/+15123632731"
           target="_blank"
           rel="noopener noreferrer"
           className="z-50 flex items-center justify-center h-16 w-16 bg-green-500 rounded-full shadow-lg hover:scale-110 transition-transform"

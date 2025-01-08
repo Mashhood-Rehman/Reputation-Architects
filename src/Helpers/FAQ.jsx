@@ -6,36 +6,37 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question:
-        "Are there any special discounts or promotions available during the event?",
+      question: "What digital marketing services do you offer for businesses?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor auctor arcu, at fermentum dui. Maecenas vestibulum a turpis in lacinia. Proin aliquam turpis at erat venenatis malesuada.",
+        "We offer a comprehensive range of digital marketing services including SEO, PPC, social media marketing, Web Development, content creation, and conversion rate optimization to help your business grow and succeed online.",
     },
     {
       question:
-        "What are the dates and locations for the product launch events?",
+        "How does SEO help improve my website's visibility on search engines?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor auctor arcu, at fermentum dui. Maecenas congue facilisis sapien, a semper orci facilisis in.",
+        "SEO (Search Engine Optimization) enhances your website's visibility by optimizing on-page elements, creating quality backlinks, and improving your site structure to rank higher on search engine results pages, driving organic traffic.",
     },
     {
-      question: "Can I bring a guest with me to the product launch event?",
+      question: "What is PPC advertising, and how can it benefit my business?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor auctor arcu, at fermentum dui. Maecenas congue facilisis sapien, a semper orci facilisis in.",
+        "PPC (Pay-Per-Click) advertising allows you to display targeted ads on platforms like Google and social media. You pay only when someone clicks your ad. It's a great way to drive immediate traffic and leads to your business.",
     },
     {
-      question: "How can I register for the event?",
+      question:
+        "How do you measure the success of a digital marketing campaign?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor auctor arcu, at fermentum dui. Maecenas congue facilisis sapien, a semper orci facilisis in.",
+        "We measure success through key performance indicators (KPIs) such as website traffic, conversion rates, ROI, and engagement metrics. We provide regular reports to track the progress and optimize campaigns for better results.",
     },
     {
-      question: "Is there parking available at the venue?",
+      question: "Can you help improve my local search rankings?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor auctor arcu, at fermentum dui. Maecenas congue facilisis sapien, a semper orci facilisis in.",
+        "Yes, we specialize in Local SEO. We optimize your business for local search queries, improve your Google My Business profile, and ensure that your business appears in local search results and maps for relevant keywords.",
     },
     {
-      question: "How can I contact the event organizers?",
+      question:
+        "How long does it take to see results from digital marketing campaigns?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor auctor arcu, at fermentum dui. Maecenas congue facilisis sapien, a semper orci facilisis in.",
+        "The timeline for results can vary depending on the strategy and goals. For SEO, it may take a few months to see significant results. However, PPC campaigns can provide immediate results. We tailor our approach to meet your business needs.",
     },
   ];
 
