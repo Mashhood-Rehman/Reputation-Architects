@@ -8,7 +8,7 @@ export default function About() {
               <img
                 height={100}
                 width={100}
-                src="/marketing-min.webp"
+                src="/Digitalmarketing.webp"
                 alt="Creative professional"
                 className="w-full h-full object-cover rounded-lg"
               />
@@ -17,7 +17,7 @@ export default function About() {
 
           <div className="space-y-8">
             <div className="space-y-6">
-              <p className="text-gray-400 text-sm uppercase tracking-wider">
+              <p className="text-orange-500 text-sm uppercase tracking-wider">
                 ABOUT US
               </p>
               <h1 className="lg:text-4xl text-2xl font-bold text-white leading-tight">
@@ -37,9 +37,9 @@ export default function About() {
               {/* Feature 1 - Clean Code */}
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-[#40E0D0]/10 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center">
                     <svg
-                      className="w-6 h-6 text-[#40E0D0]"
+                      className="w-6 h-6 text-orange-500"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -64,9 +64,9 @@ export default function About() {
               {/* Feature 2 - Modern Design */}
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-[#40E0D0]/10 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center">
                     <svg
-                      className="w-6 h-6 text-[#40E0D0]"
+                      className="w-6 h-6 text-orange-500"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"

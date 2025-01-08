@@ -9,8 +9,8 @@ const galleryImages = [
   "/G2.webp",
   "/G3.webp",
   "/G4.webp",
-  "/G5.webp",
-  "/G6.webp",
+  "/G7.webp",
+  "/optimization.webp",
 ];
 
 const Footer = () => {
@@ -62,7 +62,7 @@ const Footer = () => {
 
   return (
     <div className="relative bg-black bg-opacity-90 bg-[url('/Footer.webp')] bg-cover bg-center">
-      <div className="absolute inset-0"></div>
+      
       <div className="max-w-screen-xl flex flex-col-reverse mx-auto p-4 sm:p-6 lg:p-12">
         <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4 sm:space-y-6 mt-6 sm:mt-10">
@@ -121,13 +121,16 @@ const Footer = () => {
             <div className="text-white space-y-2 sm:space-y-4 text-xs sm:text-sm">
               <p>Austin</p>
               <p>+15123632731</p>
-              <Link className="z-40" to="mailto:info@reputation-architects.com">
+              <a
+                className="z-40"
+                href="mailto:info@reputation-architects.com"
+              >
                 info@reputation-architects.com
-              </Link>
+              </a>
 
               <div className="flex space-x-4 mt-4">
-                <Link
-                  to="https://www.facebook.com/profile.php?id=61571549906577"
+                <a
+                  href="https://www.facebook.com/profile.php?id=61571549906577"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -137,9 +140,9 @@ const Footer = () => {
                     height="24"
                     className="text-white"
                   />
-                </Link>
-                <Link
-                  to="https://www.instagram.com/reputationarchitectsllc/"
+                </a>
+                <a
+                  href="https://www.instagram.com/reputationarchitectsllc/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -149,9 +152,9 @@ const Footer = () => {
                     height="24"
                     className="text-white"
                   />
-                </Link>
-                <Link
-                  to="https://www.linkedin.com/in/reputation-architects-llc-251498344/"
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/reputation-architects-llc-251498344/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -161,9 +164,9 @@ const Footer = () => {
                     height="24"
                     className="text-white"
                   />
-                </Link>
-                <Link
-                  to="https://x.com/LlcReputation"
+                </a>
+                <a
+                  href="https://x.com/LlcReputation"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -173,7 +176,7 @@ const Footer = () => {
                     height="18"
                     className="text-white mt-1"
                   />
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -224,3 +227,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

@@ -1,4 +1,4 @@
-import CursorAnimation from "../components/CursorAnimation";
+
 import HeroPage from "../components/HeroPage";
 import Services from "../components/Services";
 import React, { Suspense } from "react";
@@ -14,7 +14,7 @@ const Home = () => {
   });
   return (
     <div>
-      <CursorAnimation />
+      
       <HeroPage />
 
       <About />
