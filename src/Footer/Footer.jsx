@@ -119,25 +119,61 @@ const Footer = () => {
               Contact Us
             </h3>
             <div className="text-white space-y-2 sm:space-y-4 text-xs sm:text-sm">
-              <p>301 Princes Street, Damietta</p>
-              <p>Egypt-104</p>
-              <p>+92-207-823-7766</p>
-              <p>info@example.com</p>
-              <div className="flex gap-4">
-                {[
-                  { icon: "logos:facebook", url: "#" },
-                  { icon: "logos:twitter", url: "#" },
-                  { icon: "logos:linkedin", url: "#" },
-                  { icon: "logos:skype", url: "#" },
-                ].map((social, index) => (
-                  <Link
-                    key={index}
-                    to={social.url}
-                    className="hover:text-[#f97316] transition transform hover:-translate-y-1 duration-300"
-                  >
-                    <Icon icon={social.icon} className="w-5 h-5" />
-                  </Link>
-                ))}
+              <p>Austin</p>
+              <p>+15123632731</p>
+              <Link className="z-40" to="mailto:info@reputation-architects.com">
+                info@reputation-architects.com
+              </Link>
+
+              <div className="flex space-x-4 mt-4">
+                <Link
+                  to="https://www.facebook.com/profile.php?id=61571549906577"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon
+                    icon="basil:facebook-outline"
+                    width="24"
+                    height="24"
+                    className="text-white"
+                  />
+                </Link>
+                <Link
+                  to="https://www.instagram.com/reputationarchitectsllc/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon
+                    icon="jam:instagram"
+                    width="24"
+                    height="24"
+                    className="text-white"
+                  />
+                </Link>
+                <Link
+                  to="https://www.linkedin.com/in/reputation-architects-llc-251498344/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon
+                    icon="basil:linkedin-outline"
+                    width="24"
+                    height="24"
+                    className="text-white"
+                  />
+                </Link>
+                <Link
+                  to="https://x.com/LlcReputation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon
+                    icon="prime:twitter"
+                    width="18"
+                    height="18"
+                    className="text-white mt-1"
+                  />
+                </Link>
               </div>
             </div>
           </div>

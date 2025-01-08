@@ -106,15 +106,36 @@ const ContactForm = () => {
             <h2 className="text-gray-800 text-lg font-semibold">Socials</h2>
             <ul className="flex mt-4 justify-center sm:justify-start space-x-4">
               {[
-                { icon: "mdi:facebook", label: "Facebook" },
-                { icon: "mdi:instagram", label: "Instagram" },
-                { icon: "mdi:twitter", label: "Twitter" },
+                {
+                  icon: "mdi:linkedin",
+                  label: "LinkedIn",
+                  path: "https://www.linkedin.com/in/reputation-architects-llc-251498344/",
+                },
+                {
+                  icon: "mdi:facebook",
+                  label: "Facebook",
+                  path: "https://www.facebook.com/profile.php?id=61571549906577",
+                },
+                {
+                  icon: "mdi:instagram",
+                  label: "Instagram",
+                  path: "https://www.instagram.com/reputationarchitectsllc/",
+                },
+                {
+                  icon: "mdi:twitter",
+                  label: "Twitter",
+                  path: "https://x.com/LlcReputation",
+                },
               ].map((social, index) => (
                 <li
                   key={index}
                   className="bg-gray-100 h-10 w-10 rounded-full flex items-center justify-center shrink-0"
                 >
-                  <Link to="#" aria-label={social.label}>
+                  <Link
+                    to={social.path}
+                    target="_blank"
+                    aria-label={social.label}
+                  >
                     <Icon
                       icon={social.icon}
                       width={20}

@@ -1,18 +1,18 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { cards, digitalMarketing } from "../Helpers/Data";
+import { cards, reviewsManagement } from "../Helpers/Data"; // Updated data
 import { Icon } from "@iconify/react/dist/iconify.js";
 
-const DigitalMarketing = () => {
+const ReviewsManagement = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="bg-black text-white flex flex-col items-center px-4 py-8 sm:px-6 lg:px-16 lg:gap-12">
-      <div className="flex mt-8  flex-col lg:flex-row items-center justify-between w-full max-w-6xl gap-8 lg:gap-16 bg-black rounded-xl p-6 lg:p-12 shadow-lg relative">
-        <div className="w-full  mt-12 flex justify-start lg:absolute lg:top-4 lg:left-4 mb-4 lg:mb-0">
+      <div className="flex mt-8 flex-col lg:flex-row items-center justify-between w-full max-w-6xl gap-8 lg:gap-16 bg-black rounded-xl p-6 lg:p-12 shadow-lg relative">
+        <div className="w-full mt-12 flex justify-start lg:absolute lg:top-4 lg:left-4 mb-4 lg:mb-0">
           <Link
             to="/services"
             className="text-white hover:text-orange-500 transition duration-300 flex items-center"
@@ -24,8 +24,8 @@ const DigitalMarketing = () => {
 
         <div className="group relative w-full max-w-sm overflow-hidden rounded-lg shadow-lg">
           <img
-            src="/dg3.webp"
-            alt="Example Image"
+            src="/reviews-image.jpg" // Change image to reflect reviews
+            alt="Reviews Management"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
           <motion.div
@@ -37,7 +37,7 @@ const DigitalMarketing = () => {
             <div className="flex items-center gap-2">
               <div className="h-3 w-3 rounded-full bg-orange-500" />
               <span className="text-sm font-medium text-black">
-                Innovation First
+                Reputation Boost
               </span>
             </div>
           </motion.div>
@@ -50,7 +50,7 @@ const DigitalMarketing = () => {
             <div className="flex items-center gap-2">
               <div className="h-3 w-3 rounded-full bg-orange-500" />
               <span className="text-sm font-medium text-black">
-                Future Ready
+                Trust and Transparency
               </span>
             </div>
           </motion.div>
@@ -60,15 +60,15 @@ const DigitalMarketing = () => {
 
         <div className="w-full lg:w-2/3 flex flex-col justify-center">
           <h1 className="text-3xl lg:text-4xl font-extrabold mb-4">
-            Digital
-            <span className="text-orange-500 ml-2">Marketing</span> Services
+            Reviews
+            <span className="text-orange-500 ml-2">Management</span> Services
           </h1>
           <p className="text-gray-300 text-sm lg:text-lg mb-6">
-            Maximize your brand&apos;s reach with our comprehensive digital
-            marketing strategies.
+            Enhance your online reputation by effectively managing and
+            responding to reviews.
           </p>
           <ul className="text-sm lg:text-lg text-gray-300 grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
-            {digitalMarketing.map((item, index) => (
+            {reviewsManagement.map((item, index) => (
               <li key={index} className="group flex items-center">
                 <span className="text-orange-500 mr-2">→</span>
                 <span className="relative text-gray-300 group-hover:text-orange-500 transition-all duration-300">
@@ -82,36 +82,32 @@ const DigitalMarketing = () => {
       </div>
       <div className="flex flex-col justify-center">
         <h1 className="text-3xl lg:text-4xl text-center font-extrabold text-white mb-3">
-          Services <span className="text-orange-500">Overview</span> <br />
+          Reviews Management <span className="text-orange-500">Overview</span>
         </h1>
         <p className="text-gray-300 pl-20 pr-20 text-sm sm:text-base leading-relaxed">
-          Xsuite Digital offers cutting-edge Digital Marketing Services designed
-          to enhance your online presence and amplify your brand&apos;s digital
-          footprint. We specialize in creating and managing data-driven
-          marketing campaigns that drive engagement, boost conversions, and
-          foster meaningful connections with your target audience. Our expertise
-          includes SEO, SMM, and PPC advertising, ensuring your business thrives
-          in the competitive digital landscape. With a focus on measurable
-          results and innovative strategies, Xsuite Digital helps your brand
-          achieve sustainable growth and stand out in today&apos;s dynamic
-          online market.
+          Our Reviews Management Services help businesses track, manage, and
+          improve their online reviews across various platforms. We specialize
+          in building positive reputations by helping businesses respond to
+          customer feedback, manage ratings, and drive positive online
+          sentiment. Whether you are looking to increase customer trust or
+          resolve negative reviews, our services can elevate your brand&apos;s
+          online presence.
         </p>
       </div>
 
-      <div className="bg-black w-full max-w-6xl  mt-0 rounded-lg shadow-lg p-8 sm:p-10 lg:p-16 lg:grid lg:grid-cols-2 lg:gap-10">
+      <div className="bg-black w-full max-w-6xl mt-0 rounded-lg shadow-lg p-8 sm:p-10 lg:p-16 lg:grid lg:grid-cols-2 lg:gap-10">
         <div className="flex flex-col justify-center">
           <h1 className="text-3xl lg:text-4xl font-extrabold text-white mb-6">
-            Our <span className="text-orange-500">Services</span> <br />{" "}
-            Expertise
+            Our <span className="text-orange-500">Services</span> Expertise
           </h1>
-          <ul className="text-sm lg:text-lg text-gray-300   gap-y-4 gap-x-8">
+          <ul className="text-sm lg:text-lg text-gray-300 gap-y-4 gap-x-8">
             {[
-              "Online Promotion: Showcase your products across social media and digital platforms",
-              "Search Engine Optimization: Enhance website visibility with optimized content",
-              "Brand Strengthening: Build a stronger online presence with expert strategies",
-              "Expert Support: Rely on our dedicated team for impactful digital growth",
+              "Online Reputation Monitoring: Track reviews and ratings across various platforms",
+              "Customer Engagement: Respond to reviews and engage with customers directly",
+              "Sentiment Analysis: Assess customer feedback to improve service quality",
+              "Reputation Recovery: Manage negative reviews and build a positive online image",
             ].map((item, index) => (
-              <li key={index} className="group flex sm:mb[-8 ] items-center">
+              <li key={index} className="group flex sm:mb[-8] items-center">
                 <span className="text-orange-500 mr-2">→</span>
                 <span className="relative text-gray-300 group-hover:text-white transition-all duration-300">
                   {item}
@@ -130,7 +126,7 @@ const DigitalMarketing = () => {
         >
           <div className="group relative w-full max-w-sm overflow-hidden rounded-lg shadow-lg">
             <img
-              src="/DG.webp"
+              src="/reviews-management-image.jpg" // Change image to reflect reviews management
               alt="Example Image"
               className="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
             />
@@ -163,6 +159,7 @@ const DigitalMarketing = () => {
           </div>
         </motion.div>
       </div>
+
       <div className="mt-12 w-full max-w-6xl mx-auto">
         <h2 className="text-2xl lg:text-3xl font-bold text-center text-orange-500 mb-"></h2>
         <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
@@ -171,10 +168,10 @@ const DigitalMarketing = () => {
               key={index}
               className="bg-black text-white rounded-lg p-6 relative shadow-md hover:shadow-lg transition duration-300"
             >
-              <div className="absolute w-full -top-6  flex items-center justify-start  border-gray-300 bg-black">
+              <div className="absolute w-full -top-6 flex items-center justify-start border-gray-300 bg-black">
                 {React.createElement(card.icon, {
                   className:
-                    "p-2 text-gray-300 w-12 h-12  text-orange-500 rounded-full border-dotted border-2",
+                    "p-2 text-gray-300 w-12 h-12 text-orange-500 rounded-full border-dotted border-2",
                 })}
               </div>
               <h1 className="text-xl font-extrabold mt-8 mb-4 text-left">
@@ -191,4 +188,4 @@ const DigitalMarketing = () => {
   );
 };
 
-export default DigitalMarketing;
+export default ReviewsManagement;

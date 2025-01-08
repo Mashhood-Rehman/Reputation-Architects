@@ -2,6 +2,8 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import CircleLogo from "/src/components/CircleLogo.jsx";
 import { Link } from "react-router-dom";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 const HeroPage = () => {
   const { scrollYProgress } = useScroll();
@@ -45,32 +47,53 @@ const HeroPage = () => {
         />
       ))}
 
-      <span className=" absolute z-10  space-y-8  lg:flex lg:flex-col top-1/3 left-4 hidden   ">
-        <Link to="https://www.facebook.com/profile.php?id=61566739650180">
-          <img
-            src="/fb11-min.webp"
-            alt="facebook icon"
-            width={50}
-            height={50}
-            className="h-auto w-5 p-1"
+      <span className="absolute z-10 space-y-8 lg:flex lg:flex-col top-1/3 left-4 hidden">
+        <Link
+          to="https://www.facebook.com/profile.php?id=61571549906577"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon
+            className="text-white"
+            icon="basil:facebook-outline"
+            width="24"
+            height="24"
           />
         </Link>
-        <Link to="https://www.facebook.com/profile.php?id=61566739650180">
-          <img
-            src="/instaram-icon.webp"
-            alt="facebook icon"
-            width={50}
-            height={50}
-            className="h-auto w-6 p-1"
+        <Link
+          to="https://www.instagram.com/reputationarchitectsllc/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon
+            icon="jam:instagram"
+            width="24"
+            height="24"
+            className="text-white"
           />
         </Link>
-        <Link to="https://www.facebook.com/profile.php?id=61566739650180">
-          <img
-            src="/inn-min.webp"
-            alt="facebook icon"
-            width={50}
-            height={50}
-            className="h-auto w-7 p-1"
+        <Link
+          to="https://www.linkedin.com/in/reputation-architects-llc-251498344/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon
+            icon="basil:linkedin-outline"
+            width="24"
+            height="24"
+            className="text-white"
+          />
+        </Link>
+        <Link
+          to="https://x.com/LlcReputation"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon
+            icon="prime:twitter"
+            width="18"
+            height="18"
+            className="text-white"
           />
         </Link>
       </span>
