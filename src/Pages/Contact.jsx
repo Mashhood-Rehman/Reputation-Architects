@@ -68,7 +68,7 @@ const ContactForm = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="grid sm:grid-cols-2 items-center gap-8 p-6 sm:p-8 mx-auto max-w-5xl bg-gray-50 shadow-lg rounded-md font-sans"
+        className="grid sm:grid-cols-2 items-center gap-8 p-6 sm:p-8 mx-auto max-w-5xl bg-gray-200 shadow-lg rounded-md font-sans"
       >
         <motion.div
           initial={{ x: -50, opacity: 0 }}
