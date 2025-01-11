@@ -62,7 +62,6 @@ const Footer = () => {
 
   return (
     <div className="relative bg-black bg-opacity-90 bg-[url('/Footer.webp')] bg-cover bg-center">
-      
       <div className="max-w-screen-xl flex flex-col-reverse mx-auto p-4 sm:p-6 lg:p-12">
         <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4 sm:space-y-6 mt-6 sm:mt-10">
@@ -118,13 +117,15 @@ const Footer = () => {
             <h3 className="text-lg sm:text-xl lg:text-2xl text-white font-semibold mt-6 sm:mt-10">
               Contact Us
             </h3>
-            <div className="text-white space-y-2 sm:space-y-4 text-xs sm:text-sm">
-              <p>Austin</p>
-              <p>+15123632731</p>
+            <div className="text-white flex flex-col space-y-4  sm:space-y-4 text-xs sm:text-sm">
               <a
-                className="z-40"
-                href="mailto:info@reputation-architects.com"
+                href="https://maps.app.goo.gl/fmmTxXrW8cxY4WUcA"
+                target="_blank"
               >
+                5900 Balcones Drive # 20546 Austin, TX 78731
+              </a>
+              <a href="tel:+15123632731">+15123632731</a>
+              <a className="z-40" href="mailto:info@reputation-architects.com">
                 info@reputation-architects.com
               </a>
 
@@ -227,4 +228,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

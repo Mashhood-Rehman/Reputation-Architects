@@ -7,7 +7,7 @@ const ContactLink = React.lazy(() => import("../components/ContactLink"));
 import About from "../components/About";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
-import CursorAnimation from "../components/CursorAnimation";
+import CursorAnimation from "../Helpers/CursorAnimation";
 
 const Home = () => {
   useEffect(() => {
