@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { navdData } from "../Helpers/Data";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Icon } from '@iconify/react';  // Import Iconify
+import { Icon } from "@iconify/react"; // Import Iconify
 
 const Navbar = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -37,11 +37,12 @@ const Navbar = () => {
         <button
           onClick={toggleSidebar}
           className="text-white p-3 rounded-full focus:outline-none z-50"
+          aria-label={isSidebarOpen ? "Close sidebar" : "Open sidebar"}
         >
           {isSidebarOpen ? (
-            <Icon icon="mdi:close" className="text-3xl text-white z-20" />  
+            <Icon icon="mdi:close" className="text-3xl text-white z-20" />
           ) : (
-            <Icon icon="mdi:menu" className="text-3xl" />  
+            <Icon icon="mdi:menu" className="text-3xl" />
           )}
         </button>
 
