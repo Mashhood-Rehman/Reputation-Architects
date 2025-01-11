@@ -3,32 +3,30 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { cards } from "../Helpers/Data";
 import { Icon } from "@iconify/react/dist/iconify.js";
-// import ContactLink from "../../ContactLink";
 
 export default function Web() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  console.log(cards);
 
   return (
     <div className="bg-black text-white flex flex-col items-center px-4 py-8 sm:px-6 lg:px-16 lg:gap-12">
       <div className="flex flex-col mt-10 lg:flex-row items-center justify-between w-full max-w-6xl gap-8 lg:gap-16 bg-black rounded-xl p-6 lg:p-12 shadow-lg relative">
-      <div className="w-full mt-5  flex justify-start lg:absolute lg:top-4 lg:left-4 mb-8 lg:mb-0">
-              <Link
-                to="/services"
-                className="text-white hover:text-orange-500 transition duration-300 flex items-center"
-              >
-                <Icon icon="si:arrow-left-line" className=" mr-2 text-sm" />
-                <span className="text-sm ">Back to Services</span>
-              </Link>
-            </div>
+        <div className="w-full mt-5  flex justify-start lg:absolute lg:top-4 lg:left-4 mb-8 lg:mb-0">
+          <Link
+            to="/services"
+            className="text-white hover:text-orange-500 transition duration-300 flex items-center"
+          >
+            <Icon icon="si:arrow-left-line" className=" mr-2 text-sm" />
+            <span className="text-sm ">Back to Services</span>
+          </Link>
+        </div>
 
-        <div className="group relative w-full max-w-sm overflow-hidden rounded-lg shadow-lg">
+        <div className="group m-8 relative w-full max-w-sm overflow-hidden rounded-lg shadow-lg">
           <img
             src="/Web2.webp"
             alt="Example Image"
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
           />
           <motion.div
             className="absolute -right-8 -bottom-8 bg-orange-500 rounded-xl p-4 shadow-lg w-48"
@@ -92,7 +90,7 @@ export default function Web() {
         <h1 className="text-3xl lg:text-4xl text-center font-extrabold text-white mb-3">
           Services <span className="text-orange-500">Overview</span> <br />
         </h1>
-        <p className="text-gray-300 pl-20 pr-20 text-sm sm:text-base leading-relaxed">
+        <p className="text-gray-300  text-sm sm:text-base leading-relaxed">
           Xsuite Digital offers cutting-edge Digital Marketing Services designed
           to enhance your online presence and amplify your brand&apos;s digital
           footprint. We specialize in creating and managing data-driven
@@ -108,9 +106,8 @@ export default function Web() {
 
       <div className="bg-black w-full max-w-6xl  mt-0 rounded-lg shadow-lg p-8 sm:p-10 lg:p-16 lg:grid lg:grid-cols-2 lg:gap-10">
         <div className="flex flex-col justify-center">
-          <h1 className="text-2xl lg:text-4xl font-extrabold text-white mb-6">
-            Our <span className="text-orange-500">Services</span> <br />{" "}
-            Expertise
+          <h1 className="text-2xl flex items-center space-x-3    lg:text-4xl font-extrabold text-white mb-6">
+            Our <span className="text-orange-500">Services</span> Expertise
           </h1>
           <ul className="text-sm lg:text-lg text-gray-300   gap-y-4 gap-x-8">
             {[
@@ -119,7 +116,7 @@ export default function Web() {
               "Responsive Web Development: Build websites optimized for all devices and browsers.",
               "Diverse Website Types: From blogs and personal sites to corporate, business, and informational platforms.",
             ].map((item, index) => (
-              <li key={index} className="group flex items-center">
+              <li key={index} className="group flex items-start">
                 <span className="text-orange-500 mr-2">→</span>
                 <span className="relative text-gray-300 group-hover:text-white transition-all duration-300">
                   {item}
@@ -140,7 +137,7 @@ export default function Web() {
             <img
               src="/Web4.webp"
               alt="Example Image"
-              className="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
+              className="w-full h-[300px] object-contain transition-transform duration-500 group-hover:scale-110"
             />
             <motion.div
               className="absolute -right-8 -bottom-8 bg-orange-500 rounded-xl p-4 shadow-lg w-48"

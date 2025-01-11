@@ -96,7 +96,7 @@ const SEO = () => {
         <h1 className="text-3xl lg:text-4xl text-center font-extrabold text-white mb-3">
           Services <span className="text-orange-500">Overview</span> <br />
         </h1>
-        <p className="text-gray-300 pl-20 pr-20 text-sm sm:text-base leading-relaxed">
+        <p className="text-gray-300  text-sm sm:text-base leading-relaxed">
           Xsuite Digital offers cutting-edge Digital Marketing Services designed
           to enhance your online presence and amplify your brand&apos;s digital
           footprint. We specialize in creating and managing data-driven

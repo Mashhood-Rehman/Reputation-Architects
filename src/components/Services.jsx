@@ -24,7 +24,7 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <div className="bg-black text-white min-h-screen relative overflow-hidden">
+    <div className="bg-black text-white min-h-[85vh] relative overflow-hidden">
       <div className="max-w-6xl p-4 sm:p-6 md:p-16">
         <div className="flex flex-col lg:flex-row  items-center space-y-6 lg:space-y-0 lg:space-x-6">
           <div className="flex flex-col z-10 lg:flex-row items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-6 text-center lg:text-left">

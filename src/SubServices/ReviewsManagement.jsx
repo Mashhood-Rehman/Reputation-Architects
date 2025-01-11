@@ -12,15 +12,15 @@ const ReviewsManagement = () => {
   return (
     <div className="bg-black text-white flex flex-col items-center px-4 py-8 sm:px-6 lg:px-16 lg:gap-12">
       <div className="flex mt-10 flex-col lg:flex-row items-center justify-between w-full max-w-6xl gap-8 lg:gap-16 bg-black rounded-xl p-6 lg:p-12 shadow-lg relative">
-         <div className="w-full mt-5  flex justify-start lg:absolute lg:top-4 lg:left-4 mb-8 lg:mb-0">
-                 <Link
-                   to="/services"
-                   className="text-white hover:text-orange-500 transition duration-300 flex items-center"
-                 >
-                   <Icon icon="si:arrow-left-line" className=" mr-2 text-sm" />
-                   <span className="text-sm ">Back to Services</span>
-                 </Link>
-               </div>
+        <div className="w-full mt-5  flex justify-start lg:absolute lg:top-4 lg:left-4 mb-8 lg:mb-0">
+          <Link
+            to="/services"
+            className="text-white hover:text-orange-500 transition duration-300 flex items-center"
+          >
+            <Icon icon="si:arrow-left-line" className=" mr-2 text-sm" />
+            <span className="text-sm ">Back to Services</span>
+          </Link>
+        </div>
 
         <div className="group relative w-full max-w-sm overflow-hidden rounded-lg shadow-lg">
           <img
@@ -49,9 +49,7 @@ const ReviewsManagement = () => {
           >
             <div className="flex items-center gap-2">
               <div className="h-3 w-3 rounded-full bg-orange-500" />
-              <span className="text-sm font-medium text-black">
-              
-              </span>
+              <span className="text-sm font-medium text-black"></span>
             </div>
           </motion.div>
           <div className="absolute inset-0 bg-white/10 transition-all duration-300 transform scale-x-0 origin-left group-hover:scale-x-100"></div>
@@ -84,7 +82,7 @@ const ReviewsManagement = () => {
         <h1 className="text-3xl lg:text-4xl text-center font-extrabold text-white mb-3">
           Reviews Management <span className="text-orange-500">Overview</span>
         </h1>
-        <p className="text-gray-300 pl-20 pr-20 text-sm sm:text-base leading-relaxed">
+        <p className="text-gray-300  text-sm sm:text-base leading-relaxed">
           Our Reviews Management Services help businesses track, manage, and
           improve their online reviews across various platforms. We specialize
           in building positive reputations by helping businesses respond to

@@ -35,7 +35,7 @@ export default function About() {
             {/* Features Section */}
             <div className="grid grid-cols-2 gap-6">
               {/* Feature 1 - Clean Code */}
-              <div className="flex items-start space-x-4">
+              <div className=" flex lg:flex-row flex-col  items-start space-x-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center">
                     <svg
@@ -53,8 +53,8 @@ export default function About() {
                     </svg>
                   </div>
                 </div>
-                <div>
-                  <h3 className="text-white font-semibold mb-1">Clean Code</h3>
+                <div className=" text-sm lg:text-lg">
+                  <h3 className="text-white  font-semibold mb-1">Clean Code</h3>
                   <p className="text-gray-400 text-sm">
                     Optimized for better performance
                   </p>
@@ -62,7 +62,7 @@ export default function About() {
               </div>
 
               {/* Feature 2 - Modern Design */}
-              <div className="flex items-start space-x-4">
+              <div className="flex lg:flex-row flex-col items-start space-x-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center">
                     <svg
@@ -80,7 +80,7 @@ export default function About() {
                     </svg>
                   </div>
                 </div>
-                <div>
+                <div className=" text-sm lg:text-lg">
                   <h3 className="text-white font-semibold mb-1">
                     Modern Design
                   </h3>
