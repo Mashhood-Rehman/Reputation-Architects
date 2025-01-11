@@ -81,12 +81,12 @@ const Footer = () => {
               {["Our Story", "Mission and Values", "Team", "Testimonials"].map(
                 (item, index) => (
                   <li key={index}>
-                    <a
-                      href="#"
+                    <Link
+                      href="/about"
                       className="hover:text-[#f97316] transition-colors"
                     >
                       {item}
-                    </a>
+                    </Link>
                   </li>
                 )
               )}
