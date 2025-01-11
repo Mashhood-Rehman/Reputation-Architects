@@ -6,11 +6,11 @@ export default function About() {
           <div className="relative aspect-square w-full max-w-lg mx-auto lg:mx-0">
             <div className="relative h-full">
               <img
-                height={100}
-                width={100}
+                height={500}
+                width={500}
                 src="/Digitalmarketing.webp"
                 alt="Creative professional"
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-auto object-cover rounded-lg"
               />
             </div>
           </div>
