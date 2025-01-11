@@ -16,11 +16,13 @@ const Home = () => {
   return (
     <div>
       <Helmet>
+        <title>
+          Reputation Architects | Boost Online Reputation & Brand Growth
+        </title>
         <meta
           name="description"
-          content="We are a top digital marketing agency in Austin, offering expert services in SEO, social media marketing, PPC, and web development to help your business grow online."
+          content="Build your online presence, elevate your reputation, and grow your business with powerful marketing strategies from Reputation Architects."
         />
-        <title>Reputation Architects LLC | Boost Your Business</title>
       </Helmet>
 
       <CursorAnimation />
