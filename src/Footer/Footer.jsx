@@ -69,7 +69,8 @@ const Footer = () => {
               <img src="/Main-Logo.webp" alt="Logo" width={120} height={50} />
             </Link>
             <p className="text-white text-xs sm:text-sm lg:text-base">
-              Digital Agency with creative ideas and great team support.
+              Digital Excellence, Creative Ideas, and Strong Team Support- Your
+              Success Starts Here.
             </p>
           </div>
 
@@ -139,7 +140,7 @@ const Footer = () => {
                     icon="basil:facebook-outline"
                     width="24"
                     height="24"
-                    className="text-white"
+                    className="text-white hover:text-orange-500 duration-300 ease-in-out "
                   />
                 </a>
                 <a
@@ -151,7 +152,7 @@ const Footer = () => {
                     icon="jam:instagram"
                     width="24"
                     height="24"
-                    className="text-white"
+                    className="text-white hover:text-orange-500 duration-300 ease-in-out "
                   />
                 </a>
                 <a
@@ -163,7 +164,7 @@ const Footer = () => {
                     icon="basil:linkedin-outline"
                     width="24"
                     height="24"
-                    className="text-white"
+                    className="text-white hover:text-orange-500 duration-300 ease-in-out "
                   />
                 </a>
                 <a
@@ -175,7 +176,7 @@ const Footer = () => {
                     icon="prime:twitter"
                     width="18"
                     height="18"
-                    className="text-white mt-1"
+                    className="text-white hover:text-orange-500 duration-300 mt-1 ease-in-out "
                   />
                 </a>
               </div>

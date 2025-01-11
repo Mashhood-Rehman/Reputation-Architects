@@ -58,7 +58,7 @@ const HeroPage = () => {
           aria-label="Visit our Facebook page"
         >
           <Icon
-            className="text-white"
+            className="text-white hover:text-orange-500 duration-300 ease-in-out "
             icon="basil:facebook-outline"
             width="24"
             height="24"
@@ -74,7 +74,7 @@ const HeroPage = () => {
             icon="jam:instagram"
             width="24"
             height="24"
-            className="text-white"
+            className="text-white hover:text-orange-500 duration-300 ease-in-out "
           />
         </Link>
         <Link
@@ -87,7 +87,7 @@ const HeroPage = () => {
             icon="basil:linkedin-outline"
             width="24"
             height="24"
-            className="text-white"
+            className="text-white hover:text-orange-500 duration-300 ease-in-out "
           />
         </Link>
         <Link
@@ -100,7 +100,7 @@ const HeroPage = () => {
             icon="prime:twitter"
             width="18"
             height="18"
-            className="text-white"
+            className="text-white hover:text-orange-500 duration-300 ease-in-out "
           />
         </Link>
       </span>
