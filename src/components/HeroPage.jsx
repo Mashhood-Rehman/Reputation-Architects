@@ -55,6 +55,7 @@ const HeroPage = () => {
           to="https://www.facebook.com/profile.php?id=61571549906577"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Visit our Facebook page"
         >
           <Icon
             className="text-white"
@@ -67,6 +68,7 @@ const HeroPage = () => {
           to="https://www.instagram.com/reputationarchitectsllc/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Visit our Instagram profile"
         >
           <Icon
             icon="jam:instagram"
@@ -79,6 +81,7 @@ const HeroPage = () => {
           to="https://www.linkedin.com/in/reputation-architects-llc-251498344/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Visit our LinkedIn profile"
         >
           <Icon
             icon="basil:linkedin-outline"
@@ -91,6 +94,7 @@ const HeroPage = () => {
           to="https://x.com/LlcReputation"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Visit our Twitter profile"
         >
           <Icon
             icon="prime:twitter"
