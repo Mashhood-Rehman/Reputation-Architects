@@ -24,7 +24,7 @@ const SEO = () => {
 
         <div className="group relative w-full max-w-sm overflow-hidden rounded-lg shadow-lg">
           <img
-            src="/SEO4.webp"
+            src="/SEO1.webp"
             alt="Example Image"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
