@@ -110,14 +110,14 @@ const HeroPage = () => {
         style={{ opacity, scale, y }}
       >
         <div className="text-white text-left">
-          <motion.h1
-            className="text-3xl mr-6 lg:mr-0 lg:text-6xl font-bold mb-4"
+          <motion.div
+            className="  lg:mr-0 lg:text-6xl  mb-4"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Reputation Architects
-          </motion.h1>
+           <img height={800} width={800} src="/heroimg.webp" alt="Reputation-image" />
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: -40 }}
@@ -154,10 +154,11 @@ const HeroPage = () => {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-12 sm:mt-4 flex"
+            className="mt-12 sm:mt-4 flex items-center justify-center"
           >
+            
             <Link to="/Contact">
-              <button className="relative text-white hover:text-orange-500 font-bold group">
+              <button className="relative text-white flex items-center justify-center hover:text-orange-500 font-bold group">
                 Get a Quote →
                 <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
               </button>
