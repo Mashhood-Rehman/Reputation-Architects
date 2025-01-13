@@ -18,6 +18,8 @@ const Navbar = () => {
             setBgColor("bg-transparent");
           }
         }
+      } else {
+        setBgColor("bg-black");
       }
     };
 
