@@ -1,79 +1,49 @@
-"use client";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
-import { useEffect, useState } from "react";
-import { motion, useSpring, useMotionValue } from "framer-motion";
-
-const CursorAnimation = () => {
-  const cursorX = useMotionValue(-100);
-  const cursorY = useMotionValue(-100);
-  const outerX = useSpring(cursorX, { stiffness: 150, damping: 30 });
-  const outerY = useSpring(cursorY, { stiffness: 150, damping: 30 });
-
-  const [isHovering, setIsHovering] = useState(false);
+export default function Component() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      cursorX.set(e.clientX);
-      cursorY.set(e.clientY);
+      setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
-    const handleMouseEnter = () => setIsHovering(true);
-    const handleMouseLeave = () => setIsHovering(false);
-
     window.addEventListener("mousemove", handleMouseMove);
-    document.querySelectorAll("a, button").forEach((el) => {
-      el.addEventListener("mouseenter", handleMouseEnter);
-      el.addEventListener("mouseleave", handleMouseLeave);
-    });
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      document.querySelectorAll("a, button").forEach((el) => {
-        el.removeEventListener("mouseenter", handleMouseEnter);
-        el.removeEventListener("mouseleave", handleMouseLeave);
-      });
     };
   }, []);
 
   return (
-    <>
+    <div className="fixed inset-0 pointer-events-none  z-50 overflow-hidden">
       <motion.div
-        style={{
-          x: outerX,
-          y: outerY,
-          width: "36px",
-          height: "36px",
-          backgroundColor: "rgba(255, 159, 28, 0.4)",
-
-          borderRadius: "50%",
-          mixBlendMode: "difference",
-        }}
-        className="fixed top-0 left-0 pointer-events-none z-50"
+        className="w-4 h-4 rounded-full bg-orange-500 fixed pointer-events-none"
         animate={{
-          scale: isHovering ? 1.5 : 1,
-          opacity: isHovering ? 0.7 : 0.5,
+          x: mousePosition.x - 8,
+          y: mousePosition.y - 8,
         }}
-        transition={{ duration: 0.2 }}
+        transition={{
+          type: "spring",
+          damping: 25,
+          stiffness: 300,
+          mass: 0.5,
+        }}
       />
-
       <motion.div
-        style={{
-          x: cursorX,
-          y: cursorY,
-          width: "12px",
-          height: "12px",
-          backgroundColor: "#f97316",
-
-          borderRadius: "50%",
-        }}
-        className="fixed top-0 left-0 pointer-events-none z-50"
+        className="w-12 h-12 rounded-full border-2 border-orange-500/50 fixed pointer-events-none"
         animate={{
-          scale: isHovering ? 1.2 : 1,
+          x: mousePosition.x - 24,
+          y: mousePosition.y - 24,
         }}
-        transition={{ duration: 0.2 }}
+        transition={{
+          type: "spring",
+          damping: 15,
+          stiffness: 150,
+          mass: 1,
+        }}
       />
-    </>
+    </div>
   );
-};
-
-export default CursorAnimation;
+}

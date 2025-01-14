@@ -4,16 +4,9 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 
-const galleryImages = [
-  "/G1.webp",
-  "/G2.webp",
-  "/G3.webp",
-  "/G4.webp",
-  "/G7.webp",
-  "/optimization.webp",
-];
-
 const Footer = () => {
+  const [loading, setLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     email: "",
   });
@@ -61,169 +54,201 @@ const Footer = () => {
   };
 
   return (
-    <div className="relative bg-black bg-opacity-90 bg-[url('/Footer.webp')] bg-cover bg-center">
-      <div className="max-w-screen-xl flex flex-col-reverse mx-auto p-4 sm:p-6 lg:p-12">
-        <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="space-y-4 sm:space-y-6 mt-6 sm:mt-10">
-            <Link to="/">
-              <img src="/Main-Logo.webp" alt="Logo" width={120} height={50} />
+    <div>
+      <footer className="font-sans tracking-wide bg-black py-20">
+        <div className="container mx-auto flex flex-col item-center ">
+          <div className="flex lg:flex-row flex-col gap-16 w-full max-w-9xl">
+            {/* Company Logo and Newsletter Subscription */}
+            <div className="flex flex-col items-center w-full sm:w-1/2 lg:w-1/4">
+              <Link to="/" className="inline-block mb-3">
+                <img src="/Main-Logo.webp" alt="Logo" width={120} height={50} />{" "}
+              </Link>
+
+              <p className="text-white text-xs sm:text-sm lg:text-base">
+                Digital Excellence, Creative Ideas, and Strong Team Support-
+                Your Success Starts Here.{" "}
+              </p>
+              <form
+                ref={form}
+                onSubmit={sendEmail}
+                className="mt-6 flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-3"
+              >
+                <input
+                  onChange={handleInputChange}
+                  name="email"
+                  type="email"
+                  placeholder="Enter your email"
+                  className="px-4 py-2 rounded-md text-black w-full sm:w-auto focus:outline-none"
+                  required
+                />
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className={`px-4 py-2 ${
+                    loading ? "bg-gray-400" : "bg-white"
+                  } text-black font-semibold rounded-md hover:bg-orange-600`}
+                >
+                  {loading ? "Sending..." : "Subscribe"}
+                </button>
+              </form>
+            </div>
+
+            {/* Get in Touch */}
+            <div className="flex flex-col items-center lg:text-start text-center w-full sm:w-1/2 lg:w-1/4">
+              <h4 className="text-white font-semibold text-lg pr-1 lg:pr-32 ">
+                Get In Touch
+              </h4>
+              <ul className="space-y-2 mt-6 text-gray-300">
+                <li>
+                  <a
+                    href="mailto:info@reputation-architects.com"
+                    className="hover:text-white"
+                  >
+                    <strong className="text-orange-500">Email:</strong>{" "}
+                    info@reputation-architects.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://wa.me/+15123632731"
+                    target="_blank"
+                    className="hover:text-white"
+                  >
+                    <strong className="text-orange-500">Phone:</strong> +1 (512)
+                    363-2731
+                  </a>
+                </li>
+                <li>
+                  <strong className="text-orange-500"> Timing:</strong> Mon-Sat:
+                  9am-5pm
+                </li>
+                <li>
+                  <a
+                    href="https://maps.app.goo.gl/fmmTxXrW8cxY4WUcA"
+                    target="_blank"
+                    className="hover:text-white"
+                  >
+                    <strong className="text-orange-500"> Location:</strong> 5900
+                    Balcones Drive # 20546 Austin, TX 78731
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Services */}
+            <div className="flex flex-col w-full lg:text-start text-center sm:w-1/2 lg:w-1/4">
+              <h4 className="text-white font-semibold text-lg">Services</h4>
+              <ul className="space-y-1 mt-6 text-gray-300">
+                <li>
+                  <Link to="/Services/SEO" className="hover:text-white">
+                    SEO
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/Services/Web" className="hover:text-white">
+                    Website Development
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/Services/Reviews%20Management"
+                    className="hover:text-white"
+                  >
+                    Reviews Management
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/Services/SocialMedia" className="hover:text-white">
+                    Social Media Marketing
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/Services/Google%20Business%20Verification"
+                    className="hover:text-white"
+                  >
+                    Google My Business Verification
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Follow Us */}
+            <div className="flex flex-col items-center w-full sm:w-1/2 lg:w-1/4">
+              <h4 className="text-white font-semibold text-lg">Follow Us</h4>
+              <ul className="mt-6 space-y-4 text-gray-300">
+                <li>
+                  <Link
+                    to="https://www.facebook.com/profile.php?id=61571549906577"
+                    target="_blank"
+                    className="flex items-center space-x-2 hover:text-white"
+                  >
+                    <Icon
+                      icon="ic:baseline-facebook"
+                      className="h-6 w-6 text-white hover:text-orange-500 duration-300 ease-in-out"
+                    />
+                    <span>Facebook</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="https://www.instagram.com/reputationarchitectsllc/"
+                    target="_blank"
+                    className="flex items-center space-x-2 hover:text-white"
+                  >
+                    <Icon
+                      icon="mdi:instagram"
+                      className="h-6 w-6 text-white hover:text-orange-500 duration-300 ease-in-out"
+                    />
+                    <span>Instagram</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="https://www.linkedin.com/in/reputation-architects-llc-251498344/"
+                    target="_blank"
+                    className="flex items-center space-x-2 hover:text-white"
+                  >
+                    <Icon
+                      icon="mdi:linkedin"
+                      className="h-6 w-6 text-white hover:text-orange-500 duration-300 ease-in-out"
+                    />
+                    <span>LinkedIn</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="https://x.com/LlcReputation"
+                    target="_blank"
+                    className="flex items-center space-x-2 hover:text-white"
+                  >
+                    <Icon
+                      icon="prime:twitter"
+                      className="h-6 w-6 text-white hover:text-orange-500 duration-300 ease-in-out"
+                    />
+                    <span>Twitter</span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <hr className="my-10 border-gray-600 w-full" />
+
+          <div className="flex items-center justify-center space-x-4 text-gray-300 text-sm">
+            <Link to="/TermsOfServices" className="hover:text-white">
+              Terms of Service
             </Link>
-            <p className="text-white text-xs sm:text-sm lg:text-base">
-              Digital Excellence, Creative Ideas, and Strong Team Support- Your
-              Success Starts Here.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="text-sm sm:text-base font-bold text-white mt-6 sm:mt-10">
-              About Us
-            </h4>
-            <ul className="space-y-2 mt-2 sm:mt-4 text-white text-xs sm:text-sm">
-              {["Our Story", "Mission and Values", "Team", "Testimonials"].map(
-                (item, index) => (
-                  <li key={index}>
-                    <Link
-                      href="/about"
-                      className="hover:text-[#f97316] transition-colors"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
-
-          <div className="space-y-4 sm:space-y-6">
-            <h3 className="text-lg sm:text-xl lg:text-2xl text-white font-semibold mt-6 sm:mt-10">
-              Our Services
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4">
-              {galleryImages.map((src, index) => (
-                <div
-                  key={index}
-                  className="relative group overflow-hidden rounded-md aspect-[4/3]"
-                >
-                  <img
-                    src={src}
-                    alt={`Gallery ${index + 1}`}
-                    className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-3"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="space-y-4 sm:space-y-6">
-            <h3 className="text-lg sm:text-xl lg:text-2xl text-white font-semibold mt-6 sm:mt-10">
-              Contact Us
-            </h3>
-            <div className="text-white flex flex-col space-y-4  sm:space-y-4 text-xs sm:text-sm">
-              <a
-                href="https://maps.app.goo.gl/fmmTxXrW8cxY4WUcA"
-                target="_blank"
-              >
-                5900 Balcones Drive # 20546 Austin, TX 78731
-              </a>
-              <a href="tel:+15123632731">+15123632731</a>
-              <a className="z-40" href="mailto:info@reputation-architects.com">
-                info@reputation-architects.com
-              </a>
-
-              <div className="flex space-x-4 mt-4">
-                <a
-                  href="https://www.facebook.com/profile.php?id=61571549906577"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon
-                    icon="basil:facebook-outline"
-                    width="24"
-                    height="24"
-                    className="text-white hover:text-orange-500 duration-300 ease-in-out "
-                  />
-                </a>
-                <a
-                  href="https://www.instagram.com/reputationarchitectsllc/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon
-                    icon="jam:instagram"
-                    width="24"
-                    height="24"
-                    className="text-white hover:text-orange-500 duration-300 ease-in-out "
-                  />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/reputation-architects-llc-251498344/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon
-                    icon="basil:linkedin-outline"
-                    width="24"
-                    height="24"
-                    className="text-white hover:text-orange-500 duration-300 ease-in-out "
-                  />
-                </a>
-                <a
-                  href="https://x.com/LlcReputation"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon
-                    icon="prime:twitter"
-                    width="18"
-                    height="18"
-                    className="text-white hover:text-orange-500 duration-300 mt-1 ease-in-out "
-                  />
-                </a>
-              </div>
-            </div>
+            <Link to="/PrivacyPolicy" className="hover:text-white">
+              Privacy Policy
+            </Link>
+            <Link to="/Security" className="hover:text-white">
+              Security
+            </Link>
           </div>
         </div>
-
-        <hr className="my-6 sm:my-8 lg:my-12 border-gray-700" />
-
-        <div className="text-center text-white space-y-4 sm:space-y-6 max-w-sm mx-auto">
-          <h3 className="text-lg sm:text-xl lg:text-2xl font-bold">
-            Newsletter
-          </h3>
-          <p className="text-xs sm:text-sm">
-            Subscribe to our newsletter and stay up to date with the latest
-            news, updates, and exclusive offers. Get valuable insights. Join our
-            community today!
-          </p>
-          <div className="bg-gray-800 flex items-center px-3 py-2 rounded-full space-y-3 sm:space-y-0 sm:space-x-3">
-            <form
-              ref={form}
-              onSubmit={sendEmail}
-              className="w-full flex items-center"
-            >
-              <input
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                placeholder="Enter your email"
-                className="flex-grow z-50 bg-transparent text-xs sm:text-sm text-white outline-none pl-2 py-2 rounded-l-full"
-              />
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className={`text-white ${
-                  isSubmitting
-                    ? "bg-gray-400"
-                    : "bg-orange-500 hover:bg-orange-600"
-                } rounded-2xl text-sm px-4 py-2 z-30 w-24 transition-all  duration-300 ease-in-out`}
-              >
-                {isSubmitting ? "Sending..." : "Send"}
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
+      </footer>
     </div>
   );
 };
