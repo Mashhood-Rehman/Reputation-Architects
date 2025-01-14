@@ -48,7 +48,8 @@ const FAQ = () => {
     <div className="font-sans mx-auto p-6 sm:p-12 lg:p-24 bg-black text-white">
       <div className="mb-6">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center">
-          Frequently Asked Questions
+          Frequently Asked
+          <span className=" text-orange-500 ml-2">Questions</span>
         </h2>
       </div>
       <div className="space-y-4">

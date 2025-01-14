@@ -23,7 +23,7 @@ function TextContent() {
           textShadow: "0 0 4px black, 0 0 4px black",
         }}
       >
-        GENCY CREATIVE
+        AGENCY CREATIVE
       </span>
       <span
         className="font-bold text-4xl md:text-6xl"

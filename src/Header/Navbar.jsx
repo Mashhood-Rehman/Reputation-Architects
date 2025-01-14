@@ -27,7 +27,7 @@ const Navbar = () => {
     <div>
       {/* Navbar */}
       <div
-        className={`${bgColor} hidden duration-500 ease-in-out lg:flex fixed z-50 items-center justify-between w-full p-6 md:p-12`}
+        className={`${bgColor} hidden duration-500 ease-in-out lg:flex fixed z-50 items-center justify-between w-full  p-8`}
       >
         {/* Logo on the left side */}
         <div className="flex items-center space-x-4">
@@ -52,6 +52,7 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
+        <div></div>
       </div>
       <div className="block lg:hidden">
         <Sidebar />

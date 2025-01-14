@@ -28,9 +28,12 @@ const ChatIcon = () => {
           to="https://wa.me/+15123632731"
           target="_blank"
           rel="noopener noreferrer"
-          className="z-50 flex items-center justify-center h-16 w-16 bg-green-500 rounded-full shadow-lg hover:scale-110 transition-transform"
+          className="z-50 flex items-center justify-center   rounded-full shadow-lg hover:scale-110 transition-transform"
         >
-          <Icon icon="tabler:message-circle" width={32} color="white" />
+          <Icon
+            icon="fa-brands:whatsapp"
+            className=" h-16 w-16 text-green-500"
+          />
         </Link>
       )}
     </div>
