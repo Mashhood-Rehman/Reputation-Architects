@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { navdData } from "../Helpers/Data";
 import Sidebar from "./Sidebar";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 const Navbar = () => {
   const [bgColor, setBgColor] = useState("bg-transparent");
@@ -52,7 +53,12 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <div></div>
+        <div className=" flex items-center text-white hover:text-orange-500 duration-300 ease-in-out">
+          <Icon icon="ion:call-outline" className=" h-6 w-6 " />
+          <a href="tel:+1(512)363-2731" className="  ">
+            +1 (512) 363-2731
+          </a>
+        </div>
       </div>
       <div className="block lg:hidden">
         <Sidebar />
