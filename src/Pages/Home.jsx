@@ -29,8 +29,8 @@ const Home = () => {
       <CursorAnimation />
       <HeroPage />
 
-      <About />
       <Services />
+      <About />
       <Suspense
         fallback={<div className="bg-black text-white">Loading...</div>}
       >

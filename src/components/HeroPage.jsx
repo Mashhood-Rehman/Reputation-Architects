@@ -62,7 +62,7 @@ const HeroPage = () => {
         </Link>
       </span>
 
-      <motion.div className="w-full h-full flex items-center justify-center">
+      <motion.div className="w-full h-full flex items-center  p-2 justify-center">
         <div className="text-white text-center">
           <motion.div
             className=" mb-4"
@@ -75,7 +75,7 @@ const HeroPage = () => {
               width={500}
               src="/heroimg.webp"
               alt="Reputation-image"
-              className="w-full max-w-[300px] sm:max-w-[700px] lg:ml-0 ml-6  md:max-w-[600px] lg:max-w-[1000px] "
+              className="w-full max-w-[300px]  sm:max-w-[700px] ml-6 lg:ml-0   md:max-w-[600px] lg:max-w-[1000px] "
             />
           </motion.div>
 
