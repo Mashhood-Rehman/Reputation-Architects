@@ -79,6 +79,11 @@ const ContactLink = () => {
         <h2 className="text-2xl text-white sm:text-3xl md:text-5xl lg:text-6xl font-bold text-center mt-8 sm:mt-16 max-w-4xl mx-auto leading-tight">
           Have Any Projects In Mind? Get In Touch With Us!
         </h2>
+        <div className=" flex items-center justify-center  ">
+          <button className=" text-white hover:text-orange-500 duration-300 ease-in-out mt-4  text-xl ">
+            Apply for Meeting
+          </button>
+        </div>
       </div>
       <motion.div
         className="absolute bottom-0 left-0 right-0 h-16 sm:h-32 pointer-events-none"

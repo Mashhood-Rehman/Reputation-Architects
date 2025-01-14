@@ -3,6 +3,7 @@ import Services from "../components/Services";
 import React, { Suspense } from "react";
 const Testimonials = React.lazy(() => import("../components/Testimonial"));
 const ContactLink = React.lazy(() => import("../components/ContactLink"));
+const Stats = React.lazy(() => import("../Helpers/Stats"));
 
 import About from "../components/About";
 import { useEffect } from "react";
@@ -33,6 +34,8 @@ const Home = () => {
       <Suspense
         fallback={<div className="bg-black text-white">Loading...</div>}
       >
+        <Stats />
+
         <Testimonials />
         <ContactLink />
       </Suspense>

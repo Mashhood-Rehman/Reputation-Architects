@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Icon } from "@iconify/react"; // Import Iconify for potential icons
-import { navdData } from "../Helpers/Data"; // Import the navdData array
+import { navdData } from "../Helpers/Data";
 import Sidebar from "./Sidebar";
 
 const Navbar = () => {
   const [bgColor, setBgColor] = useState("bg-transparent");
 
-  // Handle scroll to change the navbar background color
   useEffect(() => {
     const handleScroll = () => {
       if (window.location.pathname === "/") {
@@ -16,6 +14,8 @@ const Navbar = () => {
         } else {
           setBgColor("bg-transparent");
         }
+      } else {
+        setBgColor("bg-black");
       }
     };
 
@@ -27,7 +27,7 @@ const Navbar = () => {
     <div>
       {/* Navbar */}
       <div
-        className={`${bgColor} hidden duration-500 ease-in-out lg:flex fixed z-50 items-center justify-between w-full p-6 md:p-12`}
+        className={`${bgColor} hidden duration-500 ease-in-out lg:flex fixed z-50 items-center justify-between w-full  p-8`}
       >
         {/* Logo on the left side */}
         <div className="flex items-center space-x-4">
@@ -52,10 +52,10 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
+        <div></div>
       </div>
       <div className="block lg:hidden">
-
-      <Sidebar />
+        <Sidebar />
       </div>
     </div>
   );
