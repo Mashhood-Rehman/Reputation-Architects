@@ -1,73 +1,185 @@
-import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 
-const servicesData = [
-  {
-    icon: "tabler:seo",
-    title: "Search Engine Optimization",
-    description:
-      "Enhance your online visibility and drive organic traffic to your website with our expert SEO strategies.",
-  },
-  {
-    icon: "nimbus:marketing",
-    title: "Marketing & Advertisement",
-    description:
-      "Boost your brand's online presence with effective marketing campaigns and advertisements.",
-  },
-  {
-    icon: "tabler:report-analytics",
-    title: "Reporting & Analysis",
-    description:
-      "Gain actionable insights with detailed reporting and analysis to track your progress.",
-  },
-];
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
-const Services = () => {
+export default function AboutUs() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [cursorHovered, setCursorHovered] = useState(false);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleMouseEnter = () => setCursorHovered(true);
+    const handleMouseLeave = () => setCursorHovered(false);
+
+    const interactiveElements = document.querySelectorAll("button, a");
+    interactiveElements.forEach((el) => {
+      el.addEventListener("mouseenter", handleMouseEnter);
+      el.addEventListener("mouseleave", handleMouseLeave);
+    });
+
+    return () => {
+      interactiveElements.forEach((el) => {
+        el.removeEventListener("mouseenter", handleMouseEnter);
+        el.removeEventListener("mouseleave", handleMouseLeave);
+      });
+    };
+  }, []);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
-    <div className="bg-black text-white min-h-[85vh] relative overflow-hidden">
-      <div className="max-w-6xl p-4 sm:p-6 md:p-16">
-        <div className="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-6">
-          <div className="flex flex-col z-10 lg:flex-row items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-6 text-center lg:text-left">
-            <h1 className="text-xl sm:text-2xl lg:w-1/2 md:text-5xl font-bold text-white">
-              The right digital <span className="">partner</span> for success
-            </h1>
-            <p className="mt-4 lg:w-1/2 text-sm text-gray-100">
-              Lorem ipsum dolor sit amet consectetur. In nulla nunc arcu velit
-              consectetur massa mauris molestie hac. Hac arcu amet nullam
-              pellentesque. Urna eu suspendisse felis sodales sit non.
-            </p>
-          </div>
-          <Link
-            className="w-28 sm:w-36 z-30 h-12 sm:h-16 bg-orange-500 hover:bg-orange-600 duration-300 ease-in-out flex items-center justify-center border border-transparent rounded-full p-1 text-white font-semibold"
-            to="/Services"
-          >
-            View All
-          </Link>
-        </div>
-
-        <div className="absolute top-12 left-14 w-[300px] sm:w-[400px] lg:w-[500px] h-[300px] sm:h-[400px] lg:h-[500px] bg-orange-600 rounded-full z-0"></div>
-
-        <div className="relative z-10 mt-8 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
-          {servicesData.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white text-black border border-gray-300 rounded-lg p-4 sm:p-6 shadow-md flex flex-col items-center space-y-4"
+    <div className="min-h-screen bg-black text-white relative overflow-hidden px-4 py-12 md:py-24">
+      <section className="max-w-7xl mx-auto">
+        <motion.div
+          className="grid md:grid-cols-2 gap-12 items-center"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <header className="space-y-8">
+            <motion.h2
+              className="inline-block text-orange-500 font-medium"
+              variants={itemVariants}
             >
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-orange-500 text-white rounded-full flex items-center justify-center">
-                <Icon icon={service.icon} width="24" height="24" />
+              Our Services
+            </motion.h2>
+
+            <motion.h1
+              className="text-4xl md:text-5xl font-bold leading-tight"
+              variants={itemVariants}
+            >
+              The Best
+              <br />
+              <span className="text-orange-500"> Service </span>Provider
+            </motion.h1>
+
+            <motion.p className="text-gray-400 text-lg" variants={itemVariants}>
+              We are a team of over 100 skilled software engineers with a decade
+              of experience, committed to delivering exceptional products and
+              solutions.
+            </motion.p>
+
+            <motion.div
+              className="flex border-l-2 border-orange-500 p-2 items-center gap-4"
+              variants={itemVariants}
+            >
+              <motion.span
+                className="text-6xl font-bold text-orange-500"
+                animate={{ scale: [1, 1.1, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                10
+              </motion.span>
+              <div className="text-gray-400">
+                Year
+                <br />
+                <span className="font-bold text-xl text-white">Experience</span>
               </div>
-              <h3 className="text-base sm:text-lg font-semibold text-center">
-                {service.title}
-              </h3>
-              <p className="text-xs sm:text-sm text-center text-gray-600">
-                {service.description}
-              </p>
+            </motion.div>
+
+            <motion.ul className="space-y-3" variants={containerVariants}>
+              {[
+                "Web Development",
+                "Google Ads",
+                "PPC Campaigns",
+                "Graphic Designs",
+                "Digital Marketing",
+              ].map((service, index) => (
+                <motion.li
+                  key={index}
+                  className="flex items-center gap-2"
+                  variants={itemVariants}
+                >
+                  <motion.span
+                    className="text-orange-500"
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ delay: 0.6 + index * 0.1 }}
+                    aria-hidden="true"
+                  >
+                    ✓
+                  </motion.span>
+                  {service}
+                </motion.li>
+              ))}
+            </motion.ul>
+
+            <div className="mt-16 mb-8">
+              {" "}
+              {/* Adjust the margin as needed */}
+              <Link
+                className="text-white px-4 py-2 rounded-full bg-transparent border-2 border-orange-500 hover:scale-110 transition ease-in-out duration-300 hover:bg-orange-500 "
+                to="/Services"
+              >
+                Explore More
+              </Link>
             </div>
-          ))}
-        </div>
-      </div>
+          </header>
+
+          <motion.div className="relative" variants={itemVariants}>
+            <motion.div
+              className="absolute inset-0 border-4 bg-orange-500 border-orange-500 rounded-3xl"
+              animate={{ rotate: [0, 5, 0], scale: [1, 1.02, 1] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <motion.div
+              className="relative rounded-3xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img
+                src="/G1.webp"
+                alt="Team working together"
+                width={400}
+                height={300}
+                className="w-full h-auto"
+              />
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </section>
+
+      <motion.div
+        className="fixed w-12 h-12 rounded-full border-2 border-orange-500 pointer-events-none"
+        animate={{
+          x: mousePosition.x - 24,
+          y: mousePosition.y - 24,
+          scale: cursorHovered ? 1.5 : 1,
+        }}
+        transition={{ type: "spring", stiffness: 100, damping: 10 }}
+        aria-hidden="true"
+      />
     </div>
   );
-};
-
-export default Services;
+}
