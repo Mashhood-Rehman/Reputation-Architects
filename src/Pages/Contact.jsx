@@ -1,218 +1,192 @@
-import { Link } from "react-router-dom";
-import { Icon } from "@iconify/react";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import emailjs from "emailjs-com";
-import { toast } from "react-hot-toast";
-import { Helmet } from "react-helmet";
+import { useRef, useState } from "react";
 
-const ContactForm = () => {
+import { Link } from "react-router-dom";
+import emailjs from "emailjs-com";
+import toast from "react-hot-toast";
+
+const Contact = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
-    name: "",
+    companyName: "",
+    firstName: "",
+    lastName: "",
     email: "",
-    subject: "",
+    phone: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  const handleChange = ({ target: { name, value } }) => {
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    setLoading(true);
+    setError("");
 
-    const emailData = {
-      ...formData,
-      to_email: import.meta.env.VITE_TO_EMAIL,
-    };
-
-    emailjs
-      .send(
+    try {
+      await emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        emailData,
-        import.meta.env.VITE_EMAILJS_USER_ID
-      )
-      .then(
-        (response) => {
-          toast.success("Message sent successfully!"); //
-          setFormData({ name: "", email: "", subject: "", message: "" });
-        },
-        (error) => {
-          toast.error("Failed to send the message. Please try again later.");
-        }
-      )
-      .finally(() => {
-        setIsSubmitting(false);
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      toast.success("Form Submitted Successfully!");
+
+      // Reset form data
+      setFormData({
+        companyName: "",
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
       });
+    } catch (err) {
+      console.error("EmailJS Error:", err);
+      toast.error("Failed to send message, please try again.");
+      setError("Failed to send message, please try again.");
+    } finally {
+      setLoading(false); // Ensure loading state resets
+    }
   };
 
   return (
-    <div className="z-50 flex flex-col bg-black min-h-screen justify-center p-4 sm:p-8">
-      <Helmet>
-        <meta
-          name="description"
-          content="Get in touch with our team for inquiries, project collaboration, or digital marketing consultation. Reach out via email or social media."
-        />
-        <title>Contact Us | Reputation Architects Consultation</title>
-      </Helmet>
+    <div className="min-h-screen bg-black p-6 md:p-12">
+      <div className="max-w-7xl mx-auto bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500">
+        <div className="flex flex-col md:flex-row items-stretch">
+          {/* Left Section */}
+          <div className="relative w-full md:w-1/2 bg-gradient-to-br from-gray-500/20 to-[#262626] p-8 md:p-16">
+            {/* Animated background effects */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+              <div className="absolute w-64 h-64 -top-32 -left-32 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute w-64 h-64 -bottom-32 -right-32 bg-orange-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            </div>
 
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="grid sm:grid-cols-2 items-center gap-8 p-6 sm:p-8 mx-auto max-w-5xl bg-gray-200 shadow-lg rounded-md font-sans"
-      >
-        <motion.div
-          initial={{ x: -50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
-          className="text-center sm:text-left"
-        >
-          <div className="flex items-center justify-center sm:justify-start space-x-3">
-            <div className="bg-orange-500 h-1 rounded-full w-12"></div>
-            <h1 className="text-black text-2xl sm:text-3xl font-extrabold">
-              Get in touch
-            </h1>
+            <div className="relative z-10 flex flex-col justify-center h-full text-center md:text-left space-y-8">
+              <div className="animate-fadeIn">
+                <h2 className="text-sm text-orange-400 font-bold tracking-widest uppercase mb-2 transform hover:scale-105 transition-transform duration-300">
+                  GET STARTED WITH US
+                </h2>
+                <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+                  Start Conversation To
+                  <br />
+                  <span className="bg-gradient-to-r from-orange-400 to-orange-600 text-transparent bg-clip-text animate-gradient">
+                    Skyrocket
+                  </span>{" "}
+                  Your Business
+                </h1>
+                <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                  Schedule a free consultation with our experts.
+                  <br /> Uncover opportunities and take the first step
+                  <br /> towards digital success.
+                </p>
+              </div>
+
+              <Link
+                to="https://wa.me/+15123632731"
+                target="_blank"
+                className="inline-block group w-fit mx-auto md:mx-0"
+              >
+                <button className="relative overflow-hidden px-8 py-3 bg-orange-500 text-white rounded-full transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/30">
+                  <span className="relative z-10">Lets Talk</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                </button>
+              </Link>
+            </div>
           </div>
-          <p className="text-sm text-gray-500 mt-4 leading-6">
-            Have some big idea or brand to develop and need help? Reach out—we’d
-            love to hear about your project and provide assistance.
-          </p>
 
-          {/* Email Section */}
-          <div className="mt-8">
-            <h2 className="text-gray-800 text-lg font-semibold">Email</h2>
-            <ul className="mt-4">
-              <li className="flex items-center justify-center sm:justify-start">
-                <div className="bg-gray-100 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                  <Icon
-                    icon="mdi:email-outline"
-                    width={20}
-                    height={20}
-                    color="#f97316"
-                  />
+          {/* Right Section (Form) */}
+          <div className="w-full md:w-1/2 bg-white p-8 md:p-16">
+            <div className="max-w-md mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-8 animate-fadeIn">
+                Get A Free Consultation With
+                <br />
+                <span className="text-orange-500">Our Marketing Experts</span>
+              </h2>
+
+              {error && (
+                <div className="animate-fadeIn bg-red-50 text-red-500 p-4 rounded-lg text-center mb-6">
+                  {error}
                 </div>
-                <Link
-                  to="mailto:info@reputation-architects.com"
-                  className="text-orange-500 text-sm ml-4"
-                >
-                  <small className="block">Mail</small>
-                  <strong>info@reputation-architects.com</strong>
-                </Link>
-              </li>
-            </ul>
-          </div>
+              )}
 
-          <div className="mt-8">
-            <h2 className="text-gray-800 text-lg font-semibold">Socials</h2>
-            <ul className="flex mt-4 justify-center sm:justify-start space-x-4">
-              {[
-                {
-                  icon: "mdi:linkedin",
-                  label: "LinkedIn",
-                  path: "https://www.linkedin.com/in/reputation-architects-llc-251498344/",
-                },
-                {
-                  icon: "mdi:facebook",
-                  label: "Facebook",
-                  path: "https://www.facebook.com/profile.php?id=61571549906577",
-                },
-                {
-                  icon: "mdi:instagram",
-                  label: "Instagram",
-                  path: "https://www.instagram.com/reputationarchitectsllc/",
-                },
-                {
-                  icon: "mdi:twitter",
-                  label: "Twitter",
-                  path: "https://x.com/LlcReputation",
-                },
-              ].map((social, index) => (
-                <li
-                  key={index}
-                  className="bg-gray-100 h-10 w-10 rounded-full flex items-center justify-center shrink-0"
-                >
-                  <Link
-                    to={social.path}
-                    target="_blank"
-                    aria-label={social.label}
-                  >
-                    <Icon
-                      icon={social.icon}
-                      width={20}
-                      height={20}
-                      color="#f97316"
+              <form ref={form} onSubmit={sendEmail} className="space-y-6">
+                <input
+                  type="text"
+                  name="companyName"
+                  placeholder="Company name"
+                  value={formData.companyName}
+                  onChange={handleChange}
+                  className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 hover:border-orange-300"
+                  required
+                />
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {["firstName", "lastName"].map((name) => (
+                    <input
+                      key={name}
+                      type="text"
+                      name={name}
+                      placeholder={name.replace(/([A-Z])/g, " $1").trim()}
+                      value={formData[name]}
+                      onChange={handleChange}
+                      className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 hover:border-orange-300"
+                      required
                     />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </motion.div>
+                  ))}
+                </div>
 
-        <motion.form
-          onSubmit={handleSubmit}
-          initial={{ x: 50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
-          className="space-y-4"
-        >
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Name"
-            className="w-full text-gray-800 rounded-md py-3 px-4 border border-gray-300 text-sm focus:outline-orange-500 focus:ring-2 focus:ring-orange-500"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Email"
-            className="w-full text-gray-800 rounded-md py-3 px-4 border border-gray-300 text-sm focus:outline-orange-500 focus:ring-2 focus:ring-orange-500"
-            required
-          />
-          <input
-            type="text"
-            name="subject"
-            value={formData.subject}
-            onChange={handleChange}
-            placeholder="Subject"
-            className="w-full text-gray-800 rounded-md py-3 px-4 border border-gray-300 text-sm focus:outline-orange-500 focus:ring-2 focus:ring-orange-500"
-          />
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Message"
-            rows="6"
-            className="w-full text-gray-800 rounded-md px-4 py-3 border border-gray-300 text-sm focus:outline-orange-500 focus:ring-2 focus:ring-orange-500"
-            required
-          ></textarea>
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className={`text-white ${
-              isSubmitting ? "bg-gray-400" : "bg-orange-500 hover:bg-orange-600"
-            } rounded-md text-sm px-4 py-3 w-full transition-all duration-300 ease-in-out`}
-          >
-            {isSubmitting ? "Sending..." : "Send"}
-          </button>
-        </motion.form>
-      </motion.div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {["email", "phone"].map((name) => (
+                    <input
+                      key={name}
+                      type={name === "email" ? "email" : "tel"}
+                      name={name}
+                      placeholder={name.charAt(0).toUpperCase() + name.slice(1)}
+                      value={formData[name]}
+                      onChange={handleChange}
+                      className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 hover:border-orange-300"
+                      required
+                    />
+                  ))}
+                </div>
+
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 hover:border-orange-300 h-32 resize-none"
+                  required
+                />
+
+                <button
+                  className={`w-full relative overflow-hidden group ${
+                    loading
+                      ? "bg-gray-400 cursor-not-allowed"
+                      : "bg-gradient-to-r from-orange-500 to-orange-600"
+                  } text-white py-4 rounded-lg transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-lg hover:shadow-orange-500/30`}
+                  type="submit"
+                  disabled={loading}
+                >
+                  <span className="relative z-10">
+                    {loading ? "Sending..." : "Send Message"}
+                  </span>
+                  {!loading && (
+                    <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                  )}
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default ContactForm;
+export default Contact;
