@@ -64,7 +64,7 @@ const Footer = () => {
                 <img src="/Main-Logo.webp" alt="Logo" width={120} height={50} />{" "}
               </Link>
 
-              <p className="text-white text-xs sm:text-sm lg:text-base">
+              <p className="text-white text-center text-xs sm:text-sm lg:text-base">
                 Digital Excellence, Creative Ideas, and Strong Team Support-
                 Your Success Starts Here.{" "}
               </p>

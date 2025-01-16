@@ -7,9 +7,9 @@ import GoogleBusinessVerification from "../SubServices/GoogleBusinessVerificatio
 
 export const navdData = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
   { name: "Services", href: "/Services" },
   { name: "Packages", href: "/Packages" },
+  { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -72,14 +72,6 @@ export const servicesInfo = [
       "Strategic search engine optimization to improve your visibility and drive organic traffic.",
   },
   {
-    icon: () => <Icon icon="mdi:speaker" className="h-8 w-8 text-white" />,
-    title: "Social Media Marketing",
-    item: <SocialMedia />,
-    path: "SocialMedia",
-    description:
-      "Engaging social media strategies to build your brand presence and connect with your audience.",
-  },
-  {
     icon: () => <Icon icon="mdi:earth" className="h-8 w-8 text-white" />,
     title: "Reviews Management",
     item: <ReviewsManagement />,
@@ -87,6 +79,15 @@ export const servicesInfo = [
     description:
       "Comprehensive digital marketing solutions to grow your online presence and reach.",
   },
+  {
+    icon: () => <Icon icon="mdi:speaker" className="h-8 w-8 text-white" />,
+    title: "Social Media Marketing",
+    item: <SocialMedia />,
+    path: "SocialMedia",
+    description:
+      "Engaging social media strategies to build your brand presence and connect with your audience.",
+  },
+
   {
     icon: () => <Icon icon="mdi:chart-line" className="h-8 w-8 text-white" />,
     title: "Google Business Verification",

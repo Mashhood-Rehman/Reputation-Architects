@@ -17,7 +17,7 @@ const Services = () => {
         <title>Reputation Architects LLC | SEO, PPC & More | Austin, TX</title>
       </Helmet>
 
-      <div className="h-[60vh] bg-black flex flex-col space-y-4 items-center justify-center">
+      <div className="h-[40vh] bg-black flex flex-col space-y-4 items-center justify-center">
         <h1 className="text-white text-5xl font-[sans-serif]">SERVICES</h1>
         <div className=" flex items-center text-lg font-[sans-serif] justify-center z-10">
           <Link
