@@ -69,7 +69,7 @@ const Sidebar = () => {
         transition={{ type: "tween", ease: "easeOut", duration: 0.5 }}
         className="fixed top-0 right-0 w-full h-full bg-black bg-opacity-90 text-white z-40 flex items-center justify-center"
       >
-        <ul className="space-y-10 mt-24 text-center">
+        <ul className="space-y-2 mt-24 text-center">
           {navdData.map((item, index) => (
             <li key={index}>
               <Link
