@@ -18,7 +18,7 @@ const About = () => {
         />
         <title>About Us | Reputation Architects LLC</title>
       </Helmet>
-      <div className="h-[20vh] bg-black flex flex-col space-y-4 items-center justify-center">
+      <div className="h-[10vh] bg-black flex flex-col space-y-4 items-center justify-center">
         <h1 className="text-white font-semibold text-5xl font-[sans-serif]">
           About Us
         </h1>
