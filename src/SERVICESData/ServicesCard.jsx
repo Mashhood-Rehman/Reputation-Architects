@@ -25,60 +25,42 @@ function ServicesCard() {
           animate="visible"
         >
           {servicesInfo &&
-            servicesInfo.map((service, index) =>
-              service.isTitle ? (
-                <motion.div
-                  key={index}
-                  className="relative p-6"
-                  variants={cardVariants}
-                >
-                  <div className="text-white">
-                    <h2 className="text-3xl font-bold md:text-4xl">
-                      {service.content.title}
-                      <br />
-                      <span className="text-orange-500">
-                        {service.content.subtitle}
-                      </span>
-                    </h2>
+            servicesInfo.map((service, index) => (
+              <motion.div
+                key={index}
+                className="group relative border border-white/10 hover:border-orange-500/20 p-6 transition-all"
+                variants={cardVariants}
+                whileHover={{ scale: 1.05 }}
+              >
+                {/* Dynamically rendering the icon */}
+                <div className="mb-4 text-orange-500">
+                  {service.icon && service.icon()}
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-white">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-gray-400">{service.description}</p>
+                <Link to={`/Services/${service.path}`}>
+                  <div className="absolute bottom-1 right-6 flex items-center text-orange-500 cursor-pointer hover:underline">
+                    <span>View Details</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      className="w-4 h-4 ml-2"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                      />
+                    </svg>
                   </div>
-                </motion.div>
-              ) : (
-                <motion.div
-                  key={index}
-                  className="group relative border border-white/10 hover:border-orange-500/20 p-6 transition-all"
-                  variants={cardVariants}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  {/* Dynamically rendering the icon */}
-                  <div className="mb-4 text-orange-500">
-                    {service.icon && service.icon()}
-                  </div>
-                  <h3 className="mb-2 text-lg font-semibold text-white">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm text-gray-400">{service.description}</p>
-                  <Link to={`/Services/${service.path}`}>
-                    <div className="absolute bottom-1 right-6 flex items-center text-orange-500 cursor-pointer hover:underline">
-                      <span>View Details</span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                        stroke="currentColor"
-                        className="w-4 h-4 ml-2"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                        />
-                      </svg>
-                    </div>
-                  </Link>
-                </motion.div>
-              )
-            )}
+                </Link>
+              </motion.div>
+            ))}
         </motion.div>
       </div>
     </section>
