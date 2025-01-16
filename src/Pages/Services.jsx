@@ -19,7 +19,7 @@ const Services = () => {
 
       <div className=" h-[27vh] bg-black flex flex-col space-y-4 items-center justify-center">
         <h1 className="text-white text-5xl font-semibold font-[sans-serif]">
-          OUR SERVICES
+          Our Services
         </h1>
       </div>
       <div>

@@ -20,7 +20,7 @@ const About = () => {
       </Helmet>
       <div className="h-[27vh] bg-black flex flex-col space-y-4 items-center justify-center">
         <h1 className="text-white font-semibold text-5xl font-[sans-serif]">
-          ABOUT US
+          About Us
         </h1>
       </div>
       <div>
