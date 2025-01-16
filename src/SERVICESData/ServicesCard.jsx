@@ -28,7 +28,7 @@ function ServicesCard() {
             servicesInfo.map((service, index) => (
               <motion.div
                 key={index}
-                className="group relative border border-white/10 hover:border-orange-500/20 p-6 transition-all"
+                className="group relative border bg-gray-900 rounded-xl border-white/10 hover:border-orange-500/20 p-6 transition-all"
                 variants={cardVariants}
                 whileHover={{ scale: 1.05 }}
               >
