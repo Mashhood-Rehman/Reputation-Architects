@@ -8,7 +8,6 @@ const Sidebar = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [bgColor, setBgColor] = useState("bg-transparent");
 
-  // Handle scroll to change navbar background color
   useEffect(() => {
     const handleScroll = () => {
       if (window.location.pathname === "/") {
