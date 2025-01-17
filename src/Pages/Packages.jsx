@@ -80,7 +80,7 @@ const PackageDetails = () => {
           Digital Marketing Packages | SEO, Web Design & Social Media
         </title>
       </Helmet>
-      <div className="bg-black text-white py-20 lg:py-32 relative overflow-hidden">
+      <div className="bg-black text-white py-20 lg:py-36 relative overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -96,7 +96,7 @@ const PackageDetails = () => {
         </motion.div>
       </div>
 
-      <div className="flex justify-center items-center mt-12 mb-8">
+      <div className="flex justify-center items-center  mb-8">
         <label
           htmlFor="timeframe"
           className="mr-3 text-lg text-white font-semibold"
