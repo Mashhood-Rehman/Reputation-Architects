@@ -3,40 +3,31 @@ import { useState } from "react";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
-
   const faqs = [
     {
-      question: "What digital marketing services do you offer for businesses?",
+      question: "What is SEO, and how can it help my business?",
       answer:
-        "We offer a comprehensive range of digital marketing services including SEO, PPC, social media marketing, Web Development, content creation, and conversion rate optimization to help your business grow and succeed online.",
+        "SEO (Search Engine Optimization) improves your website's visibility on search engines, helping attract organic traffic and potential customers to grow your business.",
     },
     {
-      question:
-        "How does SEO help improve my website's visibility on search engines?",
+      question: "What web development services do you provide?",
       answer:
-        "SEO (Search Engine Optimization) enhances your website's visibility by optimizing on-page elements, creating quality backlinks, and improving your site structure to rank higher on search engine results pages, driving organic traffic.",
+        "We specialize in creating responsive, modern websites tailored to your business needs, ensuring a user-friendly experience that drives conversions.",
     },
     {
-      question: "What is PPC advertising, and how can it benefit my business?",
+      question: "How does reviews management enhance my brand's credibility?",
       answer:
-        "PPC (Pay-Per-Click) advertising allows you to display targeted ads on platforms like Google and social media. You pay only when someone clicks your ad. It's a great way to drive immediate traffic and leads to your business.",
+        "By managing and showcasing positive reviews, we help build trust and credibility with potential clients, strengthening your online reputation.",
     },
     {
-      question:
-        "How do you measure the success of a digital marketing campaign?",
+      question: "How can social media marketing grow my business?",
       answer:
-        "We measure success through key performance indicators (KPIs) such as website traffic, conversion rates, ROI, and engagement metrics. We provide regular reports to track the progress and optimize campaigns for better results.",
+        "Our social media campaigns engage your target audience, increase brand awareness, and drive traffic to your website, resulting in better customer retention.",
     },
     {
-      question: "Can you help improve my local search rankings?",
+      question: "Why is Google Business verification important?",
       answer:
-        "Yes, we specialize in Local SEO. We optimize your business for local search queries, improve your Google My Business profile, and ensure that your business appears in local search results and maps for relevant keywords.",
-    },
-    {
-      question:
-        "How long does it take to see results from digital marketing campaigns?",
-      answer:
-        "The timeline for results can vary depending on the strategy and goals. For SEO, it may take a few months to see significant results. However, PPC campaigns can provide immediate results. We tailor our approach to meet your business needs.",
+        "Google Business verification improves your local search visibility, making it easier for nearby customers to find and trust your business.",
     },
   ];
 
