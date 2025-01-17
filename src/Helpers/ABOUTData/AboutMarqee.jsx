@@ -1,6 +1,6 @@
 export default function AboutMarqee() {
   return (
-    <div className="relative w-full overflow-hidden bg-black py-4">
+    <div className="relative  w-full overflow-hidden bg-black py-4">
       <div className="animate-marquee-ltr flex whitespace-nowrap will-change-transform">
         {[...Array(3)].map((_, index) => (
           <div key={index} className="flex items-center gap-4 px-4">
