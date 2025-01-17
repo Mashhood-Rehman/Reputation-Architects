@@ -83,7 +83,7 @@ const HeroPage = () => {
             <div className="flex flex-col  items-center  justify-center ">
               <h1 className="text-orange-500  text-3xl  sm:text-4xl md:text-4xl lg:text-4xl lg:leading-normal font-extrabold text-center sm:text-left">
                 <span className="text-white    ">
-                  Crafting Digital Brilliance Brick by Brick in{" "}
+                  Building Business Reputation Brick by Brick,Through{" "}
                 </span>
                 <br />
 
