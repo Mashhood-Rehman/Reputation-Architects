@@ -26,9 +26,10 @@ export default function About() {
                 Get Our Clients.
               </h1>
               <p className="text-gray-400 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-                magna integer a tellus cursus amet. Proin vel magna integer in
-                tellus cursus vitae interdum ut elementum sit amet.
+                At Reputation Architects LLC, we empower businesses with
+                services like SEO, web development, reviews management, social
+                media marketing, and Google Business verification. Let’s boost
+                your online presence together!
               </p>
             </div>
 

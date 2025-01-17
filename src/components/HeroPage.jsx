@@ -75,7 +75,7 @@ const HeroPage = () => {
               width={500}
               src="/heroimg.webp"
               alt="Reputation-image"
-              className="w-full max-w-[300px]  sm:max-w-[700px] ml-6    md:max-w-[600px] lg:max-w-[1000px] "
+              className="w-full max-w-[300px]  sm:max-w-[700px] ml-8   md:max-w-[600px] lg:max-w-[1000px] "
             />
           </motion.div>
 
