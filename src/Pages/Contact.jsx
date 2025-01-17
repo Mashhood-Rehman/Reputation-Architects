@@ -59,7 +59,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-black p-6 md:p-12">
-      <div className="max-w-7xl mx-auto bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500">
+      <div className="max-w-7xl mx-auto mt-28 bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500">
         <div className="flex flex-col md:flex-row items-stretch">
           {/* Left Section */}
           <div className="relative w-full md:w-1/2 bg-gradient-to-br from-gray-500/20 to-[#262626] p-8 md:p-16">
