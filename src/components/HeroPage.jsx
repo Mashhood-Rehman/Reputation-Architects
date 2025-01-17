@@ -89,17 +89,16 @@ const HeroPage = () => {
 
                 <TypeAnimation
                   sequence={[
-                    "Digital Marketing",
+                    "SEO",
                     1000,
                     "Web Development",
                     1000,
-                    "SEO",
+
+                    "Reviews Management",
                     1000,
                     "Social Media Marketing",
                     1000,
-                    "",
-                    1000,
-                    "Reviews Management",
+
                     1000,
                     "GMB Verification",
                     1000,
