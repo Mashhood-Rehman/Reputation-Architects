@@ -5,29 +5,38 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const faqs = [
     {
-      question: "What is SEO, and how can it help my business?",
+      question:
+        "How does SEO help improve my website's ranking and visibility?",
       answer:
-        "SEO (Search Engine Optimization) improves your website's visibility on search engines, helping attract organic traffic and potential customers to grow your business.",
+        "SEO (Search Engine Optimization) improves your website's ranking by optimizing content, keywords, backlinks, and technical aspects, making your website more search engine-friendly. This enhances visibility, attracts targeted traffic, and increases your chances of converting visitors into customers.",
     },
     {
-      question: "What web development services do you provide?",
+      question:
+        "Why is having a professionally developed website important for my business?",
       answer:
-        "We specialize in creating responsive, modern websites tailored to your business needs, ensuring a user-friendly experience that drives conversions.",
+        "A professionally developed website ensures that your business has a fast, secure, and user-friendly online presence. It creates a positive first impression, improves user experience, and helps in showcasing your services effectively. A well-developed website also enhances credibility and drives customer engagement.",
     },
     {
-      question: "How does reviews management enhance my brand's credibility?",
+      question: "How does review management improve my online reputation?",
       answer:
-        "By managing and showcasing positive reviews, we help build trust and credibility with potential clients, strengthening your online reputation.",
+        "Review management helps you actively monitor, respond to, and improve customer feedback. Positive reviews build trust and attract new customers, while professionally handling negative reviews shows your commitment to customer satisfaction. This improves your overall online reputation and strengthens customer loyalty.",
     },
     {
       question: "How can social media marketing grow my business?",
       answer:
-        "Our social media campaigns engage your target audience, increase brand awareness, and drive traffic to your website, resulting in better customer retention.",
+        "Social media marketing helps your business connect with a larger audience, build relationships, and increase brand awareness. By posting engaging content, running targeted campaigns, and analyzing performance metrics, you can drive traffic, generate leads, and convert followers into customers.",
     },
     {
-      question: "Why is Google Business verification important?",
+      question:
+        "What is Google My Business verification, and why is it important?",
       answer:
-        "Google Business verification improves your local search visibility, making it easier for nearby customers to find and trust your business.",
+        "Google My Business (GMB) verification ensures your business appears on Google Maps and search results, making it easier for customers to find and contact you. Verification establishes trust, improves local SEO rankings, and helps your business stand out in local searches.",
+    },
+    {
+      question:
+        "Can you verify my Google My Business listing without video verification?",
+      answer:
+        "Yes, we specialize in Google My Business verification without bypassing video verification. We use legitimate methods to ensure your business is verified quickly and securely, enabling you to benefit from enhanced local visibility and customer trust.",
     },
   ];
 
