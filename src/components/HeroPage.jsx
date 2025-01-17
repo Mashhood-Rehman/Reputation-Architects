@@ -91,15 +91,17 @@ const HeroPage = () => {
                   sequence={[
                     "Digital Marketing",
                     1000,
-                    "Google Ads",
+                    "Web Development",
                     1000,
-                    "PPC Campaigns",
+                    "Search Engine Optimization",
                     1000,
                     "Social Media Marketing",
                     1000,
-                    "Web Development",
+                    "",
                     1000,
-                    "Graphic Design",
+                    "Reviews Management",
+                    1000,
+                    "Google Business Verification",
                     1000,
                   ]}
                   wrapper="span"
