@@ -1,10 +1,13 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
 import toast from "react-hot-toast";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const form = useRef();
   const [formData, setFormData] = useState({
     companyName: "",

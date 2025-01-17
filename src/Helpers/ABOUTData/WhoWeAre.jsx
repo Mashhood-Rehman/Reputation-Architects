@@ -18,10 +18,9 @@ const WhoWeAre = () => {
       <div className="mt-12 flex flex-wrap justify-center items-center">
         <div className="w-full lg:w-1/2 p-6">
           <p className="text-white">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
+            Our mission is to empower businesses with tools and strategies to
+            thrive in the digital landscape. We deliver tailored solutions that
+            boost visibility, credibility, and growth.
           </p>
           <ul className="mt-8 space-y-6">
             {[
