@@ -110,9 +110,10 @@ export default function AboutUs() {
 
             <motion.ul className="space-y-3" variants={containerVariants}>
               {[
-                "Web Development",
                 "SEO",
+                "Web Development",
                 "Reviews Managment",
+                "Social Media Marketing",
                 "Google Business Verification",
               ].map((service, index) => (
                 <motion.li
