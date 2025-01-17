@@ -110,7 +110,6 @@ export default function AboutUs() {
 
             <motion.ul className="space-y-3" variants={containerVariants}>
               {[
-                "Digital Marketing",
                 "Web Development",
                 "SEO",
                 "Reviews Managment",
