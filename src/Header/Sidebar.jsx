@@ -5,6 +5,12 @@ import { Icon } from "@iconify/react"; // Import Iconify
 import { navdData } from "../Helpers/Data";
 
 const Sidebar = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling effect
+    });
+  };
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [bgColor, setBgColor] = useState("bg-transparent");
 
@@ -61,6 +67,7 @@ const Sidebar = () => {
         <div className="flex items-center">
           <Link to="/">
             <img
+              onClick={scrollToTop}
               src="/Main-Logo.webp"
               alt="Logo"
               className="h-10 w-10 md:h-14 md:w-14 object-contain"
