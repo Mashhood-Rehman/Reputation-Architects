@@ -93,7 +93,7 @@ const HeroPage = () => {
                     1000,
                     "Web Development",
                     1000,
-                    "Search Engine Optimization",
+                    "SEO",
                     1000,
                     "Social Media Marketing",
                     1000,
@@ -101,7 +101,7 @@ const HeroPage = () => {
                     1000,
                     "Reviews Management",
                     1000,
-                    "Google Business Verification",
+                    "GMB Verification",
                     1000,
                   ]}
                   wrapper="span"
