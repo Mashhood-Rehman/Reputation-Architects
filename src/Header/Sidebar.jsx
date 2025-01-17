@@ -17,7 +17,7 @@ const Sidebar = () => {
           setBgColor("bg-transparent");
         }
       } else {
-        setBgColor("bg-black bg-opacity-80");
+        setBgColor("bg-black ");
       }
     };
 

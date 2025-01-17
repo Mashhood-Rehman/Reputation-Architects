@@ -17,7 +17,7 @@ const App = () => {
         <Route
           path="/Services"
           element={
-            <div className="pt-24 md:pt-32">
+            <div>
               <Services />
             </div>
           }
@@ -27,7 +27,7 @@ const App = () => {
         <Route
           path="/about"
           element={
-            <div className="pt-24 md:pt-32">
+            <div>
               <About />
             </div>
           }
@@ -35,7 +35,7 @@ const App = () => {
         <Route
           path="/contact"
           element={
-            <div className="pt-24 md:pt-32">
+            <div>
               <Contact />
             </div>
           }
