@@ -16,7 +16,7 @@ export default function About() {
           </div>
 
           <div className="space-y-8">
-            <div className="space-y-6">
+            <div className="space-y-2">
               <p className="text-orange-500 text-sm uppercase tracking-wider">
                 ABOUT US
               </p>
