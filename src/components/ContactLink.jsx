@@ -11,7 +11,7 @@ const ContactLink = () => {
   ];
 
   return (
-    <section className="container max-w-full bg-black mx-auto py-12  relative">
+    <section className="container max-w-full bg-black mx-auto py-12 relative">
       {triangles.map((triangle, index) => (
         <motion.div
           key={index}
