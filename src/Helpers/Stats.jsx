@@ -6,27 +6,31 @@ const Stats = () => {
   const stats = [
     {
       icon: (
-        <Icon icon="mdi:account-group" className="text-orange-500 w-10 h-10" />
+        <Icon icon="mdi:briefcase-check" className="text-orange-500 w-10 h-10" />
       ),
-      value: 400,
-      label: "Unique Visitors",
-    },
-    {
-      icon: <Icon icon="mdi:cart" className="text-orange-500 w-10 h-10" />,
-      value: 450,
-      label: "Total Sales",
-    },
-    {
-      icon: <Icon icon="mdi:star" className="text-orange-500 w-10 h-10" />,
-      value: 4.8,
-      label: "Customer Rating",
+      value: 3000,
+      label: "Projects Completed",
     },
     {
       icon: (
-        <Icon icon="mdi:account-group" className="text-orange-500 w-10 h-10" />
+        <Icon icon="mdi:account-heart" className="text-orange-500 w-10 h-10" />
       ),
       value: 1500,
-      label: "Happy Customers",
+      label: "Satisfied Clients",
+    },
+    {
+      icon: (
+        <Icon icon="mdi:account-multiple" className="text-orange-500 w-10 h-10" />
+      ),
+      value: 20,
+      label: "Dedicated Team Members",
+    },
+    {
+      icon: (
+        <Icon icon="mdi:calendar-clock" className="text-orange-500 w-10 h-10" />
+      ),
+      value: 10,
+      label: "Years of Experience",
     },
   ];
 
@@ -62,7 +66,7 @@ const Stats = () => {
               ) : (
                 "0"
               )}
-              {stat.value > 100 && "+"} {/* Adds "+" for values over 100 */}
+              {"+"} {/* Adds "+" for values over 100 */}
             </h3>
             <p className="text-base text-white font-semibold mt-3">
               {stat.label}
