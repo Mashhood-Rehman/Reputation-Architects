@@ -5,15 +5,15 @@ const Testimonials = () => {
   const testimonials = [
     {
       img: "https://readymadeui.com/team-2.webp",
-      name: "John Doe",
-      role: "Founder of Rubik",
-      text: "The service was amazing. I never had to wait that long for my food. The staff was friendly and attentive, and the delivery was impressively prompt.",
+      name: "John D.",
+      role: "Owner of The Appliance Squad:",
+      text: "I hired these folks to build a website for The Appliance Squad, and the results are amazing! The site looks fantastic, is easy to navigate, and perfectly matches my vision. I’m extremely pleased with their work and wouldn’t hesitate to work with them again!",
     },
     {
       img: "https://readymadeui.com/team-5.webp",
-      name: "Mark Adair",
-      role: "Founder of Alpha",
-      text: "The service was amazing. I never had to wait that long for my food. The staff was friendly and attentive, and the delivery was impressively prompt.",
+      name: "Chris Anderson ",
+      role: "CEO of Mountain Movers:",
+      text: "We’ve seen great results with Reputation Architects LLC for our SEO. Our moving company is now ranking at the top locally, and we’re getting a lot more leads. If you want to grow your business online, I highly recommend them!",
       stars: 4,
     },
     {
@@ -30,9 +30,9 @@ const Testimonials = () => {
     },
     {
       img: "https://readymadeui.com/team-5.webp",
-      name: "Alice Smith",
-      role: "Manager of Beta",
-      text: "A delightful experience from start to finish. The service was efficient, and the food was mouthwatering.",
+      name: "Jeremiah Blake",
+      role: "Director at The Agency Texas ",
+      text: "My partner and I were worried about our low review count, so we hired this company for their review management services. They’ve made a huge difference! They helped us get more reviews from our customers and other sources, and now we feel confident in our ability to compete. We’re so glad we made the decision to work with them!",
       stars: 4,
     },
     {
