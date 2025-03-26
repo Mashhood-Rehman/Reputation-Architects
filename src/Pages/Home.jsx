@@ -27,6 +27,7 @@ const Home = () => {
       </Helmet>
 
       <CursorAnimation />
+
       <HeroPage />
 
       <Services />
