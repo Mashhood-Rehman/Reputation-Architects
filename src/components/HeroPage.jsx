@@ -6,10 +6,10 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 const HeroPage = () => {
   return (
-    <div className="bg-[url('/b4.webp')] h-[70vh] lg:h-[100vh] bg-fixed bg-center bg-cover relative">
+    <div className="bg-[url('/b4.webp')] min-h-[82vh] h-auto lg:h-[100vh] lg:min-h-0 bg-fixed bg-center bg-cover relative">
       <span className="absolute z-10 space-y-8 lg:flex lg:flex-col top-1/3 left-4 hidden">
         <Link
-          to="https://www.facebook.com/profile.php?id=61571549906577"
+          to="https://www.facebook.com/share/1BuuACg9Vm/?mibextid=wwXIfr"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Visit our Facebook page"
@@ -22,7 +22,7 @@ const HeroPage = () => {
           />
         </Link>
         <Link
-          to="https://www.instagram.com/reputationarchitectsllc/"
+          to="https://www.facebook.com/share/1BuuACg9Vm/?mibextid=wwXIfr"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Visit our Instagram profile"
@@ -62,10 +62,9 @@ const HeroPage = () => {
         </Link>
       </span>
 
-      <motion.div className="w-full h-full flex items-center  p-2 justify-center">
-        <div className="text-white text-center">
+      <motion.div className="w-full min-h-[82vh] flex items-center justify-center px-2 pb-8 lg:min-h-full lg:h-full lg:p-2">        <div className="text-white text-center w-full max-w-[100vw]">
           <motion.div
-            className=" mb-4"
+            className="mb-3 sm:mb-4"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -75,13 +74,12 @@ const HeroPage = () => {
               width={500}
               src="/heroimg.webp"
               alt="Reputation-image"
-              className="w-full max-w-[300px]  sm:max-w-[700px] ml-8   md:max-w-[600px] lg:max-w-[1000px] "
-            />
+              className="block w-full max-w-[min(100%,280px)] sm:max-w-[700px] mx-auto md:max-w-[600px] lg:max-w-[1000px]"            />
           </motion.div>
 
           <motion.div>
             <div className="flex flex-col  items-center  justify-center ">
-              <h1 className="text-orange-500  text-2xl  sm:text-4xl md:text-4xl lg:text-4xl lg:leading-normal font-extrabold text-center sm:text-left">
+              <h1 className="text-orange-500 text-2xl sm:text-4xl md:text-4xl lg:text-4xl lg:leading-normal font-extrabold text-center lg:text-left">
                 <span className="text-white    ">
                   Building Business Reputation Brick by Brick,Through{" "}
                 </span>

@@ -101,11 +101,11 @@ const Footer = () => {
               <ul className="space-y-2 mt-6 text-gray-300">
                 <li>
                   <a
-                    href="mailto:info@reputation-architects.com"
+                    href="mailto:info@rep-architects.com"
                     className="hover:text-white"
                   >
                     <strong className="text-orange-500">Email:</strong>{" "}
-                    info@reputation-architects.com
+                    info@rep-architects.com
                   </a>
                 </li>
                 <li>
