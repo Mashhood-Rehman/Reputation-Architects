@@ -110,12 +110,12 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://wa.me/+15123632731"
+                    href="https://wa.me/+12148987958"
                     target="_blank"
                     className="hover:text-white"
                   >
-                    <strong className="text-orange-500">Phone:</strong> +1 (512)
-                    363-2731
+                    <strong className="text-orange-500">Phone:</strong> +1 (214)
+                    898-7958
                   </a>
                 </li>
                 <li>

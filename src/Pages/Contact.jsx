@@ -90,7 +90,7 @@ const Contact = () => {
               </div>
 
               <Link
-                to="https://wa.me/+15123632731"
+                to="https://wa.me/+12148987958"
                 target="_blank"
                 className="inline-block group w-fit mx-auto md:mx-0"
               >

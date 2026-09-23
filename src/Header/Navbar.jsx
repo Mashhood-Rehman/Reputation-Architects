@@ -55,8 +55,8 @@ const Navbar = () => {
         </div>
         <div className=" flex items-center text-white hover:text-orange-500 duration-300 ease-in-out">
           <Icon icon="ion:call-outline" className=" h-6 w-6 " />
-          <a href="tel:+1(512)363-2731" className="  ">
-            +1 (512) 363-2731
+          <a href="tel:+12148987958" className="  ">
+            +1 (214) 898-7958
           </a>
         </div>
       </div>
