@@ -242,13 +242,13 @@ const Footer = () => {
           <hr className="my-10 border-gray-600 w-full" />
 
           <div className="flex items-center justify-center space-x-4 text-gray-300 text-sm">
-            <Link to="/TermsOfServices" className="hover:text-white">
+            <Link to="/terms" className="hover:text-white">
               Terms of Service
             </Link>
-            <Link to="/PrivacyPolicy" className="hover:text-white">
+            <Link to="/privacy-policy" className="hover:text-white">
               Privacy Policy
             </Link>
-            <Link to="/Security" className="hover:text-white">
+            <Link to="/security" className="hover:text-white">
               Security
             </Link>
           </div>

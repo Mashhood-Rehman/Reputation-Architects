@@ -51,12 +51,8 @@ const App = () => {
             </div>
           }
         />
-        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/Terms" element={<Terms />} />
-        <Route path="/TermsOfServices" element={<Terms />} />
         <Route path="/terms" element={<Terms />} />
-        <Route path="/Security" element={<Security />} />
         <Route path="/security" element={<Security />} />
       </Routes>
       <ChatIcon />

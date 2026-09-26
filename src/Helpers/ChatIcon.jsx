@@ -44,7 +44,9 @@ const ChatIcon = () => {
       </AnimatePresence>
 
       <Link
-        to="booking.rep-architects.com"
+        to="https://booking.rep-architects.com"
+        target="_blank"
+        rel="noopener noreferrer"
         className="flex items-center gap-2.5 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-5 py-3 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 font-extrabold tracking-wide text-sm sm:text-base border border-orange-400/40 cursor-pointer"
       >
         <img
