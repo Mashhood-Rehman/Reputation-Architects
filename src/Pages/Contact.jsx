@@ -58,23 +58,23 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black p-6 md:p-12">
-      <div className="max-w-7xl mx-auto bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500">
-        <div className="flex flex-col md:flex-row items-stretch">
+    <div className="min-h-screen bg-black pt-24 pb-12 px-4 sm:px-6 md:pt-32 md:pb-16 md:px-8 lg:pt-36 lg:pb-20 xl:pt-40 flex items-center justify-center">
+      <div className="w-full max-w-6xl mx-auto bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.01] transition-all duration-500">
+        <div className="flex flex-col lg:flex-row items-stretch">
           {/* Left Section */}
-          <div className="relative w-full md:w-1/2 bg-gradient-to-br from-gray-500/20 to-[#262626] p-8 md:p-16">
+          <div className="relative w-full lg:w-1/2 bg-gradient-to-br from-gray-500/20 to-[#262626] p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-center">
             {/* Animated background effects */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
               <div className="absolute w-64 h-64 -top-32 -left-32 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
               <div className="absolute w-64 h-64 -bottom-32 -right-32 bg-orange-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
             </div>
 
-            <div className="relative z-10 flex flex-col justify-center h-full text-center md:text-left space-y-8">
+            <div className="relative z-10 flex flex-col justify-center h-full text-center lg:text-left space-y-6 lg:space-y-8">
               <div className="animate-fadeIn">
-                <h2 className="text-sm text-orange-400 font-bold tracking-widest uppercase mb-2 transform hover:scale-105 transition-transform duration-300">
+                <h2 className="text-xs sm:text-sm text-orange-400 font-bold tracking-widest uppercase mb-2 transform hover:scale-105 transition-transform duration-300">
                   GET STARTED WITH US
                 </h2>
-                <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
                   Start Conversation To
                   <br />
                   <span className="bg-gradient-to-r from-orange-400 to-orange-600 text-transparent bg-clip-text animate-gradient">
@@ -82,20 +82,20 @@ const Contact = () => {
                   </span>{" "}
                   Your Business
                 </h1>
-                <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed max-w-lg mx-auto lg:mx-0">
                   Schedule a free consultation with our experts.
-                  <br /> Uncover opportunities and take the first step
-                  <br /> towards digital success.
+                  <br className="hidden sm:inline" /> Uncover opportunities and take the first step
+                  <br className="hidden sm:inline" /> towards digital success.
                 </p>
               </div>
 
               <Link
                 to="https://wa.me/+12148987958"
                 target="_blank"
-                className="inline-block group w-fit mx-auto md:mx-0"
+                className="inline-block group w-fit mx-auto lg:mx-0"
               >
-                <button className="relative overflow-hidden px-8 py-3 bg-orange-500 text-white rounded-full transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/30">
-                  <span className="relative z-10">Lets Talk</span>
+                <button className="relative overflow-hidden px-6 sm:px-8 py-2.5 sm:py-3 bg-orange-500 text-white rounded-full text-sm sm:text-base transform hover:translate-y-[-2px] transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/30 cursor-pointer">
+                  <span className="relative z-10 font-semibold">Lets Talk</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                 </button>
               </Link>
@@ -103,32 +103,32 @@ const Contact = () => {
           </div>
 
           {/* Right Section (Form) */}
-          <div className="w-full md:w-1/2 bg-white p-8 md:p-16">
-            <div className="max-w-md mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-8 animate-fadeIn">
+          <div className="w-full lg:w-1/2 bg-white p-6 sm:p-8 md:p-10 lg:p-12 flex items-center justify-center">
+            <div className="w-full max-w-md mx-auto">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 text-center mb-5 sm:mb-6 animate-fadeIn">
                 Get A Free Consultation With
                 <br />
                 <span className="text-orange-500">Our Marketing Experts</span>
               </h2>
 
               {error && (
-                <div className="animate-fadeIn bg-red-50 text-red-500 p-4 rounded-lg text-center mb-6">
+                <div className="animate-fadeIn bg-red-50 text-red-500 p-3 rounded-lg text-sm text-center mb-4">
                   {error}
                 </div>
               )}
 
-              <form ref={form} onSubmit={sendEmail} className="space-y-6">
+              <form ref={form} onSubmit={sendEmail} className="space-y-4 sm:space-y-4.5">
                 <input
                   type="text"
                   name="companyName"
                   placeholder="Company name"
                   value={formData.companyName}
                   onChange={handleChange}
-                  className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 hover:border-orange-300"
+                  className="w-full p-2.5 sm:p-3 text-sm sm:text-base border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 hover:border-orange-300"
                   required
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                   {["firstName", "lastName"].map((name) => (
                     <input
                       key={name}
@@ -137,13 +137,13 @@ const Contact = () => {
                       placeholder={name.replace(/([A-Z])/g, " $1").trim()}
                       value={formData[name]}
                       onChange={handleChange}
-                      className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 hover:border-orange-300"
+                      className="w-full p-2.5 sm:p-3 text-sm sm:text-base border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 hover:border-orange-300"
                       required
                     />
                   ))}
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                   {["email", "phone"].map((name) => (
                     <input
                       key={name}
@@ -152,7 +152,7 @@ const Contact = () => {
                       placeholder={name.charAt(0).toUpperCase() + name.slice(1)}
                       value={formData[name]}
                       onChange={handleChange}
-                      className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 hover:border-orange-300"
+                      className="w-full p-2.5 sm:p-3 text-sm sm:text-base border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 hover:border-orange-300"
                       required
                     />
                   ))}
@@ -163,7 +163,7 @@ const Contact = () => {
                   placeholder="Your Message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 hover:border-orange-300 h-32 resize-none"
+                  className="w-full p-2.5 sm:p-3 text-sm sm:text-base border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-300 hover:border-orange-300 h-24 sm:h-28 resize-none"
                   required
                 />
 
@@ -172,11 +172,11 @@ const Contact = () => {
                     loading
                       ? "bg-gray-400 cursor-not-allowed"
                       : "bg-gradient-to-r from-orange-500 to-orange-600"
-                  } text-white py-4 rounded-lg transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-lg hover:shadow-orange-500/30`}
+                  } text-white py-3 sm:py-3.5 rounded-lg transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-lg hover:shadow-orange-500/30 cursor-pointer`}
                   type="submit"
                   disabled={loading}
                 >
-                  <span className="relative z-10">
+                  <span className="relative z-10 font-semibold text-sm sm:text-base">
                     {loading ? "Sending..." : "Send Message"}
                   </span>
                   {!loading && (
